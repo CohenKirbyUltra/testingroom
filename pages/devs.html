@@ -38,6 +38,15 @@
   </head>
 
   <body>
-    <script></script>
+    <script>
+      document.addEventListener("selectionchange",event=>{
+      let selection = document.getSelection ? document.getSelection().toString() :  document.selection.createRange().toString() ;
+        console.log(selection);
+        if (selection === "Dakota") {
+          alert("It's best not to worry about it.");
+          location.replace("about.html");
+        }
+      })
+    </script>
   </body>
 </html>
