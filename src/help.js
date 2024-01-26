@@ -36,10 +36,10 @@ function submit() {
             location.replace("https://cohenkirbyultra.github.io/testingroom/pages/find.html");
             break;
         case "Dakota":
-            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/Smile/Dakota.html");
+            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/smile/Dakota.html");
             break;
         case "dakota":
-            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/Smile/Dakota.html");
+            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/smile/Dakota.html");
             break;
         default:
             window.alert("Failure.");
