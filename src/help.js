@@ -24,22 +24,22 @@ function submit() {
 
     switch(ans) {
         case "Goner":
-            location.replace("https://s6d358.csb.app/pages/goodbye.html");
+            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/goodbye.html");
             break;
         case "goner":
-            location.replace("https://s6d358.csb.app/pages/goodbye.html");
+            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/goodbye.html");
             break;
         case "Polygons":
-            location.replace("https://s6d358.csb.app/pages/find.html");
+            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/find.html");
             break;
         case "polygons":
-            location.replace("https://s6d358.csb.app/pages/find.html");
+            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/find.html");
             break;
         case "Dakota":
-            location.replace("https://s6d358.csb.app/pages/Smile/Dakota.html");
+            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/Smile/Dakota.html");
             break;
         case "dakota":
-            location.replace("https://s6d358.csb.app/pages/Smile/Dakota.html");
+            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/Smile/Dakota.html");
             break;
         default:
             window.alert("Failure.");
