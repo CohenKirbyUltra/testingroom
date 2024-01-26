@@ -30,7 +30,7 @@ function check() {
 
     if (funValue === Fun) {
         window.blur();
-        const locket = window.open("https://s6d358.csb.app/happy.html", "Locket", "width=500, height=500"); locket.focus();
+        const locket = window.open("https://cohenkirbyultra.github.io/testingroom/happy.html", "Locket", "width=500, height=500"); locket.focus();
         var XX = 3;
         var y = 0;
 
@@ -71,7 +71,7 @@ function check() {
 }
 
 function close() {
-    location.replace("https://s6d358.csb.app/lock.html");
+    location.replace("https://cohenkirbyultra.github.io/testingroom/lock.html");
 }
 
 function FlashText() {
