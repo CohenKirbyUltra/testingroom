@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+    <title>NO</title>
+    <audio id="game2" controls autoplay hidden>
+        <source src="../audio/morse.wav" type="audio/wav">
+    </audio>
+    <center>
+    <link href="src/missing.css" />
+    <img src="imgs/late.png" width="400px" height="400px"/>
+    </center>
+  </head>
+  <body>
+    <script>
+      function PlayAudio() {
+        document.getElementById("game2").play();
+      }
+
+      document.onvisibilitychange = () => {
+        if (document.visibilityState === "hidden") {
+          window.WindowState = "normal";
+          window.alert("LOOK AT ME");
+        }
+      };
+    </script>
+  </body>
+</html>
