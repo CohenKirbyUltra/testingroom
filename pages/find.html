@@ -26,7 +26,6 @@ document.onvisibilitychange = () => {
 };
 function update() {
     times++;
-    console.log("Don't you have anything better to do?");
     switch(times) {
         case 1:
             document.getElementById("findmeplease").src = tests[0];
@@ -45,12 +44,12 @@ function update() {
             break;
         case 6:
             document.getElementById("findmeplease").src = tests[5];
+            PlayAudio();
             break;
         default:
-            alert("why");
+            alert("...");
             break;
     }
-    alert("Where are you going");
 }
 
 
