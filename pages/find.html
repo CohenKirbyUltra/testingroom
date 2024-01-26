@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+    <audio id="game" controls autoplay hidden>
+      <source src="../audio/all-a-game.mp3" type="audio/mpeg">
+      <source src="../audio/all-a-game.ogg" type="audio/ogg">
+    </audio>
+  </head>
+  <body onload="PlayAudio();">
+    <center>
+      <img src="../imgs/Rabbit.png" width="100%" height="100%"/>
+    </center>
+    <script>
+      function PlayAudio() {
+        document.getElementById("game").play();
+      }
+    </script>
+  </body>
+</html>

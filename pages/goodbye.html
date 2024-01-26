@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+    <audio id="game" controls autoplay hidden>
+      <source src="../audio/findme.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="game2" controls autoplay hidden>
+        <source src="../audio/morse.wav" type="audio/wav">
+    </audio>
+  </head>
+  <body onload="PlayAudio();">
+    <center>
+      <img src="../imgs/hello.gif" width="671px" height="901px" id="skull"/>
+    </center>
+    <script>
+        var goodbye = "goodbye"
+      function PlayAudio() {
+        document.getElementById("game").play();
+        document.getElementById("game2").play();
+      }
+
+      setInterval(() => {
+            window.document.title = goodbye += "e";
+      }, 1000);
+
+
+      document.onvisibilitychange = () => {
+        if (document.visibilityState === "hidden") {
+          window.alert("An error has occurred.");
+          document.getElementById("skull").style.opacity = 0;
+        }
+      };
+    </script>
+  </body>
+</html>
