@@ -23,14 +23,20 @@ function update() {
         case 6:
             image.src = tests[5];
             break;
+        default:
+            alert("why");
+            break;
     }
 }
 
-document.onvisibilitychange = () => {
-    if (document.visibilityState === "hidden") {
-        update();
-    }
-}
+
 function PlayAudio() {
     document.getElementById("game").play();
 }
+
+function preload_image(im_url) {
+    let img = new Image();
+    img.src = im_url;
+}
+
+tests.forEach(preload_image);
