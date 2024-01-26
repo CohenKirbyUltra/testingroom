@@ -1,0 +1,134 @@
+@font-face {
+    font-family: futura;
+    src: url(../fonts/Futura/Futura_Standard.ttf);
+  }
+  
+  body {
+    font-family: futura;
+    background-color: rgb(206, 116, 6);
+    color: orange;
+  }
+  
+  a {
+    color: rgb(255, 123, 0);
+  }
+  
+  .hide {
+    color: rgb(206, 116, 6);
+  }
+  
+  .container {
+    position: relative;
+    width: 200px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+    transition: .2s ease;
+    background-color: #000000;
+  }
+  
+  .container:hover .overlay {
+    opacity: 0.2;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #aboutSection {
+    width: 75%;
+  }
+  
+  .image {
+    width: 200px;
+    height: 200px;
+    flex-wrap: wrap;
+  }
+  
+  .wideimage {
+    width: 820px;
+    height: 420px;
+    border-width: 5px;
+    border-color: orangered;
+  }
+  
+  .footer {
+    color: rgb(233, 132, 8);
+    background-color: rgb(233, 132, 8);
+    width: 80%;
+    height: 30px;
+  }
+  
+  #vent {
+    cursor: pointer;
+  }
+  
+  .scroll-left {
+    height: 50px;	
+    overflow: hidden;
+    position: relative;
+   }
+   .scroll-left p {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    transform:translateX(100%);
+    /* Apply animation to this element */
+    animation: scroll-left 15s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @keyframes scroll-left {
+    0%   {
+    transform: translateX(160%); 		
+    }
+    100% {
+    transform: translateX(-160%); 
+    }
+   }
+  
+  #scrollg {
+    font-size: xx-large;
+    font-weight: bolder;
+  }
+  
+  #titlescreen:hover {
+    cursor: pointer;
+  }
+
+  input {
+    border-radius: 2px;
+    border-color: #ff8800;
+    border-width: 5px;
+    background-color: #b6660b;
+    color: rgb(255, 208, 0);
+    font-color: #ffaa00;
+  }
+
+  button {
+    border-radius: 2px;
+    border-color: #ff8800;
+    border-width: 5px;
+    background-color: #b6660b;
+    color: rgb(255, 208, 0);
+    font-color: #ffaa00;
+  }

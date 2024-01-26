@@ -1,0 +1,14 @@
+@font-face {
+  font-family: futura;
+  src: url(../fonts/Futura/Futura_Standard.ttf);
+}
+
+body {
+  font-family: futura;
+  background-color: black;
+  color: white;
+}
+
+.hide {
+  color: black;
+}
