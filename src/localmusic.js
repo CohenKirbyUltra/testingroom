@@ -4,7 +4,10 @@ Music.src = "../audio/music/Website_Main.mp3";
 Music.loop = true;
 Music.type = "audio/mp3";
 
-function onload() {
+
+onLoad();
+
+function onLoad() {
     switch (location.href) {
         case "https://cohenkirbyultra.github.io/testingroom/index.html":
             musicType(0);
