@@ -16,6 +16,11 @@
   </head>
   <body>
     <script>
+      var Sfx = new Audio();
+      Sfx.src = "audio/sfx/Look_at_me.wav";
+      Sfx.loop = false;
+      Sfx.type = "audio/wav";
+
       function PlayAudio() {
         document.getElementById("game2").play();
       }
@@ -23,6 +28,7 @@
       document.onvisibilitychange = () => {
         if (document.visibilityState === "hidden") {
           window.WindowState = "normal";
+          Sfx.play();
           window.alert("LOOK AT ME");
         }
       };

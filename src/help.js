@@ -3,6 +3,10 @@ document.getElementById("locket").addEventListener("keypress", update);
 document.getElementById("locket").addEventListener("change", update);
 document.getElementById("goodbye").enabled = false;
 document.getElementById("goodbye").addEventListener("click", submit);
+var Failure = new Audio();
+Failure.src = "audio/sfx/Failure.wav";
+Failure.loop = false;
+Failure.type = "audio/wav";
 
 function update() {
     let button = document.getElementById("goodbye");
@@ -42,6 +46,7 @@ function submit() {
             location.replace("https://cohenkirbyultra.github.io/testingroom/pages/smile/Dakota.html");
             break;
         default:
+            Failure.play();
             window.alert("Failure.");
             location.replace("about:blank");
             break;

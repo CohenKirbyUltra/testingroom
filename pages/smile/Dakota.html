@@ -470,40 +470,7 @@
       </tr>
     </table>
     <p class="c15"><span class="c7"></span></p>
-    <script>
-      var times = 0;
-      document.onvisibilitychange = () => {
-        if (document.visibilityState === "hidden") {
-          if (times > 4) {
-            Array.from(document.getElementsByTagName("span")).forEach(function (
-              element,
-              index,
-              array
-            ) {
-              array[index].innerHTML = "WHY IS IT ALWAYS ME";
-              document.getElementById("Dakota").src = "Why.png";
-            });
-          }
-
-            switch (times) {
-              case 1:
-                alert("Don't leave me here...");
-                break;
-              case 2:
-                alert("Please..");
-                break;
-              case 3:
-                alert("PLEASE I'M BEGGING YOU COHEN");
-                break;
-              case 4:
-                alert("WHAT DID I DO WRONG?!");
-                break;
-              default:
-                break;
-            }
-          times++;
-        }
-      };
+    <script src="../../src/dakota.js">
     </script>
   </body>
 </html>

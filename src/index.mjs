@@ -48,14 +48,6 @@ function close() {
     location.replace("https://cohenkirbyultra.github.io/testingroom/lock.html");
 }
 
-// music stuff
-var Music = new Audio();
-Music.src = "src/audio/music/Website_Main.mp3";
-Music.loop = true;
-Music.type = "audio/mp3";
-
-Music.play();
-
 // window stuff
 function createHappy() {
     let bounce = {
