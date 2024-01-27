@@ -47,7 +47,7 @@ document.getElementById("submithappiness").onClick = function Submit() {
 };
 
 // sfx stuff
-document.getElementById("keysound").src = "audio/sfx/key1.wav";
+document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
 document.getElementById("keysound").loop = false;
 document.getElementById("keysound").type = "audio/wav";
 //Audio Keys
@@ -56,19 +56,19 @@ function PlaySfx(type) {
   document.getElementById("keysound").currentTime = 0;
   switch (type) {
     case 0:
-      document.getElementById("keysound").src = "audio/sfx/key1.wav";
+      document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
       break;
     case 1:
-      document.getElementById("keysound").src = "audio/sfx/key2.wav";
+      document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key2.wav";
       break;
     case 2:
-      document.getElementById("keysound").src = "audio/sfx/key3.wav";
+      document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key3.wav";
       break;
     case 3:
-      document.getElementById("keysound").src = "audio/sfx/key4.wav";
+      document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key4.wav";
       break;
     case 4:
-      document.getElementById("keysound").src = "audio/sfx/key5.wav";
+      document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key5.wav";
       break;
     default:
       console.log("Error, over sfx limit");
