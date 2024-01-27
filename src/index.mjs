@@ -4,7 +4,7 @@ function getRndInteger(min, max) {
 
 var Music = document.getElementById("music");
 
-document.onload = function() {
+document.body.onload = function() {
     Music.play();
 }
 var clicks = 0;
