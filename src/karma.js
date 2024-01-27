@@ -43,7 +43,7 @@ function Submit() {
     }
 }
 // sfx stuff
-var Sfx = document.getElementById("keypressthingidk");
+var Sfx = new Audio();
 Sfx.src = "audio/sfx/key1.wav";
 Sfx.loop = false;
 Sfx.type = "audio/wav";
