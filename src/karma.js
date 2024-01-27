@@ -44,7 +44,6 @@ document.getElementById("submithappiness").onClick = function Submit() {
         }
     }
   }
-};
 
 // sfx stuff
 document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
