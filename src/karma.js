@@ -10,17 +10,20 @@ Happybtn.disabled = true;
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
+setInterval(function () {
+    currentValue = InputerCode.value;
+
+    if (currentValue > 0) {
+      Happybtn.disabled = false;
+      Happybtn.innerHTML = "Happy";
+    } else {
+      Happybtn.enabled = true;
+      Happybtn.innerHTML = "...";
+    }  
+}, 500);
 
 window.addEventListener("keypress", function () {
-  currentValue = InputerCode.value;
-
-  if (currentValue > 0) {
-    Happybtn.disabled = false;
-    Happybtn.innerHTML = "Happy";
-  } else {
-    Happybtn.enabled = true;
-    Happybtn.innerHTML = "...";
-  }
+    KeyClick();
 });
 document.getElementById("submithappiness").onClick = function () {
   if (!currentValue === codes[0] && !currentValue === codes[1]) {
