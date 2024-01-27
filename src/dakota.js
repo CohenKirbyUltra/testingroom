@@ -3,7 +3,8 @@ Sfx.src = "../audio/music/torture.mp3";
 Sfx.loop = true;
 Sfx.type = "audio/mpeg";
 
-var vocal = document.getElementById("vocal");
+var vocal = new Audio();
+Sfx.src = "../audio/music/tick.wav";
 vocal.loop = true;
 vocal.type = "audio/wav";
 
@@ -12,7 +13,9 @@ Music.src = "../audio/music/Theresalwayssomething.mp3";
 Music.loop = true;
 Music.type = "audio/mpeg";
 Music.play();
+
 var times = 0;
+
 document.onvisibilitychange = () => {
   if (document.visibilityState === "hidden") {
     if (times === 5) {
