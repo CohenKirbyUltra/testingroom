@@ -11,7 +11,7 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-InputerCode.addEventListener("keypress", function () {
+document.addEventListener("keypress", function () {
     currentValue = InputerCode.value;
 
     if (!currentValue === "" || !currentValue === null) {
@@ -19,6 +19,7 @@ InputerCode.addEventListener("keypress", function () {
     } else {
         Happybtn.enabled = true;
     }
+    KeyClick();
 })
 
 function Submit() {
