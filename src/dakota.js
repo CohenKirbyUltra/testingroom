@@ -31,7 +31,7 @@ document.onvisibilitychange = () => {
         }, 100)
       });
         vocal.pause();
-        vocal.currentTime = 0;
+    vocal.currentTime = 0;
       document.getElementById("torture").play();
     }
     times++;
