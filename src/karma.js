@@ -26,24 +26,20 @@ window.addEventListener("keypress", function () {
     KeyClick();
 });
 document.getElementById("submithappiness").onClick = function Submit() {
-    if (currentValue === 109983) {
-      location.replace(
-        "https://cohenkirbyultra.github.io/testingroom/pages/smile/Cohen.html"
-      );
-    } else {
-        if (currentValue === 722020) {
-            alert("How do you know that?");
-            location.replace(
-              "https://cohenkirbyultra.github.io/testingroom/index.html"
-            );
-        } else {
-                alert("Failure.");
-                location.replace(
-                  "https://cohenkirbyultra.github.io/testingroom/index.html"
-                );
-        }
+    switch(currentValue) {
+        case codes[0]:
+            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/smile/Cohen.html");
+            break;
+        case codes[1]:
+            location.replace("https://cohenkirbyultra.github.io/testingroom/happy.html");
+            break;
+        default:
+            Failure.play();
+            window.alert("Failure.");
+            location.replace("about:blank");
+            break;
     }
-  }
+}
 
 // sfx stuff
 document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
