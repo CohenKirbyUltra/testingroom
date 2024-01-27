@@ -7,6 +7,11 @@ var Happybtn = document.getElementById("submithappiness");
 var currentValue = "";
 Happybtn.disabled = true;
 
+var Unlock = new Audio();
+Unlock.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/unlock.wav";
+Unlock.loop = false;
+Unlock.type = "audio/wav";
+
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -55,12 +60,8 @@ function Submit() {
 }
 
 // sfx stuff
-Unlock = new Audio();
-Unlock.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/unlock.wav";
-Unlock.loop = false;
-Unlock.type = "audio/wav";
 
-Keyboard = new Audio();
+var Keyboard = new Audio();
 Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key1.wav";
 Keyboard.loop = false;
 Keyboard.type = "audio/wav";
