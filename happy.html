@@ -10,7 +10,7 @@
         <source src="../audio/No.mp3" type="audio/mpeg">
     </audio>
     <center>
-    <link rel="stylesheet" href="src/missing.css" />
+    <link id="happy" rel="stylesheet" href="src/missing.css" />
     <img src="imgs/SMILE.png" width="400px" height="400px"/>
     </center>
   </head>
@@ -21,6 +21,11 @@
       Sfx.loop = false;
       Sfx.type = "audio/wav";
 
+      var Toolateforyou = new Audio();
+      Toolateforyou.src = "audio/sfx/theywillnot.wav";
+      Toolateforyou.loop = false;
+      Toolateforyou.type = "audio/wav";
+
       function PlayAudio() {
         document.getElementById("game2").play();
       }
@@ -30,8 +35,16 @@
           window.WindowState = "normal";
           Sfx.play();
           window.alert("LOOK AT ME");
+          Toolate();
         }
       };
+
+      function Toolate() {
+        document.getElementById("happy").src = "imgs/d.png";
+        setTimeout(() => {
+          Toolateforyou.play();
+        }, 3000);
+      }
     </script>
   </body>
 </html>

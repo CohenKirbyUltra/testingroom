@@ -37,6 +37,11 @@ function check() {
         window.document.title = "Leave";
         window.alert("Stop.");
         document.querySelectorAll("center").forEach((index) => index.innerHTML = "LEAVE");
+        setInterval(function() {
+            const para = document.createElement("h6");
+            para.innerText = "LEAVE";
+            document.body.appendChild(para);
+        }, 100);
         setTimeout(function() {
         window.document.title = "GET OUT"
         }, 4000);
@@ -66,7 +71,8 @@ function createHappy() {
              // Create the window that we're going to move around
              // The javascript: URL is simply a way to display a short document
              // The final argument specifies the window size
-             bounce.win = window.open("happy.html", x, y, w, h);
+             bounce.win = window.open('happy.html', "", 
+             "width=" + w + ",height=" + h);
              
              // Use setInterval() to call the nextFrame() method every interval 
              // milliseconds. Store the return value so that we can stop the
