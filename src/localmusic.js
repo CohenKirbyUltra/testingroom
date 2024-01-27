@@ -1,6 +1,6 @@
 // music stuff
 var Music = new Audio();
-Music.src = "https://cohenkirbyultra.github.io/testingroom/audio/music/Website_Main.mp3";
+Music.src = "../../audio/music/Website_Main.mp3";
 Music.loop = true;
 Music.type = "audio/mp3";
 
@@ -38,4 +38,5 @@ function musicType(type) {
         default:
             break;
     }
+    Music.play();
 }
