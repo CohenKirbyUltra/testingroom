@@ -5,7 +5,7 @@ Sfx.type = "audio/mpeg";
 
 var vocal = new Audio();
 vocal.src = "../../audio/music/tick.wav";
-vocal.loop = true;
+vocal.loop = false;
 vocal.type = "audio/wav";
 
 var Music = new Audio();
