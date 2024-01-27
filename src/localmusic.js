@@ -1,10 +1,10 @@
 // music stuff
 var Music = new Audio();
-Music.src = "../../audio/music/Website_Main.mp3";
+Music.src = "../audio/music/Website_Main.mp3";
 Music.loop = true;
 Music.type = "audio/mp3";
 
-document.onLoad = function() {
+function onload() {
     switch (location.href) {
         case "https://cohenkirbyultra.github.io/testingroom/index.html":
             musicType(0);

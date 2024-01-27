@@ -10,3 +10,11 @@ input {
     color: red;
     background-color: maroon;
 }
+
+button {
+    border-width: 3px;
+    border-radius: 3px;
+    border-color: red;
+    color: red;
+    background-color: maroon;
+}
