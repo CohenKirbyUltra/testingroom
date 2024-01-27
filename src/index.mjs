@@ -7,6 +7,8 @@ Music.src = "audio/music/Website_Main.mp3";
 Music.loop = true;
 Music.type = "audio/mp3";
 
+Music.play();
+
 var clicks = 0;
 var funValue;
 var randomchance = 0;
@@ -44,7 +46,9 @@ function check() {
         window.alert("Stop.");
         document.querySelectorAll("center").forEach((index) => index.innerHTML = "LEAVE");
         setInterval(function() {
-            Music.currentTime -= 0.5;
+            Music.pause();
+            Music.currentTime = 40.5;
+            Music.play();
             const para = document.createElement("h6");
             para.innerText = "LEAVE";
             document.body.appendChild(para);
