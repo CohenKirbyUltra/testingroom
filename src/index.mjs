@@ -3,11 +3,16 @@ function getRndInteger(min, max) {
 }
 
 var Music = document.getElementById("music");
+
 var clicks = 0;
 var funValue;
 var randomchance = 0;
 const text = [document.getElementById("text1"), document.getElementById("text2")];
 
+
+document.onload = function() {
+    document.getElementById("music").play();
+}
 //arg chance
 setInterval(function() {
     randomchance = getRndInteger(40, 80);
