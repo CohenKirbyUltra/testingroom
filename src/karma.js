@@ -31,10 +31,20 @@ document.getElementById("submithappiness").addEventListener("click", Submit);
 function Submit() {
     switch(currentValue) {
         case codes[0]:
-            location.replace("https://cohenkirbyultra.github.io/testingroom/pages/smile/Cohen.html");
+            document.getElementById("locket").pause();
+            document.getElementById("karma").pause();
+            Unlock.play();
+            setTimeout(() => {
+              location.replace("https://cohenkirbyultra.github.io/testingroom/pages/smile/Cohen.html");        
+            }, 2000);
             break;
         case codes[1]:
-            location.replace("https://cohenkirbyultra.github.io/testingroom/happy.html");
+            document.getElementById("locket").pause();
+            document.getElementById("karma").pause();
+            Unlock.play();
+            setTimeout(() => {
+              location.replace("https://cohenkirbyultra.github.io/testingroom/happy.html");        
+            }, 2000);
             break;
         default:
             Failure.play();
@@ -45,14 +55,17 @@ function Submit() {
 }
 
 // sfx stuff
+Unlock = new Audio();
+Unlock.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/unlock.wav";
+Unlock.loop = false;
+Unlock.type = "audio/wav";
+
 Keyboard = new Audio();
-Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
+Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key1.wav";
 Keyboard.loop = false;
 Keyboard.type = "audio/wav";
 //Audio Keys
 function PlaySfx(type) {
-  Keyboard.pause();
-  Keyboard.currentTime = 0;
   switch (type) {
     case 0:
       Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key1.wav";
@@ -80,6 +93,8 @@ function PlaySfx(type) {
 
 // generates random number to play sfx randomly
 function KeyClick() {
+  Keyboard.pause();
+  Keyboard.currentTime = 0;
   let Key = getRndInteger(0, 4);
 
   switch (Key) {
