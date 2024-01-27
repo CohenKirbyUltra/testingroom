@@ -47,7 +47,7 @@ function Submit() {
 }
 
 // sfx stuff
-Keyboard = new Audio():
+Keyboard = new Audio();
 Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
 Keyboard.loop = false;
 Keyboard.type = "audio/wav";
