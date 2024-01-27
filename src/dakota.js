@@ -3,6 +3,11 @@ Sfx.src = "../audio/music/torture.mp3";
 Sfx.loop = true;
 Sfx.type = "audio/mpeg";
 
+var Music = new Audio();
+Music.src = "../audio/music/Theresalwayssomething.mp3";
+Music.loop = true;
+Music.type = "audio/mpeg";
+
 var times = 0;
 document.onvisibilitychange = () => {
   if (document.visibilityState === "hidden") {
@@ -16,7 +21,7 @@ document.onvisibilitychange = () => {
         document.body.style = "background-color: maroon";
         document.getElementById("Dakota").src = "Why.png";
       });
-      sfx.play();
+      Sfx.play();
     }
     times++;
       switch (times) {
