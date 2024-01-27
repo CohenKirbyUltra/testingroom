@@ -47,14 +47,19 @@
 
   <body>
     <script>
+      var x = 0;
       document.addEventListener("selectionchange",event=>{
       let selection = document.getSelection ? document.getSelection().toString() :  document.selection.createRange().toString() ;
         console.log(selection);
         if (selection === "Dakota") {
-          document.getElementById("music").pause();
-          document.getElementById("best").play();
-          alert("It's best not to worry about it.");
-          setTimeout(location.replace("about.html"), 3000);
+          if (x === 0) {
+            document.getElementById("music").pause();
+            document.getElementById("best").play();
+            x = 1;
+            setTimeout(location.replace("about.html"), 9000);
+          } else {
+            //nothing
+          }
         }
       });
     </script>
