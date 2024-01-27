@@ -22,6 +22,10 @@ document.addEventListener("keypress", function () {
     KeyClick();
 })
 
+Happybtn.addEventListener("click", function () {
+  Submit();
+})
+
 function Submit() {
     if (!currentValue === codes[0] && !currentValue === codes[1]) {
         alert("Failure.")
@@ -37,7 +41,7 @@ function Submit() {
     }
 }
 // sfx stuff
-var Sfx = new Audio();
+var Sfx = document.getElementById("keypressthingidk");
 Sfx.src = "audio/sfx/key1.wav";
 Sfx.loop = false;
 Sfx.type = "audio/wav";
@@ -63,10 +67,10 @@ function PlaySfx(type) {
             alert("Actual dev error: rng over limit of sfx type");
             break;
     
-            sfx.pause();
-            sfx.currentTime = 0;
+            Sfx.pause();
+            Sfx.currentTime = 0;
 
-            sfx.play();
+            Sfx.play();
 }
 
 function KeyClick() {

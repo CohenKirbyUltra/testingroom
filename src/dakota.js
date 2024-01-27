@@ -21,7 +21,7 @@ document.onvisibilitychange = () => {
         document.body.style = "background-color: maroon";
         document.getElementById("Dakota").src = "Why.png";
       });
-      Sfx.play();
+      document.getElementById("torture").play();
     }
     times++;
       switch (times) {
