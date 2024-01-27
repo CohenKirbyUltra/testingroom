@@ -12,8 +12,13 @@
     </center>
   </head>
   <body>
+    <audio id="loop" controls autoplay hidden>
+        <source src="../audio/KarmaLoop.mp3" type="audio/mpeg">
+    </audio>
     <script>
-
+        document.onLoad = function() {
+            document.getElementById("loop").play();
+        }
     </script>
   </body>
 </html>
