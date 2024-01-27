@@ -22,9 +22,9 @@ setInterval(function() {
     }  
 }, 500);
 
-document.onKeyPress = function(e) {
-    KeyClick();
-}
+window.addEventListener("keypress", function() {
+  KeyClick();
+});
 
 document.getElementById("submithappiness").addEventListener("click", Submit);
 
