@@ -30,35 +30,8 @@ function check() {
     funValue = getRndInteger(0, 40);
 
     if (funValue === Fun) {
-        window.blur();
-        const locket = window.open("https://cohenkirbyultra.github.io/testingroom/happy.html", "Locket", "width=500, height=500"); locket.focus();
-        var XX = 3;
-        var y = 0;
-
-    setInterval(() => {
-        let x = 1;
-
-        if (x === 0) {
-            XX = getRndInteger(20, 40);
-            y = getRndInteger(0, 1);
-            x = 1
-        }
-        if (x === 1) {
-            XX = getRndInteger(-20, -40);
-            y = getRndInteger(-0, -1);
-            x = 0;
-        }
-    }, 10000);
-
-
-    function movingWindow() {
-        locket.moveBy(XX, y);
+        createHappy();
     }
-
-    setInterval(() => {
-        movingWindow();
-    }, 50);
-}
 
     if (clicks === 40) {
         window.document.title = "Leave";
@@ -75,6 +48,70 @@ function close() {
     location.replace("https://cohenkirbyultra.github.io/testingroom/lock.html");
 }
 
-function FlashText() {
+// music stuff
+var Music = new Audio();
+Music.src = "src/audio/music/Website_Main.mp3";
+Music.loop = true;
+Music.type = "audio/mp3";
 
+Music.play();
+
+function createHappy() {
+    let bounce = {
+        x:0, y:0, w:200, h:100,   // Window position and size
+        dx:5, dy:5,               // Window velocity
+        interval: 100,            // Milliseconds between updates
+        win: null,                // The window we will create
+        timer: null,              // Return value of setInterval()
+    
+        // Start the animation
+        start: function() {
+             // Start with the window in the center of the screen
+             bounce.x = (screen.width - bounce.w)/2;
+             bounce.y = (screen.height - bounce.h)/2;
+    
+             // Create the window that we're going to move around
+             // The javascript: URL is simply a way to display a short document
+             // The final argument specifies the window size
+             bounce.win = window.open("happy.html");
+             
+             // Use setInterval() to call the nextFrame() method every interval 
+             // milliseconds. Store the return value so that we can stop the
+             // animation by passing it to clearInterval().
+             bounce.timer  = setInterval(bounce.nextFrame, bounce.interval);
+        },
+    
+        // Stop the animation
+        stop: function() {
+             clearInterval(bounce.timer);                // Cancel timer
+             if (!bounce.win.closed) bounce.win.close(); // Close window
+        },
+    
+        // Display the next frame of the animation.  Invoked by setInterval()
+        nextFrame: function() {
+             // If the user closed the window, stop the animation
+             if (bounce.win.closed) {
+                 clearInterval(bounce.timer);
+                 return;
+             }
+             
+             // Bounce if we have reached the right or left edge
+             if ((bounce.x+bounce.dx > (screen.availWidth - bounce.w)) ||
+                 (bounce.x+bounce.dx < 0)) bounce.dx = -bounce.dx;
+             
+             // Bounce if we have reached the bottom or top edge
+             if ((bounce.y+bounce.dy > (screen.availHeight - bounce.h)) ||
+                 (bounce.y+bounce.dy < 0)) bounce.dy = -bounce.dy;
+             
+             // Update the current position of the window
+             bounce.x += bounce.dx;
+             bounce.y += bounce.dy;
+             
+             // Finally, move the window to the new position
+             bounce.win.moveTo(bounce.x,bounce.y);
+    
+             // Display current position in window status line
+             bounce.win.defaultStatus = "(" + bounce.x + "," + bounce.y + ")";
+        }
+    }
 }
