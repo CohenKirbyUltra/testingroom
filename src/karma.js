@@ -14,21 +14,15 @@ function getRndInteger(min, max) {
 window.addEventListener("keypress", function() {
     currentValue = InputerCode.value;
 
-    if (currentValue !== "") {
+    if (currentValue > 0) {
         Happybtn.disabled = false;
         Happybtn.innerHTML = "Happy";
     } else {
         Happybtn.enabled = true;
         Happybtn.innerHTML = "...";
     }
-    KeyClick();
 })
-
-Happybtn.onClick = function() {
-  Submit();
-}
-
-function Submit() {
+document.getElementById("submithappiness").onClick = function() {
     if (!currentValue === codes[0] && !currentValue === codes[1]) {
         alert("Failure.")
         location.replace("https://cohenkirbyultra.github.io/testingroom/index.html");
@@ -42,8 +36,9 @@ function Submit() {
         }
     }
 }
+
 // sfx stuff
-var Sfx = new Audio();
+var Sfx = document.getElementById("keysound");
 Sfx.src = "audio/sfx/key1.wav";
 Sfx.loop = false;
 Sfx.type = "audio/wav";
@@ -70,12 +65,13 @@ function PlaySfx(type) {
             alert("Actual dev error: rng over limit of sfx type");
             break;
     }
+            // immediately play
             Sfx.pause();
             Sfx.currentTime = 0;
-
             Sfx.play();
 }
 
+// generates random number to play sfx randomly
 function KeyClick() {
     let Key = getRndInteger(0, 4);
 
