@@ -9,10 +9,20 @@ document.onLoad = function() {
         case "https://cohenkirbyultra.github.io/testingroom/index.html":
             musicType(0);
             break;
+        case "https://cohenkirbyultra.github.io/testingroom/pages/about.html":
+            musicType(0);
+            break;
+        case "https://cohenkirbyultra.github.io/testingroom/pages/devs.html":
+            musicType(0);
+            break;
+        case "https://cohenkirbyultra.github.io/testingroom/pages/gamemodes.html":
+            musicType(0);
+            break;
         case "https://cohenkirbyultra.github.io/testingroom/lock.html":
             musicType(1);
             break;
         default:
+            //silence
             break;
     }
 }
