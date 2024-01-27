@@ -467,8 +467,8 @@
       Music.src = "../../audio/music/Theresalwayssomething.mp3";
       Music.loop = true;
       Music.type = "audio/mpeg";
-      
-      Music.play();
+
+      document.onLoad = function() {Music.play()};
     </script>
   </body>
 </html>
