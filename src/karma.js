@@ -16,8 +16,10 @@ document.addEventListener("keypress", function () {
 
     if (currentValue.length > 0) {
         Happybtn.disabled = false;
+        Happybtn.innerHTML = "Happy";
     } else {
         Happybtn.enabled = true;
+        Happybtn.innerHTML = "...";
     }
     KeyClick();
 })
