@@ -26,8 +26,8 @@ document.getElementById("titlescreen").addEventListener("click", check); // Rand
 
 function check() {
     clicks += 1;
-    let Fun = getRndInteger(0, 40);
-    funValue = getRndInteger(0, 40);
+    let Fun = getRndInteger(0, 30);
+    funValue = getRndInteger(0, 30);
 
     if (funValue === Fun) {
         createHappy();
