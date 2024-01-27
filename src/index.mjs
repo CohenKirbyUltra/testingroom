@@ -12,8 +12,8 @@ setInterval(function() {
 
     if (randomchance === 80) {
         document.getElementById("goner").play();
-        text[0].innerHTML = "A webpaGe dedacated tO the local testing room!"; 
-        text[1].innerHTML = "You might be woNdering to yoursElf if you have no context and clicked on this page, <a href='pages/about.html'>What is testingRoom?</a>";
+        text[0].innerHTML = "A webpa<u>G</u>e dedacated t<u>O</u> the local testing room!"; 
+        text[1].innerHTML = "You might be wo<u>N</u>dering to yours<u>E</u>lf if you have no context and clicked on this page, <a href='pages/about.html'>What is testing <u>R</u>oom?</a>";
         setTimeout(function() {
             document.getElementById("goner").pause();
             text[0].innerHTML = "A webpage dedacated to the local testing room!";
