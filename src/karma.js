@@ -47,6 +47,7 @@ Sfx.loop = false;
 Sfx.type = "audio/wav";
 //Audio Keys
 function PlaySfx(type) {
+    switch(type) {
     case 0:
             Sfx.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";                
             break;
@@ -66,7 +67,7 @@ function PlaySfx(type) {
             console.log("Error, over sfx limit");
             alert("Actual dev error: rng over limit of sfx type");
             break;
-    
+    }
             Sfx.pause();
             Sfx.currentTime = 0;
 
