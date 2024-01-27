@@ -25,7 +25,9 @@ setInterval(function() {
 window.addEventListener("keypress", function () {
     KeyClick();
 });
-document.getElementById("submithappiness").onClick = function Submit() {
+document.getElementById("submithappiness").addEventListener("click", Submit);
+
+function Submit() {
     switch(currentValue) {
         case codes[0]:
             location.replace("https://cohenkirbyultra.github.io/testingroom/pages/smile/Cohen.html");

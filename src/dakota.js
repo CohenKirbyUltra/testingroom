@@ -20,6 +20,11 @@ document.onvisibilitychange = () => {
         array[index].innerHTML = "WHY IS IT ALWAYS ME";
         document.body.style = "background-color: maroon";
         document.getElementById("Dakota").src = "Why.png";
+        setInterval(function() {
+            const para = document.createElement("h1");
+            para.innerText = "GET OUT OF HERE";
+            document.body.appendChild(para);
+        }, 100)
       });
       document.getElementById("torture").play();
     }
