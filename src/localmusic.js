@@ -1,6 +1,6 @@
 // music stuff
 var Music = new Audio();
-Music.src = "src/audio/music/Website_Main.mp3";
+Music.src = "../audio/music/Website_Main.mp3";
 Music.loop = true;
 Music.type = "audio/mp3";
 
@@ -30,10 +30,10 @@ document.onLoad = function() {
 function musicType(type) {
     switch(type) {
         case 0:
-            Music.src = "src/audio/music/Website_Main.mp3";
+            Music.src = "../audio/music/Website_Main.mp3";
             break;
         case 1:
-            Music.src = "src/audio/music/Website_Off.mp3";
+            Music.src = "../audio/music/Website_Off.mp3";
             break;
         default:
             break;
