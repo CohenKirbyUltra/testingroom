@@ -66,7 +66,7 @@ function createHappy() {
              // Create the window that we're going to move around
              // The javascript: URL is simply a way to display a short document
              // The final argument specifies the window size
-             bounce.win = window.open("happy.html");
+             bounce.win = window.open("happy.html", x, y, w, h);
              
              // Use setInterval() to call the nextFrame() method every interval 
              // milliseconds. Store the return value so that we can stop the
