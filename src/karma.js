@@ -24,7 +24,7 @@ setInterval(function() {
 
 document.onKeyPress = function(e) {
     if (e.keyCode != null) {
-        Submit();
+        KeyClick();
     }
 }
 
