@@ -11,10 +11,10 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-document.body.addEventListener("keypress", function() {
+window.addEventListener("keypress", function() {
     currentValue = InputerCode.value;
 
-    if (currentValue.length > 0) {
+    if (currentValue !== "") {
         Happybtn.disabled = false;
         Happybtn.innerHTML = "Happy";
     } else {
@@ -24,9 +24,9 @@ document.body.addEventListener("keypress", function() {
     KeyClick();
 })
 
-Happybtn.addEventListener("click", function () {
+Happybtn.onClick = function() {
   Submit();
-})
+}
 
 function Submit() {
     if (!currentValue === codes[0] && !currentValue === codes[1]) {
