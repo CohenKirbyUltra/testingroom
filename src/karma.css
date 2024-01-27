@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  color: red;
+}
+
+input {
+    border-width: 3px;
+    border-radius: 3px;
+    border-color: red;
+    color: red;
+    background-color: maroon;
+}
