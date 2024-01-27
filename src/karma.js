@@ -8,7 +8,7 @@ var currentValue = "";
 Happybtn.disabled = true;
 
 var Unlock = new Audio();
-Unlock.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/unlock.wav";
+Unlock.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/unlock_locket.wav";
 Unlock.loop = false;
 Unlock.type = "audio/wav";
 
