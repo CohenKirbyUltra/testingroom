@@ -474,8 +474,6 @@
       var times;
       document.onvisibilitychange = () => {
         if (document.visibilityState === "hidden") {
-          times++
-
           if (times > 4) {
             Array.from(document.getElementsByTagName("span")).forEach(function (
               element,
@@ -503,6 +501,7 @@
                 break;
             }
           }
+          times++;
         }
       };
     </script>
