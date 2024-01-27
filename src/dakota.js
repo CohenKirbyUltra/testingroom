@@ -11,7 +11,7 @@ var Music = new Audio();
 Music.src = "../audio/music/Theresalwayssomething.mp3";
 Music.loop = true;
 Music.type = "audio/mpeg";
-
+Music.play();
 var times = 0;
 document.onvisibilitychange = () => {
   if (document.visibilityState === "hidden") {
