@@ -56,6 +56,7 @@ Music.type = "audio/mp3";
 
 Music.play();
 
+// window stuff
 function createHappy() {
     let bounce = {
         x:0, y:0, w:200, h:100,   // Window position and size
