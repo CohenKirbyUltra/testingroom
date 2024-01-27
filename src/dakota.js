@@ -1,15 +1,15 @@
 var Sfx = new Audio();
-Sfx.src = "../audio/music/torture.mp3";
+Sfx.src = "../../audio/music/torture.mp3";
 Sfx.loop = true;
 Sfx.type = "audio/mpeg";
 
 var vocal = new Audio();
-Sfx.src = "../audio/music/tick.wav";
+vocal.src = "../../audio/music/tick.wav";
 vocal.loop = true;
 vocal.type = "audio/wav";
 
 var Music = new Audio();
-Music.src = "../audio/music/Theresalwayssomething.mp3";
+Music.src = "../../audio/music/Theresalwayssomething.mp3";
 Music.loop = true;
 Music.type = "audio/mpeg";
 Music.play();
@@ -43,39 +43,35 @@ document.onvisibilitychange = () => {
           vocal.pause();
           vocal.currentTime = 0;
           vocal.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/dontleavemehere.wav";
-          vocal.play();
           alert("Don't leave me here...");
           break;
         case 2:
           vocal.pause();
           vocal.currentTime = 0;
           vocal.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/please.wav";
-          vocal.play();
           alert("Please..");
           break;
         case 3:
           vocal.pause();
           vocal.currentTime = 0;
           vocal.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/cohen.wav";
-          vocal.play();
           alert("PLEASE I'M BEGGING YOU C||||E|");
           break;
         case 4:
           vocal.pause();
           vocal.currentTime = 0;
           vocal.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/whatdididowrong.wav";
-          vocal.play();
           alert("WHAT DID I DO WRONG?!");
           break;
         case 5:
           vocal.pause();
           vocal.currentTime = 0;
           vocal.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/ithurts.mp3";
-          vocal.play();
           alert("#######################");
           break;
         default:
           break;
       }
+      vocal.play();
   }
 }
