@@ -1,6 +1,11 @@
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
+var Music = new Audio();
+Music.src = "../audio/music/Website_Main.mp3";
+Music.loop = true;
+Music.type = "audio/mp3";
+
 var clicks = 0;
 var funValue;
 var randomchance = 0;
@@ -38,6 +43,7 @@ function check() {
         window.alert("Stop.");
         document.querySelectorAll("center").forEach((index) => index.innerHTML = "LEAVE");
         setInterval(function() {
+            Music.currentTime -= 0.5;
             const para = document.createElement("h6");
             para.innerText = "LEAVE";
             document.body.appendChild(para);
@@ -72,7 +78,7 @@ function createHappy() {
              // The javascript: URL is simply a way to display a short document
              // The final argument specifies the window size
              bounce.win = window.open('happy.html', "", 
-             "width=" + w + ",height=" + h);
+             x, y, w, h);
              
              // Use setInterval() to call the nextFrame() method every interval 
              // milliseconds. Store the return value so that we can stop the
@@ -113,4 +119,5 @@ function createHappy() {
              bounce.win.defaultStatus = "(" + bounce.x + "," + bounce.y + ")";
         }
     }
+    bounce.start();
 }
