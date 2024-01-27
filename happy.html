@@ -1,5 +1,5 @@
 <html>
-  <head>
+  <head onLoad="document.getElementById("game2").play();">
     <style>
       body {
         background-color: black;
@@ -26,25 +26,19 @@
       Toolateforyou.loop = false;
       Toolateforyou.type = "audio/wav";
 
-      function PlayAudio() {
-        document.getElementById("game2").play();
-      }
-
       document.onvisibilitychange = () => {
         if (document.visibilityState === "hidden") {
           window.WindowState = "normal";
           Sfx.play();
           window.alert("LOOK AT ME");
-          Toolate();
+            function Toolate() {
+              document.getElementById("happy").src = "imgs/d.png";
+              setTimeout(() => {
+              Toolateforyou.play();
+            }, 3000);
+          }
         }
       };
-
-      function Toolate() {
-        document.getElementById("happy").src = "imgs/d.png";
-        setTimeout(() => {
-          Toolateforyou.play();
-        }, 3000);
-      }
     </script>
   </body>
 </html>
