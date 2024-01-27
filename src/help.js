@@ -74,9 +74,3 @@ function lost() {
         location.replace("about:blank");
     }, 2000);
 }
-
-// music stuff
-var Music = new Audio();
-Music.src = "src/audio/music/Website_Off.mp3";
-Music.loop = true;
-Music.type = "audio/mp3";
