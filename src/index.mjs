@@ -3,10 +3,6 @@ function getRndInteger(min, max) {
 }
 
 var Music = document.getElementById("music");
-
-document.body.onload = function() {
-    Music.play();
-}
 var clicks = 0;
 var funValue;
 var randomchance = 0;
@@ -14,7 +10,7 @@ const text = [document.getElementById("text1"), document.getElementById("text2")
 
 //arg chance
 setInterval(function() {
-    randomchance = getRndInteger(0, 100);
+    randomchance = getRndInteger(40, 80);
 
     if (randomchance === 80) {
         document.getElementById("goner").play();
@@ -25,7 +21,7 @@ setInterval(function() {
             text[1].innerHTML = "You might be wondering to yourself if you have no context and clicked on this page, <a href='pages/about.html'>What is testing room?</a>";
         }, 500);
     }
-}, 1500);
+}, 5000);
 
 
 document.getElementById("titlescreen").addEventListener("click", check); // Randomizes the chance of getting rare screen
