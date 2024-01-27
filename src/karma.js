@@ -57,19 +57,19 @@ function PlaySfx(type) {
   Keyboard.currentTime = 0;
   switch (type) {
     case 0:
-      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
+      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key1.wav";
       break;
     case 1:
-      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key2.wav";
+      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key2.wav";
       break;
     case 2:
-      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key3.wav";
+      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key3.wav";
       break;
     case 3:
-      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key4.wav";
+      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key4.wav";
       break;
     case 4:
-      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key5.wav";
+      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key5.wav";
       break;
     default:
       console.log("Error, over sfx limit");
