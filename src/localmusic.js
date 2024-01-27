@@ -5,10 +5,10 @@ Music.loop = true;
 Music.type = "audio/mp3";
 
 
-onLoad();
+onLoad(location.href);
 
-function onLoad() {
-    switch (location.href) {
+function onLoad(index) {
+    switch (index) {
         case "https://cohenkirbyultra.github.io/testingroom/index.html":
             musicType(0);
             break;
