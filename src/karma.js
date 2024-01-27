@@ -10,7 +10,7 @@ Happybtn.disabled = true;
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-setInterval(function () {
+setInterval(function() {
     currentValue = InputerCode.value;
 
     if (currentValue > 0) {
