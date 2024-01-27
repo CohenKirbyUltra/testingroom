@@ -2,13 +2,11 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-var Music = new Audio();
-Music.src = "audio/music/Website_Main.mp3";
-Music.loop = true;
-Music.type = "audio/mp3";
+var Music = document.getElementById("music");
 
-Music.play();
-
+document.onload = function() {
+    Music.play();
+}
 var clicks = 0;
 var funValue;
 var randomchance = 0;
