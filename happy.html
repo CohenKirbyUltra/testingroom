@@ -23,18 +23,23 @@
 
       var Toolateforyou = new Audio();
       Toolateforyou.src = "audio/sfx/Theywillnot.wav";
-      Toolateforyou.loop = false;
+      Toolateforyou.loop = true;
       Toolateforyou.type = "audio/wav";
+
+      var x = 0;
 
       document.onvisibilitychange = () => {
         if (document.visibilityState === "hidden") {
-          window.WindowState = "normal";
-          Sfx.play();
-          window.alert("LOOK AT ME");
-          document.getElementById("happy").src = "imgs/d.png";
-          setTimeout(() => {
-              Toolateforyou.play();
-          }, 7000);
+          if (!x = 1) {
+            x = 1;
+            window.WindowState = "normal";
+            Sfx.play();
+            window.alert("LOOK AT ME");
+            document.getElementById("happy").src = "imgs/d.png";
+            setTimeout(() => {
+                Toolateforyou.play();
+            }, 3000);
+          }
         }
       };
     </script>
