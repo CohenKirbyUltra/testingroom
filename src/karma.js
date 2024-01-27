@@ -22,9 +22,12 @@ setInterval(function() {
     }  
 }, 500);
 
-window.addEventListener("keypress", function () {
-    KeyClick();
-});
+document.onKeyPress = function(e) {
+    if (e.keyCode != null) {
+        Submit();
+    }
+}
+
 document.getElementById("submithappiness").addEventListener("click", Submit);
 
 function Submit() {
@@ -44,28 +47,29 @@ function Submit() {
 }
 
 // sfx stuff
-document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
-document.getElementById("keysound").loop = false;
-document.getElementById("keysound").type = "audio/wav";
+Keyboard = new Audio():
+Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
+Keyboard.loop = false;
+Keyboard.type = "audio/wav";
 //Audio Keys
 function PlaySfx(type) {
-  document.getElementById("keysound").pause();
-  document.getElementById("keysound").currentTime = 0;
+  Keyboard.pause();
+  Keyboard.currentTime = 0;
   switch (type) {
     case 0:
-      document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
+      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";
       break;
     case 1:
-      document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key2.wav";
+      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key2.wav";
       break;
     case 2:
-      document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key3.wav";
+      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key3.wav";
       break;
     case 3:
-      document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key4.wav";
+      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key4.wav";
       break;
     case 4:
-      document.getElementById("keysound").src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key5.wav";
+      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key5.wav";
       break;
     default:
       console.log("Error, over sfx limit");
@@ -73,7 +77,7 @@ function PlaySfx(type) {
       break;
   }
   // immediately play
-  document.getElementById("keysound").play();
+  Keyboard.play();
 }
 
 // generates random number to play sfx randomly
