@@ -11,7 +11,7 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-document.addEventListener("keypress", function () {
+document.body.addEventListener("keypress", function() {
     currentValue = InputerCode.value;
 
     if (currentValue.length > 0) {
@@ -51,19 +51,19 @@ Sfx.type = "audio/wav";
 function PlaySfx(type) {
     switch(type) {
     case 0:
-            Sfx.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key1.wav";                
+            Sfx.src = "audio/sfx/key1.wav";                
             break;
     case 1:
-            Sfx.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key2.wav";  
+            Sfx.src = "audio/sfx/key2.wav";  
             break;
     case 2:
-            Sfx.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key3.wav";  
+            Sfx.src = "audio/sfx/key3.wav";  
             break;
     case 3:
-            Sfx.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key4.wav";  
+            Sfx.src = "audio/sfx/key4.wav";  
             break;
     case 4:
-            Sfx.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/key5.wav";  
+            Sfx.src = "audio/sfx/key5.wav";  
             break;
     default:
             console.log("Error, over sfx limit");
