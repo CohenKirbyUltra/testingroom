@@ -14,7 +14,7 @@ function getRndInteger(min, max) {
 document.addEventListener("keypress", function () {
     currentValue = InputerCode.value;
 
-    if (!currentValue === "" || !currentValue === null) {
+    if (currentValue.length > 0) {
         Happybtn.disabled = false;
     } else {
         Happybtn.enabled = true;
