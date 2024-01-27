@@ -60,6 +60,7 @@ function countdown() {
             clearInterval(timer);
             lost(); 
         } else {
+            document.getElementById("ticktock").play();
             window.document.title = current;
             document.getElementById("hellothere").innerHTML = current;
             console.log(current);
