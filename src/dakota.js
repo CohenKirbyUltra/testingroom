@@ -41,4 +41,4 @@ document.onvisibilitychange = () => {
           break;
       }
   }
-};
+}
