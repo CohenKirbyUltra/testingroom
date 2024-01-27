@@ -8,9 +8,6 @@ var currentValue = "";
 Happybtn.disabled = true;
 
 var Unlock = new Audio();
-Unlock.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/unlock_locket.wav";
-Unlock.loop = false;
-Unlock.type = "audio/wav";
 
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -34,6 +31,10 @@ window.addEventListener("keypress", function() {
 document.getElementById("submithappiness").addEventListener("click", Submit);
 
 function Submit() {
+  Unlock.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/unlock_locket.wav";
+  Unlock.loop = false;
+  Unlock.type = "audio/wav";
+  
     switch(currentValue) {
         case codes[0]:
             document.getElementById("locket").pause();
