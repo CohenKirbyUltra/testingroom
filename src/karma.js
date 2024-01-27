@@ -25,7 +25,7 @@ setInterval(function () {
 window.addEventListener("keypress", function () {
     KeyClick();
 });
-document.getElementById("submithappiness").onClick = function () {
+document.getElementById("submithappiness").onClick = function Submit() {
   if (!currentValue === codes[0] && !currentValue === codes[1]) {
     alert("Failure.");
     location.replace(
