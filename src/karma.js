@@ -23,9 +23,7 @@ setInterval(function() {
 }, 500);
 
 document.onKeyPress = function(e) {
-    if (e.keyCode != null) {
-        KeyClick();
-    }
+    KeyClick();
 }
 
 document.getElementById("submithappiness").addEventListener("click", Submit);
