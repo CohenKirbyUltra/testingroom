@@ -37,7 +37,7 @@ function Submit() {
 
     switch(currentValue) {
         case codes[0]:
-            document.getElementById("locket").pause();
+            document.getElementById("locket").opacity = 0;
             document.getElementById("karma").pause();
             Unlock.play();
             setTimeout(() => {
@@ -45,7 +45,7 @@ function Submit() {
             }, 2000);
             break;
         case codes[1]:
-            document.getElementById("locket").pause();
+            document.getElementById("locket").opacity = 0;
             document.getElementById("karma").pause();
             Unlock.play();
             setTimeout(() => {
@@ -55,7 +55,7 @@ function Submit() {
         default:
             Failure.play();
             window.alert("Failure.");
-            location.replace("about:blank");
+            setTimeout(function() {location.replace("about:blank");}, 1000);
             break;
     }
 }
