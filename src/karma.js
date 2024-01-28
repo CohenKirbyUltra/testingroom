@@ -37,7 +37,7 @@ function Submit() {
 
     switch(currentValue) {
         case codes[0]:
-            document.getElementById("locket").opacity = 0;
+            document.getElementById("locket").opacity = 1;
             document.getElementById("karma").pause();
             Unlock.play();
             setTimeout(() => {
@@ -45,7 +45,7 @@ function Submit() {
             }, 2000);
             break;
         case codes[1]:
-            document.getElementById("locket").opacity = 0;
+            document.getElementById("locket").opacity = 1;
             document.getElementById("karma").pause();
             Unlock.play();
             setTimeout(() => {
