@@ -8,7 +8,7 @@ var currentValue = "";
 Happybtn.disabled = true;
 
 var Unlock = new Audio();
-Unlock.preload = auto;
+Unlock.preload;
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
