@@ -14,8 +14,8 @@
         <button id="submithappiness"></button>
     </center>
   </head>
-  <body>
-    <audio id="karma" controls autoplay loop hidden>
+  <body onLoad="document.getElementById("karma").play();">
+    <audio id="karma" controls preload loop hidden>
         <source src="audio/music/Karma.mp3" type="audio/mpeg">
     </audio>
     <audio id="keysound" control loop hidden>
