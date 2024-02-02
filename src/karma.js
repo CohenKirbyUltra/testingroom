@@ -1,6 +1,6 @@
 document.getElementById("karma").play();
 
-const codes = ["109983", "722020"];
+const codes = ["109983", "722020",];
 
 var InputerCode = document.getElementById("karmainput");
 var Happybtn = document.getElementById("submithappiness");
