@@ -1,0 +1,1 @@
+The intent for this project is to practice html and css by replicating the Youtube video player page.
