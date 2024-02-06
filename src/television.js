@@ -18,7 +18,7 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-InputerCode.addEventListener("input", function () {
+document.addEventListener("input", function () {
   currentValue = InputerCode.value;
 
   if (currentValue > 0) {
@@ -40,15 +40,15 @@ function Submit() {
   switch (currentValue) {
     case codes[0]:
       videoplayer.src = "https://www.youtube.com/watch?v=RGS_ConjNXU";
-      videoplayer.load();
       videoplayer.hidden = false;
       videoplayer.play();
+      document.getElementById("vhsTV").load();
       break;
     case codes[1]:
       videoplayer.src = "https://www.youtube.com/watch?v=5E4TxH6jCwo";
-      videoplayer.load();
       videoplayer.hidden = false;
       videoplayer.play();
+      document.getElementById("vhsTV").load();
       break;
     default:
       Failure.play();
