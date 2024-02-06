@@ -42,16 +42,10 @@ document.getElementById("vhsSubmit").addEventListener("click", Submit);
 function Submit() {
   switch (currentValue) {
     case codes[0]:
-      videoplayer.src = "https://www.youtube.com/watch?v=RGS_ConjNXU";
-      videoplayer.hidden = false;
-      videoplayer.play();
-      vhsTV.load();
+      changeVideo("https://www.youtube.com/watch?v=qOawLFDMD80");
       break;
     case codes[1]:
-      videoplayer.src = "https://www.youtube.com/watch?v=5E4TxH6jCwo";
-      videoplayer.hidden = false;
-      videoplayer.play();
-      vhsTV.load();
+      changeVideo("https://www.youtube.com/watch?v=5E4TxH6jCwo");
       break;
     default:
       Failure.play();
@@ -129,4 +123,12 @@ function KeyClick() {
       alert("Actual dev error: rng over limit of sfx type");
       break;
   }
+}
+
+function changeVideo(name) {
+  const video = document.getElementById("vhsTV");
+  const source = document.getElementById("videoplater");
+
+  source.setAttribute("src", name);
+  video.load();
 }
