@@ -7,6 +7,7 @@ Music.src = "audio/music/Website_Off.mp3";
 
 var mainMusic = new Audio();
 mainMusic.src = "audio/music/Website_Main.mp3";
+mainMusic.type = "audio/mpeg";
 mainMusic.loop = true;
 
 mainMusic.play();

@@ -1,5 +1,6 @@
 var Noise = new Audio();
 Noise.src = "audio/sfx/Static.mp3";
+Noise.type = "audio/mpeg";
 Noise.loop = true;
 Noise.volume = 0.5;
 
