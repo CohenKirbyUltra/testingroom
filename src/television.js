@@ -18,7 +18,7 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-setInterval(function () {
+document.addEventListener("input", function () {
   currentValue = InputerCode.value;
 
   if (currentValue > 0) {
@@ -28,7 +28,7 @@ setInterval(function () {
     Happybtn.enabled = true;
     Happybtn.innerHTML = "...";
   }
-}, 500);
+});
 
 window.addEventListener("keypress", function () {
   KeyClick();
