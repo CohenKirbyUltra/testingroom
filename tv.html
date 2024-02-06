@@ -4,7 +4,7 @@
     <meta charset=“UTF-8”>
     <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
     <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
-    <link rel="icon" type="image/x-icon" href="imgs/Test1.png">
+    <link rel="icon" type="image/x-icon" href="imgs/Smile.png">
     <style rel="stylesheet">
         body {
             background-color: #000000;
@@ -55,23 +55,43 @@
             overflow: hidden;
             opacity: 0.8;            
         }
+
+    input {
+    border-width: 3px;
+    border-radius: 3px;
+    border-color: red;
+    color: red;
+    background-color: maroon;
+    }
+
+    button {
+    border-width: 3px;
+    border-radius: 3px;
+    border-color: red;
+    color: red;
+    background-color: maroon;
+    }
+
     </style>
     <title>TV</title>
   </head>
 
   <body>
-    <script src="src/television.js">
-    </script>
-    
     <center>
         <div>
             <img src="imgs/tv.png" class="container"/>
             <img src="imgs/static.gif" class="fuzz"/>
-            <video class="videoplayer" id="vhsplayer" controls>
+            <video class="videoplayer" hidden="true" id="vhsplayer" controls>
                 <source src="https://www.youtube.com/watch?v=rbHjoFTNIbE">
                 Your browser does not support the video tag.
             </video>
+            <br>
+            <input type="input" id="vhsinput" class="vhsInput"></input>
+            <br>
+            <button id="vhsSubmit"></button>
         </div>
     </center>
+    <script src="src/television.js">
+    </script>
   </body>
 </html>
