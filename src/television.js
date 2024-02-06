@@ -12,7 +12,8 @@ const codes = ["15", "1777"];
 
 var InputerCode = document.getElementById("vhsInput");
 var Happybtn = document.getElementById("vhsSubmit");
-var videoplayer = document.getElementById("videoplayer");
+var vhsTV = document.getElementById("vhsTV");
+var videoplayer = vhsTV.getElementById("videoplayer");
 var currentValue = "";
 Happybtn.disabled = true;
 
@@ -44,13 +45,13 @@ function Submit() {
       videoplayer.src = "https://www.youtube.com/watch?v=RGS_ConjNXU";
       videoplayer.hidden = false;
       videoplayer.play();
-      document.getElementById("vhsTV").load();
+      vhsTV.load();
       break;
     case codes[1]:
       videoplayer.src = "https://www.youtube.com/watch?v=5E4TxH6jCwo";
       videoplayer.hidden = false;
       videoplayer.play();
-      document.getElementById("vhsTV").load();
+      vhsTV.load();
       break;
     default:
       Failure.play();
