@@ -10,7 +10,7 @@ const codes = ["15", "1777"];
 
 var InputerCode = document.getElementById("vhsInput");
 var Happybtn = document.getElementById("vhsSubmit");
-var TV = document.getElementById("videoplayer");
+var videoplayer = document.getElementById("videoplayer");
 var currentValue = "";
 Happybtn.disabled = true;
 
@@ -18,7 +18,7 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-document.addEventListener("input", function () {
+InputerCode.addEventListener("input", function () {
   currentValue = InputerCode.value;
 
   if (currentValue > 0) {
