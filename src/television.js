@@ -40,11 +40,13 @@ function Submit() {
   switch (currentValue) {
     case codes[0]:
       vhsplayer.src = "https://www.youtube.com/watch?v=RGS_ConjNXU";
+      vhsplayer.load();
       vhsplayer.hidden = false;
       vhsplayer.play();
       break;
     case codes[1]:
       vhsplayer.src = "https://www.youtube.com/watch?v=5E4TxH6jCwo";
+      vhsplayer.load();
       vhsplayer.hidden = false;
       vhsplayer.play();
       break;
