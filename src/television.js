@@ -1,10 +1,12 @@
 var Noise = new Audio();
-Noise.src = "audio/sfx/Static.mp3";
 Noise.type = "audio/mpeg";
+Noise.src = "audio/sfx/Static.mp3";
 Noise.loop = true;
 Noise.volume = 0.5;
 
-Noise.play();
+document.body.onLoad = function () {
+  Noise.play();
+};
 
 const codes = ["15", "1777"];
 
