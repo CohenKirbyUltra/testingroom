@@ -22,7 +22,7 @@ const text = [
 ];
 
 document.onload = function () {
-  document.getElementById("music").play();
+  mainMusic.play();
 };
 
 //arg chance
