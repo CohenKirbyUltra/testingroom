@@ -26,15 +26,15 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-document.addEventListener("keypress", function () {
+InputerCode.addEventListener("input", function () {
   currentValue = InputerCode.value;
 
   if (currentValue > 0) {
     Happybtn.disabled = false;
-    Happybtn.innerHTML = "Play";
+    Happybtn.innerHTML = "Load";
   } else {
     Happybtn.enabled = true;
-    Happybtn.innerHTML = "...";
+    Happybtn.innerHTML = "Load";
   }
 });
 
@@ -58,10 +58,7 @@ function Submit() {
       break;
     default:
       Failure.play();
-      window.alert("Failure.");
-      setTimeout(function () {
-        location.replace("about:blank");
-      }, 1000);
+      window.alert("Invaild");
       break;
   }
 }
@@ -135,6 +132,8 @@ function KeyClick() {
 }
 
 function changeVideo(name) {
+  Happybtn.enabled = true;
+  Happybtn.innerHTML = "Loading...";
   vhsTV.getElementsByTagName("source")[0].setAttribute("src", name);
   vhsTV.load();
   vhsTV.play();
