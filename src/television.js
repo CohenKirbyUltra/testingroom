@@ -13,7 +13,7 @@ const codes = ["15", "1777"];
 var InputerCode = document.getElementById("vhsInput");
 var Happybtn = document.getElementById("vhsSubmit");
 var vhsTV = document.getElementById("vhsTV");
-var videoplayer = vhsTV.getElementById("videoplayer");
+var videoplayer = vhsTV.getElementsByTagName("source")[0];
 var currentValue = "";
 Happybtn.disabled = true;
 
