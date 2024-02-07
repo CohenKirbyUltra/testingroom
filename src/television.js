@@ -42,10 +42,10 @@ document.getElementById("vhsSubmit").addEventListener("click", Submit);
 function Submit() {
   switch (currentValue) {
     case codes[0]:
-      changeVideo("https://www.youtube.com/watch?v=qOawLFDMD80");
+      changeVideo("Campus15");
       break;
     case codes[1]:
-      changeVideo("https://www.youtube.com/watch?v=5E4TxH6jCwo");
+      changeVideo("Room1777");
       break;
     default:
       Failure.play();
@@ -129,7 +129,7 @@ function changeVideo(name) {
   const video = document.getElementById("vhsTV");
   const source = document.getElementById("videoplayer");
 
-  source.setAttribute("src", name);
+  source.setAttribute("src", "video/" + name);
   video.hidden = false;
   video.load();
 }
