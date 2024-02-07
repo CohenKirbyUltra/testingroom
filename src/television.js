@@ -17,6 +17,11 @@ var videoplayer = vhsTV.getElementsByTagName("source")[0];
 var currentValue = "";
 Happybtn.disabled = true;
 
+var Failure = new Audio();
+Failure.src = "audio/sfx/Failure.wav";
+Failure.loop = false;
+Failure.type = "audio/wav";
+
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }

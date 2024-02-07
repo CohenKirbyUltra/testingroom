@@ -1,30 +1,35 @@
 document.getElementById("karma").play();
 
-const codes = ["109983", "722020",];
+const codes = ["109983", "722020"];
 
 var InputerCode = document.getElementById("karmainput");
 var Happybtn = document.getElementById("submithappiness");
 var currentValue = "";
 Happybtn.disabled = true;
 
+var Failure = new Audio();
+Failure.src = "audio/sfx/Failure.wav";
+Failure.loop = false;
+Failure.type = "audio/wav";
+
 var Unlock = new Audio();
 Unlock.preload;
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-setInterval(function() {
-    currentValue = InputerCode.value;
+setInterval(function () {
+  currentValue = InputerCode.value;
 
-    if (currentValue > 0) {
-      Happybtn.disabled = false;
-      Happybtn.innerHTML = "Happy";
-    } else {
-      Happybtn.enabled = true;
-      Happybtn.innerHTML = "...";
-    }  
+  if (currentValue > 0) {
+    Happybtn.disabled = false;
+    Happybtn.innerHTML = "Happy";
+  } else {
+    Happybtn.enabled = true;
+    Happybtn.innerHTML = "...";
+  }
 }, 500);
 
-window.addEventListener("keypress", function() {
+window.addEventListener("keypress", function () {
   KeyClick();
 });
 
@@ -35,54 +40,66 @@ function Submit() {
   Unlock.loop = false;
   Unlock.type = "audio/wav";
 
-    switch(currentValue) {
-        case codes[0]:
-            document.getElementById("locket").hidden = true;
-            document.getElementById("karma").pause();
-            Unlock.play();
-            setTimeout(() => {
-              location.replace("https://cohenkirbyultra.github.io/testingroom/pages/smile/Cohen.html");        
-            }, 2000);
-            break;
-        case codes[1]:
-            document.getElementById("locket").hidden = true;
-            document.getElementById("karma").pause();
-            Unlock.play();
-            setTimeout(() => {
-              location.replace("https://cohenkirbyultra.github.io/testingroom/happy.html");        
-            }, 2000);
-            break;
-        default:
-            Failure.play();
-            window.alert("Failure.");
-            setTimeout(function() {location.replace("about:blank");}, 1000);
-            break;
-    }
+  switch (currentValue) {
+    case codes[0]:
+      document.getElementById("locket").hidden = true;
+      document.getElementById("karma").pause();
+      Unlock.play();
+      setTimeout(() => {
+        location.replace(
+          "https://cohenkirbyultra.github.io/testingroom/pages/smile/Cohen.html",
+        );
+      }, 2000);
+      break;
+    case codes[1]:
+      document.getElementById("locket").hidden = true;
+      document.getElementById("karma").pause();
+      Unlock.play();
+      setTimeout(() => {
+        location.replace(
+          "https://cohenkirbyultra.github.io/testingroom/happy.html",
+        );
+      }, 2000);
+      break;
+    default:
+      Failure.play();
+      window.alert("Failure.");
+      setTimeout(function () {
+        location.replace("about:blank");
+      }, 1000);
+      break;
+  }
 }
 
 // sfx stuff
 
 var Keyboard = new Audio();
-Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key1.wav";
+Keyboard.src =
+  "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key1.wav";
 Keyboard.loop = false;
 Keyboard.type = "audio/wav";
 //Audio Keys
 function PlaySfx(type) {
   switch (type) {
     case 0:
-      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key1.wav";
+      Keyboard.src =
+        "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key1.wav";
       break;
     case 1:
-      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key2.wav";
+      Keyboard.src =
+        "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key2.wav";
       break;
     case 2:
-      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key3.wav";
+      Keyboard.src =
+        "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key3.wav";
       break;
     case 3:
-      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key4.wav";
+      Keyboard.src =
+        "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key4.wav";
       break;
     case 4:
-      Keyboard.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key5.wav";
+      Keyboard.src =
+        "https://cohenkirbyultra.github.io/testingroom/audio/sfx/Key5.wav";
       break;
     default:
       console.log("Error, over sfx limit");
