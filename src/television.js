@@ -127,7 +127,7 @@ function KeyClick() {
 
 function changeVideo(name) {
   const video = document.getElementById("vhsTV");
-  const source = document.getElementById("videoplater");
+  const source = document.getElementById("videoplayer");
 
   source.setAttribute("src", name);
   video.load();
