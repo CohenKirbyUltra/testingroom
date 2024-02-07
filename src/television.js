@@ -21,7 +21,7 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-document.addEventListener("input", function () {
+document.addEventListener("keypress", function () {
   currentValue = InputerCode.value;
 
   if (currentValue > 0) {
@@ -130,5 +130,6 @@ function changeVideo(name) {
   const source = document.getElementById("videoplayer");
 
   source.setAttribute("src", name);
+  video.hidden = false;
   video.load();
 }
