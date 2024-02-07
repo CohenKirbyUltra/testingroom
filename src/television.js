@@ -42,10 +42,14 @@ document.getElementById("vhsSubmit").addEventListener("click", Submit);
 function Submit() {
   switch (currentValue) {
     case codes[0]:
-      changeVideo("Campus15");
+      changeVideo(
+        "https://cohenkirbyultra.github.io/testingroom/video/Campus15.mp4",
+      );
       break;
     case codes[1]:
-      changeVideo("Room1777");
+      changeVideo(
+        "https://cohenkirbyultra.github.io/testingroom/video/Room1777.mp4",
+      );
       break;
     default:
       Failure.play();
@@ -126,10 +130,7 @@ function KeyClick() {
 }
 
 function changeVideo(name) {
-  const video = document.getElementById("vhsTV");
-  const source = document.getElementById("videoplayer");
-
-  source.setAttribute("src", "video/" + name);
-  video.hidden = false;
-  video.load();
+  vhsTV.getElementsByTagName("source")[0].setAttribute("src", name);
+  vhsTV.load();
+  vhsTV.play();
 }
