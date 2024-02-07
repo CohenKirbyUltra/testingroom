@@ -73,13 +73,13 @@
             background-color: #4a1604;
     }
 
-    button {
+    .button {
             position: absolute;
             width: 7.5%;
             height: 5%;
             top: 50%;
             left: 70%;
-            transform: translate(-53%, -400%);
+            transform: translate(-53%, -100%);
             z-index: 11;
             overflow: hidden;
             opacity: 1; 
@@ -138,7 +138,7 @@
             <br>
             <input type="input" id="vhsInput" maxlength="12"></input>
             <br>
-            <button id="vhsSubmit">Load</button>
+            <button id="vhsSubmit" class="button">Load</button>
             <br>
             <button id="vhsNext" class="next" onclick="vhsTV.currentTime+=10;">+10 Seconds</button><button id="vhsPrev" class="previous" onclick="vhsTV.currentTime-=10;">-10 Seconds</button>
         </div>
