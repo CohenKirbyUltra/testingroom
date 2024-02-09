@@ -11,7 +11,7 @@ mainMusic.src = "audio/music/Website_Main.mp3";
 mainMusic.type = "audio/mpeg";
 mainMusic.loop = true;
 
-mainMusic.play();
+document.onload = mainMusic.play();
 
 var GONER = new Audio();
 GONER.type = "audio/mpeg";
@@ -49,7 +49,18 @@ setInterval(function () {
   }
 }, 5000);
 
-document.getElementById("titlescreen").addEventListener("click", check); // Randomizes the chance of getting rare screen
+document.getElementById("titlescreen").addEventListener("click", titleClick); // Randomizes the chance of getting rare screen
+
+var scary = 206;
+
+// ooOOoooOO scary transition.......
+function titleClick() {
+  check();
+
+  mainMusic.playbackRate += 0.05;
+
+  document.body.style.backgroundColor = rgb(scary++, 116, 6);
+}
 
 function check() {
   clicks += 1;
@@ -60,13 +71,15 @@ function check() {
     createHappy();
   }
 
-  if (clicks === 40) {
+  if (clicks === 100) {
     mainMusic.pause();
     window.document.title = "Leave";
     window.alert("Stop.");
-    document
-      .querySelectorAll("center")
-      .forEach((index) => (index.innerHTML = "LEAVE"));
+    for (const child of document.children) {
+      if (child !== ("style" || "script")) {
+        child.innerHTML = "LEAVE";
+      }
+    }
     setInterval(function () {
       Music.pause();
       Music.currentTime = 40.5;
