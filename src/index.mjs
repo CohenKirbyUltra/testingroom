@@ -38,9 +38,7 @@ const text = [
   document.getElementById("text2"),
 ];
 
-document.onload = function () {
-  mainMusic.play();
-};
+mainMusic.play();
 
 //arg chance
 setInterval(function () {
@@ -83,7 +81,7 @@ function titleClick() {
   } else {
     scaryColors[1] += -1;
   }
-  
+
   if (scarycolors[2] < 0) {
     scaryColors[2] = 0;
   } else {
