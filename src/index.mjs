@@ -72,9 +72,23 @@ function titleClick() {
 
   document.body.style.backgroundColor = rgb(scaryColors[0], scaryColors[1], scaryColors[2]);
   
-  scaryColors[0]+=0.05;
-  scaryColors[1]+=0.05;
-  scaryColors[2]+=0.05;
+  if (scarycolors[0] > 255) {
+    scaryColors[0] = 255;
+  } else {
+    scaryColors[0] += 1;
+  }
+
+  if (scarycolors[1] < 0) {
+    scaryColors[1] = 0;
+  } else {
+    scaryColors[1] += -1;
+  }
+  
+  if (scarycolors[2] < 0) {
+    scaryColors[2] = 0;
+  } else {
+    scaryColors[2] += -1;
+  }
 }
 
 function check() {
@@ -91,7 +105,7 @@ function check() {
     window.document.title = "Leave";
     window.alert("Stop.");
     for (let i = 0; i < 5; i++) {
-      for (const child of allElements[1]) {
+      for (const child of allElements[i]) {
         child.innerHTML = "LEAVE";
       }
     }
