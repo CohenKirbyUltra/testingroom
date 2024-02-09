@@ -73,19 +73,19 @@ function titleClick() {
   if (scarycolors[0] > 255) {
     scaryColors[0] = 255;
   } else {
-    scaryColors[0] += 1;
+    scaryColors[0] += 3;
   }
 
   if (scarycolors[1] < 0) {
     scaryColors[1] = 0;
   } else {
-    scaryColors[1] += -1;
+    scaryColors[1] += -5;
   }
 
   if (scarycolors[2] < 0) {
     scaryColors[2] = 0;
   } else {
-    scaryColors[2] += -1;
+    scaryColors[2] += -5;
   }
 }
 
