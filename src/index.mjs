@@ -3,6 +3,7 @@ function getRndInteger(min, max) {
 }
 
 var Music = new Audio();
+Music.type = "audio/mpeg";
 Music.src = "audio/music/Website_Off.mp3";
 
 var mainMusic = new Audio();
@@ -11,6 +12,11 @@ mainMusic.type = "audio/mpeg";
 mainMusic.loop = true;
 
 mainMusic.play();
+
+var GONER = new Audio();
+GONER.type = "audio/mpeg";
+GONER.src = "audio/sfx/GONER.mp3";
+GONER.loop = false;
 
 var clicks = 0;
 var funValue;
@@ -30,7 +36,7 @@ setInterval(function () {
   randomchance = getRndInteger(40, 80);
 
   if (randomchance === 80) {
-    document.getElementById("goner").play();
+    GONER.play();
     text[0].innerHTML =
       "A webpa<u>G</u>e dedacated t<u>O</u> the local testing room!";
     text[1].innerHTML =
