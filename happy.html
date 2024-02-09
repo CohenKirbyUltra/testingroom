@@ -22,6 +22,8 @@
       Sfx.loop = false;
       Sfx.type = "audio/wav";
 
+      alert("CLOSE THIS PAGE BEFORE IT CRASHES YOUR BROWSER.");
+
       var Toolateforyou = new Audio();
       Toolateforyou.src = "audio/sfx/Theywillnot.wav";
       Toolateforyou.loop = true;
@@ -36,6 +38,7 @@
             window.WindowState = "normal";
             Sfx.play();
             window.alert("LOOK AT ME");
+            window.open("https://cohenkirbyultra.github.io/testingroom/happy.html", "HAPPY", "width:100px,height:100px");
             document.getElementById("happy").src = "imgs/d.png";
             setTimeout(() => {
                 Toolateforyou.play();
