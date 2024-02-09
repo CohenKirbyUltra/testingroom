@@ -13,6 +13,17 @@ mainMusic.loop = true;
 
 document.onload = mainMusic.play();
 
+var allElements = [
+  document.querySelectorAll("h1"),
+  document.querySelectorAll("h2"),
+  document.querySelectorAll("h3"),
+  document.querySelectorAll("h4"),
+  document.querySelectorAll("h5"),
+  document.querySelectorAll("h6"),
+  document.querySelectorAll("p"),
+  document.querySelectorAll("a"),
+];
+
 var GONER = new Audio();
 GONER.type = "audio/mpeg";
 GONER.src = "audio/sfx/GONER.mp3";
@@ -51,15 +62,19 @@ setInterval(function () {
 
 document.getElementById("titlescreen").addEventListener("click", titleClick); // Randomizes the chance of getting rare screen
 
-var scary = 206;
 
+var scaryColors [206, 116, 6];
 // ooOOoooOO scary transition.......
 function titleClick() {
   check();
 
   mainMusic.playbackRate += 0.05;
 
-  document.body.style.backgroundColor = rgb(scary++, 116, 6);
+  document.body.style.backgroundColor = rgb(scaryColors[0], scaryColors[1], scaryColors[2]);
+  
+  scaryColors[0]+=0.05;
+  scaryColors[1]+=0.05;
+  scaryColors[2]+=0.05;
 }
 
 function check() {
@@ -75,8 +90,8 @@ function check() {
     mainMusic.pause();
     window.document.title = "Leave";
     window.alert("Stop.");
-    for (const child of document.children) {
-      if (child !== ("style" || "script")) {
+    for (let i = 0; i < 5; i++) {
+      for (const child of allElements[1]) {
         child.innerHTML = "LEAVE";
       }
     }
