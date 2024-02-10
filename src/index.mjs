@@ -89,7 +89,7 @@ function titleClick() {
     scaryColors[2] += -5;
   }
 }
-
+// bleh
 function check() {
   clicks += 1;
   let Fun = getRndInteger(0, 30);
