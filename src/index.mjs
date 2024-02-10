@@ -65,7 +65,7 @@ var scaryColors = [206, 116, 6];
 function titleClick() {
   check();
 
-  mainMusic.playbackRate += 0.05;
+  mainMusic.playbackRate -= 0.00001;
 
   document.body.style.backgroundColor =
     "rgb(scaryColors[0], scaryColors[1], scaryColors[2])";
