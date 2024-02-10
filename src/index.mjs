@@ -151,8 +151,15 @@ function createHappy() {
       bounce.win = window.open(
         "happy.html",
         "IMSOHAPPY",
-        "width:" + bounce.w,
-        "height:" + bounce.h,
+        "left=" +
+          bounce.x +
+          ",top=" +
+          bounce.y +
+          ",width=" +
+          bounce.w +
+          ",height=" +
+          bounce.h +
+          ",status=yes",
       );
 
       // Use setInterval() to call the nextFrame() method every interval
