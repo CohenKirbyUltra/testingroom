@@ -11,7 +11,9 @@ mainMusic.src = "audio/music/Website_Main.mp3";
 mainMusic.type = "audio/mpeg";
 mainMusic.loop = true;
 
-document.onload = mainMusic.play();
+document.onload = function () {
+  mainMusic.play();
+};
 
 var allElements = [
   document.querySelectorAll("h1"),
