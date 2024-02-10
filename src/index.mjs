@@ -68,24 +68,24 @@ function titleClick() {
   mainMusic.playbackRate -= 0.00001;
 
   document.body.style.backgroundColor =
-    "rgb(scaryColors[0], scaryColors[1], scaryColors[2])";
+    "rgb(scaryColors[0], scaryColors[1], scaryColors[2]);";
 
   if (scaryColors[0] > 255) {
     scaryColors[0] = 255;
   } else {
-    scaryColors[0] += 3;
+    scaryColors[0] += 5;
   }
 
   if (scaryColors[1] < 0) {
     scaryColors[1] = 0;
   } else {
-    scaryColors[1] += -5;
+    scaryColors[1] += -10;
   }
 
   if (scaryColors[2] < 0) {
     scaryColors[2] = 0;
   } else {
-    scaryColors[2] += -5;
+    scaryColors[2] += -10;
   }
 }
 // bleh
