@@ -63,29 +63,35 @@ document.getElementById("titlescreen").addEventListener("click", titleClick); //
 var scaryColors = [206, 116, 6];
 // ooOOoooOO scary transition.......
 function titleClick() {
+  let scaryVaild = 0;
   check();
 
   mainMusic.playbackRate -= 0.00001;
 
-  document.body.style.backgroundColor =
-    "rgb(scaryColors[0], scaryColors[1], scaryColors[2]);";
-
   if (scaryColors[0] > 255) {
     scaryColors[0] = 255;
   } else {
+    scaryVaild++;
     scaryColors[0] += 5;
   }
 
   if (scaryColors[1] < 0) {
     scaryColors[1] = 0;
   } else {
+    scaryVaild++;
     scaryColors[1] += -10;
   }
 
   if (scaryColors[2] < 0) {
     scaryColors[2] = 0;
   } else {
+    scaryVaild++;
     scaryColors[2] += -10;
+  }
+
+  if (scaryVaild === 3) {
+    document.body.style.backgroundColor =
+      "rgb(scaryColors[0], scaryColors[1], scaryColors[2]);";
   }
 }
 // bleh
