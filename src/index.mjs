@@ -70,7 +70,7 @@ function titleClick() {
   document.body.style.backgroundColor =
     "rgb(scaryColors[0], scaryColors[1], scaryColors[2])";
 
-  if (scarycolors[0] > 255) {
+  if (scaryColors[0] > 255) {
     scaryColors[0] = 255;
   } else {
     scaryColors[0] += 3;
@@ -82,7 +82,7 @@ function titleClick() {
     scaryColors[1] += -5;
   }
 
-  if (scarycolors[2] < 0) {
+  if (scaryColors[2] < 0) {
     scaryColors[2] = 0;
   } else {
     scaryColors[2] += -5;
