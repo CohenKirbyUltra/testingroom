@@ -38,8 +38,6 @@ const text = [
   document.getElementById("text2"),
 ];
 
-mainMusic.play();
-
 //arg chance
 setInterval(function () {
   randomchance = getRndInteger(40, 80);
