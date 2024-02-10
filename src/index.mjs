@@ -74,7 +74,7 @@ function titleClick() {
     scaryColors[0] += 3;
   }
 
-  if (scarycolors[1] < 0) {
+  if (scaryColors[1] < 0) {
     scaryColors[1] = 0;
   } else {
     scaryColors[1] += -5;
