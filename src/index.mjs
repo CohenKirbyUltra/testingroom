@@ -22,6 +22,8 @@ var allElements = [
   document.querySelectorAll("h6"),
   document.querySelectorAll("p"),
   document.querySelectorAll("a"),
+  document.querySelectorAll("b"),
+  document.querySelectorAll("i"),
 ];
 
 var GONER = new Audio();
