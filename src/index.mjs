@@ -58,16 +58,19 @@ setInterval(function () {
 
 document.getElementById("titlescreen").addEventListener("click", titleClick); // Randomizes the chance of getting rare screen
 
-
-var scaryColors [206, 116, 6];
+var scaryColors = [206, 116, 6];
 // ooOOoooOO scary transition.......
 function titleClick() {
   check();
 
   mainMusic.playbackRate += 0.05;
 
-  document.body.style.backgroundColor = rgb(scaryColors[0], scaryColors[1], scaryColors[2]);
-  
+  document.body.style.backgroundColor = rgb(
+    scaryColors[0],
+    scaryColors[1],
+    scaryColors[2],
+  );
+
   if (scarycolors[0] > 255) {
     scaryColors[0] = 255;
   } else {
