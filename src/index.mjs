@@ -130,10 +130,13 @@ function check() {
         child.innerHTML = "LEAVE";
       }
     }
+    let gonertext = "YOU ARE A GONER";
     setInterval(function () {
       Music.pause();
       Music.currentTime = 40.5;
       Music.play();
+      document.getElementById("scrollg").innerHTML = gonertext;
+      gonertext += " YOU ARE A GONER ";
       const para = document.createElement("h6");
       para.innerText = "LEAVE";
       document.body.appendChild(para);
