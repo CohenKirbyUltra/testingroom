@@ -153,7 +153,7 @@ function createHappy() {
     h: 400, // Window position and size
     dx: 5,
     dy: 5, // Window velocity
-    interval: 100, // Milliseconds between updates
+    interval: 10, // Milliseconds between updates
     win: null, // The window we will create
     timer: null, // Return value of setInterval()
 
