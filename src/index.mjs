@@ -210,7 +210,7 @@ function createHappy() {
         gone.type = "audio/mpeg";
         gone.loop = false;
         gone.src = "sounds/gone.mp3";
-        gone.playbackRate = o;
+        gone.playbackRate += o;
         gone.play();
         o += o;
         alert(":)");
