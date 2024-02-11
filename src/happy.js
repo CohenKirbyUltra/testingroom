@@ -62,7 +62,6 @@ window.onclick = () => {
 let update = setInterval(() => {
   if (clicks > 10) {
     window.WindowState = "fullscreen";
-    update.clearInterval();
     document.getElementById("happy").src = "imgs/Jumpscare.png";
     document.getElementById("happy").style = "width:100%;height:100%;";
 
