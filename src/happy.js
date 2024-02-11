@@ -45,9 +45,11 @@ jumpscare.type = "audio/mpeg";
 var clicks = 0;
 
 window.onclick = () => {
-  clicks++;  
-  alert("D O    N  T      P   O   KE      T     H  E      B   E      A R.. .    .");
-}
+  clicks++;
+  alert(
+    "D O    N  T      P   O   KE      T     H  E      B   E      A R.. .    .",
+  );
+};
 
 let update = setInterval(() => {
   if (clicks > 10) {
@@ -81,4 +83,4 @@ let update = setInterval(() => {
   } else {
     window.WindowState = "normal";
   }
-};
+});
