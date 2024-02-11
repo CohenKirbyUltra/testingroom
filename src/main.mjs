@@ -1,3 +1,15 @@
+document.onmousemove = function (event) {
+  mainMusic.pause();
+  window.document.title = "Leave";
+  window.alert("Wakeup.");
+  document.getElementById("titlescreen").src = "imgs/CTR_LEAVE.png";
+  for (let i = 0; i < 5; i++) {
+    for (const child of allElements[i]) {
+      child.innerHTML = "wake up disjoined";
+    }
+  }
+};
+
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
