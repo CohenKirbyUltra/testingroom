@@ -180,6 +180,15 @@ function createHappy() {
           ",status=yes",
       );
 
+      bounce.win.onbeforeunload = function () {
+        let gone = new Audio();
+        gone.type = "audio/mpeg";
+        gone.loop = false;
+        gone.src = "sounds/gone.mp3";
+
+        gone.play();
+      };
+
       // Use setInterval() to call the nextFrame() method every interval
       // milliseconds. Store the return value so that we can stop the
       // animation by passing it to clearInterval().
