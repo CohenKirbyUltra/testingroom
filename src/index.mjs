@@ -79,12 +79,12 @@ function titleClick() {
 
   mainMusic.playbackRate -= 0.01;
 
-  if (scaryColors[0] > 254) {
+  if (scaryColors[0] < 1) {
     scaryVaild[0] = false;
-    scaryColors[0] = 255;
+    scaryColors[0] = 0;
   } else {
     scaryVaild[0] = true;
-    scaryColors[0] += 1;
+    scaryColors[0] += -1;
   }
 
   if (scaryColors[1] < 1) {
@@ -123,7 +123,7 @@ function check() {
   if (clicks === 100) {
     mainMusic.pause();
     window.document.title = "Leave";
-    window.alert("Stop.");
+    window.alert("You have been called.");
     document.getElementById("titlescreen").src = "imgs/CTR_LEAVE.png";
     for (let i = 0; i < 5; i++) {
       for (const child of allElements[i]) {
