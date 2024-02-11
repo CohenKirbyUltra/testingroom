@@ -104,8 +104,8 @@ function titleClick() {
 
   let color = RGB2HTML(scaryColors[0], scaryColors[1], scaryColors[2]);
 
-  document.body.style.backgroundColor = color;
-  document.html.style.color = color;
+  document.body.style.backgroundColor = color.toString();
+  document.html.style.color = color.toString();
 
   console.log(scaryColors);
   console.log(RGB2HTML(scaryColors[0], scaryColors[1], scaryColors[2]));
