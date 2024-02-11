@@ -65,7 +65,7 @@ setInterval(function () {
 
 document.getElementById("titlescreen").addEventListener("click", titleClick); // Randomizes the chance of getting rare screen
 
-var scaryColors = [2, 1, 6];
+var scaryColors = [206, 100, 6];
 var scaryVaild = [true, true, true];
 // ooOOoooOO scary transition.......
 function titleClick() {
@@ -79,7 +79,7 @@ function titleClick() {
     scaryColors[0] = 255;
   } else {
     scaryVaild[0] = true;
-    scaryColors[0] += 2;
+    scaryColors[0] += 1;
   }
 
   if (scaryColors[1] < 1) {
@@ -87,14 +87,14 @@ function titleClick() {
     scaryColors[1] = 0;
   } else {
     scaryVaild[1] = true;
-    scaryColors[1] += -10;
+    scaryColors[1] += -1;
   }
 
   if (scaryColors[2] < 1) {
     scaryVaild[2] = false;
     scaryColors[2] = 0;
   } else {
-    scaryColors[2] += -10;
+    scaryColors[2] += -0.1;
   }
 
   let color = RGB2HTML(scaryColors[0], scaryColors[1], scaryColors[2]);
@@ -153,7 +153,7 @@ function createHappy() {
     h: 400, // Window position and size
     dx: 5,
     dy: 5, // Window velocity
-    interval: 10, // Milliseconds between updates
+    interval: getRndInteger(5, 100), // Milliseconds between updates
     win: null, // The window we will create
     timer: null, // Return value of setInterval()
 

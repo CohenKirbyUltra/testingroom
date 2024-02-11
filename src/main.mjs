@@ -5,7 +5,7 @@ document.onmousemove = function (event) {
   document.getElementById("titlescreen").src = "imgs/CTR_LEAVE.png";
   for (let i = 0; i < 5; i++) {
     for (const child of allElements[i]) {
-      child.innerHTML = "wake up disjoined";
+      child.innerHTML = "wake up";
     }
   }
 };
@@ -77,7 +77,7 @@ setInterval(function () {
 
 document.getElementById("titlescreen").addEventListener("click", titleClick); // Randomizes the chance of getting rare screen
 
-var scaryColors = [2, 1, 6];
+var scaryColors = [200, 100, 6];
 var scaryVaild = [true, true, true];
 // ooOOoooOO scary transition.......
 function titleClick() {
@@ -91,7 +91,7 @@ function titleClick() {
     scaryColors[0] = 255;
   } else {
     scaryVaild[0] = true;
-    scaryColors[0] += 2;
+    scaryColors[0] += 1;
   }
 
   if (scaryColors[1] < 1) {
@@ -99,14 +99,14 @@ function titleClick() {
     scaryColors[1] = 0;
   } else {
     scaryVaild[1] = true;
-    scaryColors[1] += -10;
+    scaryColors[1] += -0.1;
   }
 
   if (scaryColors[2] < 1) {
     scaryVaild[2] = false;
     scaryColors[2] = 0;
   } else {
-    scaryColors[2] += -10;
+    scaryColors[2] += -1;
   }
 
   let color = RGB2HTML(scaryColors[0], scaryColors[1], scaryColors[2]);
