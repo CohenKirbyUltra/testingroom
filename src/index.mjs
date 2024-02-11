@@ -77,7 +77,7 @@ function titleClick() {
   check();
   scaryVaild = 0;
 
-  mainMusic.playbackRate -= 0.001;
+  mainMusic.playbackRate -= 0.01;
 
   if (scaryColors[0] > 254) {
     scaryVaild[0] = false;
