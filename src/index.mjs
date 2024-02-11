@@ -2,6 +2,11 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+function RGB2HTML(red, green, blue) {
+  var decColor = 0x1000000 + blue + 0x100 * green + 0x10000 * red;
+  return "#" + decColor.toString(16).substr(1);
+}
+
 var Music = new Audio();
 Music.type = "audio/mpeg";
 Music.src = "audio/music/Website_Off.mp3";
@@ -67,7 +72,7 @@ function titleClick() {
   check();
   scaryVaild = 0;
 
-  mainMusic.playbackRate -= 0.00001;
+  mainMusic.playbackRate -= 0.0001;
 
   if (scaryColors[0] > 254) {
     scaryVaild[0] = false;
@@ -92,13 +97,13 @@ function titleClick() {
     scaryColors[2] += -10;
   }
 
-  let color = rgb(scaryColors[0], scaryColors[1], scaryColors[2]);
+  let color = RGB2HTML(scaryColors[0], scaryColors[1], scaryColors[2]);
 
   document.body.style.backgroundColor = color;
   document.html.style.color = color;
 
   console.log(scaryColors);
-  console.log(rgb(scaryColors[0], scaryColors[1], scaryColors[2]));
+  console.log(RGB2HTML(scaryColors[0], scaryColors[1], scaryColors[2]));
 }
 // bleh
 function check() {
