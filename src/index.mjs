@@ -2,7 +2,7 @@ var Failure = new Audio();
 Failure.src = "audio/sfx/Failure.wav";
 Failure.loop = false;
 Failure.type = "audio/wav";
-
+var o = 0.05;
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -210,8 +210,10 @@ function createHappy() {
         gone.type = "audio/mpeg";
         gone.loop = false;
         gone.src = "sounds/gone.mp3";
-
+        gone.playbackRate = o;
         gone.play();
+        o += o;
+        alert(":)");
         return;
       }
 

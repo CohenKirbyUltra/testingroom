@@ -1,5 +1,5 @@
 document.onmousemove = function (event) {
-  mainMusic.pause();
+  mainMusic.play();
   window.document.title = "Leave";
   window.alert("Wakeup.");
   document.getElementById("titlescreen").src = "imgs/CTR_LEAVE.png";
@@ -25,10 +25,8 @@ Music.src = "audio/music/Website_Off.mp3";
 
 var mainMusic = new Audio();
 mainMusic.type = "audio/mpeg";
-mainMusic.src = "audio/music/Website_Main.mp3";
+mainMusic.src = "audio/music/Website_Wake_Up.mp3";
 mainMusic.loop = true;
-
-mainMusic.play();
 
 var allElements = [
   document.querySelectorAll("h1"),
