@@ -1,3 +1,11 @@
+var buzz = new Audio();
+buzz.src = "audio/sfx/No.mp3";
+buzz.loop = true;
+buzz.volume = 0.2;
+buzz.type = "audio/mpeg";
+
+buzz.play();
+
 var Sfx = new Audio();
 Sfx.src = "audio/sfx/Look_at_me.wav";
 Sfx.loop = false;
