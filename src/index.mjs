@@ -1,3 +1,8 @@
+var Failure = new Audio();
+Failure.src = "audio/sfx/Failure.wav";
+Failure.loop = false;
+Failure.type = "audio/wav";
+
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -180,15 +185,6 @@ function createHappy() {
           ",status=yes",
       );
 
-      bounce.win.onbeforeunload = function () {
-        let gone = new Audio();
-        gone.type = "audio/mpeg";
-        gone.loop = false;
-        gone.src = "sounds/gone.mp3";
-
-        gone.play();
-      };
-
       // Use setInterval() to call the nextFrame() method every interval
       // milliseconds. Store the return value so that we can stop the
       // animation by passing it to clearInterval().
@@ -206,6 +202,13 @@ function createHappy() {
       // If the user closed the window, stop the animation
       if (bounce.win.closed) {
         clearInterval(bounce.timer);
+        Failure.play();
+        let gone = new Audio();
+        gone.type = "audio/mpeg";
+        gone.loop = false;
+        gone.src = "sounds/gone.mp3";
+
+        gone.play();
         return;
       }
 
