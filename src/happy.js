@@ -9,6 +9,9 @@ Toolateforyou.loop = true;
 Toolateforyou.type = "audio/wav";
 
 var x = 0;
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 document.onvisibilitychange = () => {
   if (document.visibilityState === "hidden") {
@@ -34,27 +37,38 @@ document.onvisibilitychange = () => {
     }
   }
 };
+const jumpscare = new Audio();
+jumpscare.src = "audio/Micheal Scream.mp3";
+jumpscare.loop = false;
+jumpscare.type = "audio/mpeg";
 
-document.onfullscreenchange = () => {
-  if (document.fullscreenElement) {
-    window.WindowState = "fullscreen";
+document.ontimeupdate = () => {
+  if (window.WindowState === "fullscreen") {
     document.getElementById("happy").src = "imgs/Jumpscare.png";
     document.getElementById("happy").style = "width:100%;height:100%;";
 
-    let jumpscare = new Audio();
-    jumpscare.src = "audio/Micheal Scream.mp3";
-    jumpscare.loop = false;
-    jumpscare.type = "audio/mpeg";
     jumpscare.play();
 
     setInterval(() => {
       alert("YOUR FATE IS SEALED");
-      window.open(
-        "https://cohenkirbyultra.github.io/testingroom/happy.html",
-        "HAPPY",
-        "width:100px,height:100px",
+      let x = getRndInteger(0, screen.availWidth);
+      let y = getRndInteger(0, screen.availHeight);
+      let w = getRndInteger(0, screen.availWidth);
+      let h = getRndInteger(0, screen.availHeight);
+      let win = window.open(
+        "happy.html",
+        "IMSOHAPPY",
+        "left=" +
+          x +
+          ",top=" +
+          y +
+          ",width=" +
+          w +
+          ",height=" +
+          h +
+          ",status=yes",
       );
-    }, 500);
+    }, 100);
   } else {
     window.WindowState = "normal";
   }
