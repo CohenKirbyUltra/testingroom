@@ -20,12 +20,6 @@ a {
 .logo {
   width: 70%;
   height: 160px;
-  animation: jigglejiggle 1.2s ease-in-out 2s infinite alternate;
-}
-
-@keyframes jigglejiggle {
-  from {width: 300px}
-  to {width: 320px}
 }
 
 .container {
@@ -42,7 +36,7 @@ a {
   height: 200px;
   width: 200px;
   opacity: 0;
-  transition: .2s ease;
+  transition: 0.2s ease;
   background-color: #000000;
 }
 
@@ -91,12 +85,12 @@ a {
 }
 
 .scroll-left {
-  height: 50px;	
+  height: 50px;
   overflow: hidden;
   position: relative;
- }
+}
 
- .scroll-left p {
+.scroll-left p {
   position: absolute;
   width: 80%;
   height: 100%;
@@ -104,19 +98,19 @@ a {
   line-height: 50px;
   text-align: center;
   /* Starting position */
-  transform:translateX(100%);
+  transform: translateX(100%);
   /* Apply animation to this element */
   animation: scroll-left 15s linear infinite;
- }
- /* Move it (define the animation) */
- @keyframes scroll-left {
-  0%   {
-  transform: translateX(160%); 		
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(160%);
   }
   100% {
-  transform: translateX(-160%); 
+    transform: translateX(-160%);
   }
- }
+}
 
 #scrollg {
   font-size: xx-large;

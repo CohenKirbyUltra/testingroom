@@ -7,8 +7,8 @@ Music.type = "audio/mpeg";
 Music.src = "audio/music/Website_Off.mp3";
 
 var mainMusic = new Audio();
-mainMusic.src = "audio/music/Website_Main.mp3";
 mainMusic.type = "audio/mpeg";
+mainMusic.src = "audio/music/Website_Main.mp3";
 mainMusic.loop = true;
 
 mainMusic.play();
@@ -92,8 +92,13 @@ function titleClick() {
     scaryColors[2] += -10;
   }
 
-  document.style.backgroundColor =
-    "rgb(scaryColors[0], scaryColors[1], scaryColors[2]);";
+  let color = rgb(scaryColors[0], scaryColors[1], scaryColors[2]);
+
+  document.body.style.backgroundColor = color;
+  document.html.style.color = color;
+
+  console.log(scaryColors);
+  console.log(rgb(scaryColors[0], scaryColors[1], scaryColors[2]));
 }
 // bleh
 function check() {
@@ -109,6 +114,7 @@ function check() {
     mainMusic.pause();
     window.document.title = "Leave";
     window.alert("Stop.");
+    document.getElementById("titlescreen").src = "imgs/CTR_LEAVE.png";
     for (let i = 0; i < 5; i++) {
       for (const child of allElements[i]) {
         child.innerHTML = "LEAVE";
@@ -138,8 +144,8 @@ function createHappy() {
   let bounce = {
     x: 0,
     y: 0,
-    w: 200,
-    h: 100, // Window position and size
+    w: 400,
+    h: 400, // Window position and size
     dx: 5,
     dy: 5, // Window velocity
     interval: 100, // Milliseconds between updates
