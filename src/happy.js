@@ -1,3 +1,9 @@
+var titleran = ["IMSOHAPPY", "HAPPY", "AREYOUHAPPY?", "SOHAPPY", "VERYHAPPY"];
+
+setInterval(() => {
+  document.title = titleran[getRndInteger(0, titleran.length)];
+}, 100);
+
 var buzz = new Audio();
 buzz.src = "audio/sfx/No.mp3";
 buzz.loop = true;
