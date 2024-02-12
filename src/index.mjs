@@ -205,13 +205,8 @@ function createHappy() {
       // If the user closed the window, stop the animation
       if (bounce.win.closed) {
         clearInterval(bounce.timer);
+        Failure.playbackRate += o;
         Failure.play();
-        let gone = new Audio();
-        gone.type = "audio/mpeg";
-        gone.loop = false;
-        gone.src = "sounds/gone.mp3";
-        gone.playbackRate += o;
-        gone.play();
         o += o;
         alert(":)");
         return;
