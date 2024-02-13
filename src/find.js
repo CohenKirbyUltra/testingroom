@@ -9,35 +9,6 @@ const tests = [
   "../imgs/Test6.png",
 ];
 
-const Remembers = [
-  "Remember",
-  "Rmbeerem",
-  "ebremmeR",
-  "remmber",
-  "mberemre",
-  "emreberm",
-  "mreeRmbe",
-  "remberme",
-  "emreberm",
-  "Rmberme",
-  "emremerb",
-  "Dakota",
-  "Remember",
-];
-var hellothere = "I see you.";
-Loop();
-function Loop() {
-  let LoopTime = getRndInteger(10, 700);
-
-  document.getElementById("remember").innerHTML =
-    Remembers[getRndInteger(0, Remembers.length - 1)];
-
-  if (getRndInteger(0, 100) === getRndInteger(0, 100)) {
-    document.getElementById("HI").innerHTML = " " + hellothere;
-    hellothere = hellothere + " I see you.";
-  }
-  setTimeout(Loop, LoopTime);
-}
 function update() {
   times++;
   switch (times) {
