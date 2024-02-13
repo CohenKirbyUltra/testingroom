@@ -100,7 +100,7 @@ var Remembers = [
   "Rmberme",
   "emremerb",
   "Dakota",
-  "Remember";
+  "Remember",
 ];
 
 var hellothere = "I see you.";
