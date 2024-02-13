@@ -1,54 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <center>
-    <img class="logo" src="imgs/CTR_Web.png" id="titlescreen"></img>
-    <meta charset=“UTF-8”>
-    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-    <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
-    <link rel="icon" type="image/x-icon" href="imgs/icon.ico">
-    <link rel="stylesheet" type="text/css" href="src/styles.css">
-    <title>Testing Room Homepage</title>
-    <br>
-    <br>
-    <section>
-      <center>
-        <div class="scroll-left">
-          <p id="scrollg">Hello!! Welcome to the <i>TESTING ROOM</i> webpage!!</p>
-        </div>
-      </center>
-    </section>
-      <div class="footer"></div>
-    <section>
-      <br>
-        <h2 id="text1">A webpage dedacated to the local testing room!</h2>
-        <h2 id="text2">You might be wondering to yourself if you have no context and clicked on this page, <a href="pages/about.html">What is testing room?</a></h2>
-        <h2 class="hide">No need to worry about it.</h2>
-      <br>
-    </section>
-    <div class="footer"></div>
-    <header>
-      <h1 class="header"><b>Images Of Testing Room</b></h1>
-    </header>
-    <div>
-      <button class="nextImage" id="next"></button>
-      <div class="container"><img class="image" src="imgs/drawing.jpg" id="selectorImage"/><div class="overlay"></div></div> 
-      <button class="previousImage" id="previous"></button>
-    </div>
-    <br>
-    <h1>Play the game <a href="https://rec.net/room/COHENS_TESTING_ROOM">here!</a></h1>
-    <br>
-      <nav>
-        <a class="navtext" href="pages/about.html">About</a> |
-        <a class="naxtext" href="pages/gamemodes.html">Gamemodes</a>
-        <a class="hide">Polygons</a>
-      </nav>
-    </center>
-  </head>
-
-  <body>
-    <script src="src/index.mjs">
-    </script>
     <script>
       var ImageSelector = document.getElementById("selectorImage");
 
@@ -99,6 +51,54 @@
           window.location.href = "missing.html";
         }
       }
+    </script>
+    <center>
+    <img class="logo" src="imgs/CTR_Web.png" id="titlescreen"></img>
+    <meta charset=“UTF-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="src/styles.css">
+    <title>Testing Room Homepage</title>
+    <br>
+    <br>
+    <section>
+      <center>
+        <div class="scroll-left">
+          <p id="scrollg">Hello!! Welcome to the <i>TESTING ROOM</i> webpage!!</p>
+        </div>
+      </center>
+    </section>
+      <div class="footer"></div>
+    <section>
+      <br>
+        <h2 id="text1">A webpage dedacated to the local testing room!</h2>
+        <h2 id="text2">You might be wondering to yourself if you have no context and clicked on this page, <a href="pages/about.html">What is testing room?</a></h2>
+        <h2 class="hide">No need to worry about it.</h2>
+      <br>
+    </section>
+    <div class="footer"></div>
+    <header>
+      <h1 class="header"><b>Images Of Testing Room</b></h1>
+    </header>
+    <div>
+      <button class="nextImage" id="next"></button>
+      <div class="container"><img class="image" src="imgs/drawing.jpg" id="selectorImage"/><div class="overlay"></div></div> 
+      <button class="previousImage" id="previous"></button>
+    </div>
+    <br>
+    <h1>Play the game <a href="https://rec.net/room/COHENS_TESTING_ROOM">here!</a></h1>
+    <br>
+      <nav>
+        <a class="navtext" href="pages/about.html">About</a> |
+        <a class="naxtext" href="pages/gamemodes.html">Gamemodes</a>
+        <a class="hide">Polygons</a>
+      </nav>
+    </center>
+  </head>
+
+  <body>
+    <script src="src/index.mjs">
     </script>
   </body>
 </html>
