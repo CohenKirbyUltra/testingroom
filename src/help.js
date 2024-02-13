@@ -108,7 +108,7 @@ var hellothere = "I see you.";
 Loop();
 
 function Loop() {
-  let LoopTime = getRndInteger(10, 700);
+  let LoopTime = getRndInteger(10, 7000);
 
   document.getElementById("remember").innerHTML =
     Remembers[getRndInteger(0, Remembers.length - 1)];
