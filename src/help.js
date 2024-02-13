@@ -87,7 +87,7 @@ function lost() {
   }, 2000);
 }
 
-const Remembers = [
+var Remembers = [
   "Remember",
   "Rmbeerem",
   "ebremmeR",
