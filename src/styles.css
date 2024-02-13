@@ -146,14 +146,14 @@ a {
 
 .nextImage {
   font-size: 50px;
-  background-image: src(../images/Next.png);
+  background-image: src(../imgs/Next.png);
   width: 100px;
   height: 50px;
 }
 
 .previousImage {
   font-size: 50px;
-  background-image: src(../images/Previous.png);
+  background-image: src(../imgs/Previous.png);
   width: 100px;
   height: 50px;
 }
