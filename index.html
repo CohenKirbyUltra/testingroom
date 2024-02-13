@@ -31,9 +31,9 @@
       <h1 class="header"><b>Images Of Testing Room</b></h1>
     </header>
     <div>
-      <div class="container"><img class="image" src="imgs/drawing.jpg"/><div class="overlay"></div></div> 
-      <div class="container"><img class="image" src="imgs/london.jpg"/><div class="overlay"></div></div><div class="container"><img class="image" src="imgs/chicago.jpg"/><div class="overlay"></div></div><div class="container" id="vent" onclick="location.replace('missing.html')"><img class="image" src="imgs/vent.jpg"/><div class="overlay"></div></div>
-      <div class="container"><img class="image" src="imgs/Cone.jpg"/><div class="overlay"></div></div> <div class="container"><img class="image" src="imgs/cafe.jpg"><div class="overlay"></div></div> <div class="container"><img class="image" src="imgs/Gooby.png"/><div class="overlay"></div></div>
+      <button class="nextImage" id="next"></button>
+      <div class="container"><img class="image" src="imgs/drawing.jpg" id="selectorImage"/><div class="overlay"></div></div> 
+      <button class="previousImage" id="previous"></button>
     </div>
     <br>
     <h1>Play the game <a href="https://rec.net/room/COHENS_TESTING_ROOM">here!</a></h1>
@@ -48,6 +48,8 @@
 
   <body>
     <script src="src/index.mjs">
+    </script>
+    <script src="src/imageswitch.js">
     </script>
   </body>
 </html>
