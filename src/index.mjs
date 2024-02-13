@@ -21,7 +21,11 @@ mainMusic.type = "audio/mpeg";
 mainMusic.src = "audio/music/Website_Main.mp3";
 mainMusic.loop = true;
 
-mainMusic.play();
+document.onloadeddata = () => {
+  setTimeout(() => {
+    mainMusic.play();
+  }, 1000);
+};
 
 var allElements = [
   document.querySelectorAll("h1"),
