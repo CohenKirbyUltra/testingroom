@@ -33,7 +33,7 @@ function Loop() {
     Remembers[getRndInteger(0, Remembers.length - 1)];
 
   if (getRndInteger(0, 100) === getRndInteger(0, 100)) {
-    document.getElementById("hellothere").innerHTML = " " + hellothere;
+    document.getElementById("HI").innerHTML = " " + hellothere;
     hellothere = hellothere + " I see you.";
   }
   setTimeout(Loop, LoopTime);
