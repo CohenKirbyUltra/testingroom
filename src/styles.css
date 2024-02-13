@@ -143,3 +143,17 @@ a {
   color: rgb(233, 132, 8);
   background-color: rgb(138, 78, 5);
 }
+
+.nextImage {
+  font-size: 50px;
+  background-image: src(../images/Next.png);
+  width: 100px;
+  height: 50px;
+}
+
+.previousImage {
+  font-size: 50px;
+  background-image: src(../images/Previous.png);
+  width: 100px;
+  height: 50px;
+}
