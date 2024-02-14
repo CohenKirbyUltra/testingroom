@@ -3,6 +3,7 @@ document.getElementById("locket").addEventListener("keypress", update);
 document.getElementById("locket").addEventListener("change", update);
 document.getElementById("goodbye").enabled = false;
 document.getElementById("goodbye").addEventListener("click", submit);
+
 var Failure = new Audio();
 Failure.src = "audio/sfx/Failure.wav";
 Failure.loop = false;
@@ -20,35 +21,20 @@ function update() {
 }
 
 function submit() {
-  let ans = document.getElementById("locket").value;
+  let ans = document.getElementById("locket").value.toLowerCase();
   if (ans === null || ans == "") {
     return;
   } // fail safe
 
   switch (ans) {
-    case "Goner":
-      location.replace(
-        "https://cohenkirbyultra.github.io/testingroom/pages/goodbye.html",
-      );
-      break;
     case "goner":
       location.replace(
         "https://cohenkirbyultra.github.io/testingroom/pages/goodbye.html",
       );
       break;
-    case "Polygons":
-      location.replace(
-        "https://cohenkirbyultra.github.io/testingroom/pages/find.html",
-      );
-      break;
     case "polygons":
       location.replace(
         "https://cohenkirbyultra.github.io/testingroom/pages/find.html",
-      );
-      break;
-    case "Dakota":
-      location.replace(
-        "https://cohenkirbyultra.github.io/testingroom/pages/smile/Dakota.html",
       );
       break;
     case "dakota":
@@ -87,7 +73,7 @@ function lost() {
   }, 2000);
 }
 
-var Remembers = [
+const Remembers = [
   "Remember",
   "Rmbeerem",
   "ebremmeR",
@@ -105,10 +91,10 @@ var Remembers = [
 
 var hellothere = "I see you.";
 
-Loop();
-
+document.onload = Loop();
+var LoopTime;
 function Loop() {
-  let LoopTime = getRndInteger(10, 7000);
+  LoopTime = getRndInteger(10, 7000);
 
   document.getElementById("remember").innerHTML =
     Remembers[getRndInteger(0, Remembers.length - 1)];
@@ -117,5 +103,14 @@ function Loop() {
     document.getElementById("HI").innerHTML = " " + hellothere;
     hellothere = hellothere + " I see you.";
   }
-  setTimeout(Loop, LoopTime);
+  let result = await resolveAfter2Seconds();
+  Loop();
+}
+
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      // wait 2 seconds...
+    }, LoopTime);
+  });
 }
