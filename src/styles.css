@@ -145,13 +145,13 @@ a {
 }
 
 .nextImage {
-  width: 300px;
-  height: 600px;
+  width: 30%;
+  height: 30%;
 }
 
 .previousImage {
-  width: 300px;
-  height: 600px;
+  width: 30%;
+  height: 30%;
 }
 
 .nextImage:hover {
@@ -163,9 +163,15 @@ a {
 }
 
 #next {
+  width: 30%;
+  height: 40%;
   background-color: rgba(206, 116, 6, 0);
+  border-color: rgba(206, 116, 6, 0);
 }
 
 #previous {
+  width: 30%;
+  height: 40%;
   background-color: rgba(206, 116, 6, 0);
+  border-color: rgba(206, 116, 6, 0);
 }
