@@ -91,18 +91,12 @@ const Remembers = [
 
 var hellothere = "I see you.";
 
-document.onload = Loop();
 var LoopTime;
 async function Loop() {
   LoopTime = getRndInteger(10, 7000);
 
   document.getElementById("remember").innerHTML =
     Remembers[getRndInteger(0, Remembers.length - 1)];
-
-  if (getRndInteger(0, 100) === getRndInteger(0, 100)) {
-    document.getElementById("HI").innerHTML = " " + hellothere;
-    hellothere = hellothere + " I see you.";
-  }
   let result = await resolveAfter2Seconds();
   Loop();
 }
@@ -114,3 +108,5 @@ function resolveAfter2Seconds() {
     }, LoopTime);
   });
 }
+
+Loop();
