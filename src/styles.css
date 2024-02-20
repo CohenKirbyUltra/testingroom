@@ -1,4 +1,4 @@
-.btn-group button {
+.imagestuff button {
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
@@ -8,18 +8,24 @@
   border-color: rgb(206, 116, 6);
 }
 
-.btn-group button:not(:last-child) {
+.imagestuff button:not(:last-child) {
   border-right: none; /* Prevent double borders */
 }
 
-.btn-group div {
+.imagestuff div {
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
 }
 
-.btn-group div:not(:last-child) {
+.imagestuff div:not(:last-child) {
   border-right: none; /* Prevent double borders */
+}
+
+.imagestuff:after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 @font-face {
