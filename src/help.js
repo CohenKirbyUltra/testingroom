@@ -104,7 +104,7 @@ async function Loop() {
 function resolveAfter2Seconds() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      // wait 2 seconds...
+      resolve(hellothere);
     }, LoopTime);
   });
 }
