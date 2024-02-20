@@ -1,11 +1,11 @@
 .imagestuff button {
+  width: 20%;
+  height: 60%;
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
-  width: 20%;
-  height: 60%;
-  background-color: rgb(206, 116, 6);
-  border-color: rgb(206, 116, 6);
+  background-color: rgb(186, 109, 15);
+  border-color: rgb(118, 68, 8);
 }
 
 .imagestuff button:not(:last-child) {
