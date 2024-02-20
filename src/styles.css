@@ -2,6 +2,10 @@
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
+  width: 20%;
+  height: 60%;
+  background-color: rgb(206, 116, 6);
+  border-color: rgb(206, 116, 6);
 }
 
 .btn-group button:not(:last-child) {
@@ -16,13 +20,6 @@
 
 .btn-group div:not(:last-child) {
   border-right: none; /* Prevent double borders */
-}
-
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 @font-face {
