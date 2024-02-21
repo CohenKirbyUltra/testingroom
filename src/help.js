@@ -93,7 +93,7 @@ var hellothere = "I see you.";
 
 var LoopTime;
 async function Loop() {
-  LoopTime = getRndInteger(10, 7000);
+  LoopTime = getRndInteger(10, 1000);
   let rand = getRndInteger(0, Remembers.length - 1);
   document.getElementById("remember").innerHTML = Remembers[rand];
   if (rand === 11) {
