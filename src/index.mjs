@@ -267,7 +267,7 @@ document.getElementById("previous").addEventListener("click", function () {
 document.getElementById("next").addEventListener("click", function () {
   ChangeImage("next");
 });
-document.getElementById("Image").addEventListener("click", function () {
+document.getElementById("container").addEventListener("click", function () {
   Missing();
 });
 
