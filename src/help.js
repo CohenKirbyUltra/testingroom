@@ -69,7 +69,7 @@ function countdown() {
       document.getElementById("hellothere").innerHTML = current;
       console.log(current);
       current -= 1;
-      flickerlimit -= 50;
+      flickerlimit -= 125;
     }
   }, 1000);
 }
