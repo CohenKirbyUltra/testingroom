@@ -130,6 +130,8 @@ function resolveAfter() {
     }, FlickerTime);
   });
 }
+
+flickerLoop();
 Loop();
 
 function getRndInteger(min, max) {
