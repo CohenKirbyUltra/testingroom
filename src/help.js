@@ -69,7 +69,7 @@ function countdown() {
       document.getElementById("hellothere").innerHTML = current;
       console.log(current);
       current -= 1;
-      flickerlimit -= 225;
+      flickerlimit -= 300;
     }
   }, 1000);
 }
@@ -112,7 +112,7 @@ async function Loop() {
 }
 
 async function flickerLoop() {
-  FlickerTime = getRndInteger(1000, flickerlimit);
+  FlickerTime = getRndInteger(100, flickerlimit);
   documentFlicker();
   let result = await resolveAfter();
   flickerLoop();
