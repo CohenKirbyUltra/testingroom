@@ -264,7 +264,9 @@ document.getElementById("previous").addEventListener("click", function () {
 document.getElementById("next").addEventListener("click", function () {
   ChangeImage("next");
 });
-document.getElementById("Image").addEventListener("click", Missing);
+document.getElementById("Image").addEventListener("click", function () {
+  Missing();
+});
 
 function ChangeImage(type) {
   console.log(type);
@@ -289,9 +291,10 @@ function ChangeImage(type) {
   }
 }
 
-function Missing() {
+async function Missing() {
   if (Index === 3) {
-    alert("Error 8600: They are Missing.");
+    let currentalert = alert("Error 8600: They are Missing.");
+    await currentalert;
     window.location.href = "missing.html";
   }
 }
