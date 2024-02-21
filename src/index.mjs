@@ -246,7 +246,7 @@ function createHappy() {
 
 // image selector shit
 
-var ImageSelector = document.getElementById("selectorImage");
+var ImageSelector = document.getElementById("Image");
 
 var Previous = document.getElementById("previous");
 var Next = document.getElementById("next");
@@ -265,7 +265,7 @@ var Index = 0;
 
 Previous.addEventListener("click", ChangeImage("previous"));
 Next.addEventListener("click", ChangeImage("next"));
-ImageSelector.addEventListener("click", Missing);
+document.getElementById("Image").addEventListener("click", Missing);
 
 function ChangeImage(type) {
   console.log(type);
@@ -275,14 +275,14 @@ function ChangeImage(type) {
       if (Index > Images.length - 1) {
         Index = 0;
       }
-      ImageSelector.src = Images[Index];
+      document.getElementById("Image").src = Images[Index];
       break;
     case "next":
       Index--;
       if (Index < 0) {
         Index = Images.length - 1;
       }
-      ImageSelector.src = Images[Index];
+      document.getElementById("Image").src = Images[Index];
       break;
     default:
       alert("Something went wrong");
