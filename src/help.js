@@ -1,5 +1,5 @@
 var Static = new Audio();
-Static.src = "audio/sfx/Static.mp3";
+Static.src = "audio/sfx/StaticT.mp3";
 Static.loop = false;
 Static.type = "audio/mpeg";
 
