@@ -245,6 +245,9 @@ function createHappy() {
 }
 
 // image selector shit
+var Page = new Audio();
+Page.type = "audio/mp3";
+Page.src = "sfx/pageFlip.mp3";
 
 var Images = [
   "imgs/drawing.jpg",
@@ -289,6 +292,7 @@ function ChangeImage(type) {
       alert("Something went wrong");
       break;
   }
+  Page.play();
 }
 
 async function Missing() {
