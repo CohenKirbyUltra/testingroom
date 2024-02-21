@@ -94,6 +94,7 @@ var hellothere = "I see you.";
 var LoopTime;
 async function Loop() {
   LoopTime = getRndInteger(10, 1000);
+  documentFlicker();
   let rand = getRndInteger(0, Remembers.length - 1);
   document.getElementById("remember").innerHTML = Remembers[rand];
   if (rand === 11) {
@@ -115,4 +116,46 @@ Loop();
 
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var colorthing;
+var hex1, hex2, hex3, hex4, hex5, hex6;
+const hexcal = [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+];
+async function documentFlicker() {
+  hex1 = hexcal[getRndInteger(0, 16)];
+  hex2 = hexcal[getRndInteger(0, 16)];
+  hex3 = hexcal[getRndInteger(0, 16)];
+  hex4 = hexcal[getRndInteger(0, 16)];
+  hex5 = hexcal[getRndInteger(0, 16)];
+  hex6 = hexcal[getRndInteger(0, 16)];
+
+  colorthing = "#" + hex1 + hex2 + hex3 + hex4 + hex5 + hex6;
+
+  let LoopTime2 = getRndInteger(1, 300);
+  await flickerCalculate();
+}
+
+function flickerCalculate() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      document.body.style.backgroundColor = colorthing;
+    }, LoopTime2);
+  });
 }
