@@ -249,6 +249,10 @@ var Page = new Audio();
 Page.type = "audio/mpeg";
 Page.src = "audio/sfx/pageFlip.mp3";
 
+var Missing3 = new Audio();
+Missing3.type = "audio/mpeg";
+Missing3.src = "audio/sfx/Info3.mp3";
+
 var Images = [
   "imgs/drawing.jpg",
   "imgs/london.jpg",
@@ -298,9 +302,33 @@ function ChangeImage(type) {
 }
 
 async function Missing() {
-  if (Index === 3) {
-    let currentalert = alert("Error 8600: They are Missing.");
-    await currentalert;
-    window.location.href = "missing.html";
+  switch (Index) {
+    case 0:
+      alert("Little Gooby :3");
+      break;
+    case 1:
+      alert("The cafe from the gabble's perspective.");
+      break;
+    case 2:
+      alert("Idk what this part is tbh.");
+      break;
+    case 3:
+      Missing3.play();
+      let currentalert = alert("Error 8600: They are Missing.");
+      await currentalert;
+      window.location.href = "missing.html";
+      break;
+    case 4:
+      alert("Average day for a chicago resident");
+      break;
+    case 5:
+      alert("London shankoff");
+      break;
+    case 6:
+      alert("Just the hangout drawing board!");
+      break;
+    default:
+      alert("Default Info Message");
+      break;
   }
 }
