@@ -192,16 +192,11 @@ a {
   cursor: pointer;
 }
 
-#next {
-  width: 15%;
-  height: 20%;
-  background-color: rgba(206, 116, 6, 0);
-  border-color: rgba(206, 116, 6, 0);
-}
-
-#previous {
-  width: 15%;
-  height: 20%;
-  background-color: rgba(206, 116, 6, 0);
-  border-color: rgba(206, 116, 6, 0);
+button {
+  border-radius: 2px;
+  border-color: #ff8800;
+  border-width: 5px;
+  background-color: #b6660b;
+  color: rgb(255, 208, 0);
+  font-color: #ffaa00;
 }
