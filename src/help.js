@@ -55,6 +55,8 @@ function submit() {
   }
 }
 
+var flickerlimit = 10000;
+
 function countdown() {
   let current = 60;
   let timer = setInterval(function () {
@@ -67,6 +69,7 @@ function countdown() {
       document.getElementById("hellothere").innerHTML = current;
       console.log(current);
       current -= 1;
+      flickerlimit -= 50;
     }
   }, 1000);
 }
@@ -109,7 +112,7 @@ async function Loop() {
 }
 
 async function flickerLoop() {
-  FlickerTime = getRndInteger(1000, 10000);
+  FlickerTime = getRndInteger(1000, flickerlimit);
   documentFlicker();
   let result = await resolveAfter();
   flickerLoop();
