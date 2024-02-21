@@ -67,12 +67,16 @@ a {
   height: 200px;
   width: 200px;
   opacity: 0;
-  transition: 0.2s ease;
   background-color: #000000;
+  border-width: 0px;
+  border-radius: 15px;
+  border-color: rgb(106, 116, 6);
+  transition: 0.2s ease;
 }
 
 .container:hover .overlay {
   opacity: 0.2;
+  border-width: 10px;
 }
 
 .text {
