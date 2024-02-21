@@ -91,10 +91,9 @@ const Remembers = [
 
 var hellothere = "I see you.";
 
-var LoopTime;
+var LoopTime, FlickerTime;
 async function Loop() {
   LoopTime = getRndInteger(10, 1000);
-  documentFlicker();
   let rand = getRndInteger(0, Remembers.length - 1);
   document.getElementById("remember").innerHTML = Remembers[rand];
   if (rand === 11) {
@@ -102,6 +101,13 @@ async function Loop() {
   }
   let result = await resolveAfter2Seconds();
   Loop();
+}
+
+async function flickerLoop() {
+  FlickerTime = getRndInteger(1000, 10000);
+  documentFlicker();
+  let result = await resolveAfter();
+  flickerLoop();
 }
 
 function resolveAfter2Seconds() {
@@ -112,6 +118,13 @@ function resolveAfter2Seconds() {
   });
 }
 
+function resolveAfter() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, FlickerTime);
+  });
+}
 Loop();
 
 function getRndInteger(min, max) {
@@ -153,9 +166,10 @@ async function documentFlicker() {
 
 function flickerCalculate() {
   let LoopTime2 = getRndInteger(1, 300);
+  document.body.style.backgroundColor = colorthing;
   return new Promise((resolve) => {
     setTimeout(() => {
-      document.body.style.backgroundColor = colorthing;
+      document.body.style.backgroundColor = "#ce7406";
     }, LoopTime2);
   });
 }
