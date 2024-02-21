@@ -258,10 +258,12 @@ var Images = [
 
 var Index = 0;
 
-document
-  .getElementById("previous")
-  .addEventListener("click", ChangeImage("previous"));
-document.getElementById("next").addEventListener("click", ChangeImage("next"));
+document.getElementById("previous").addEventListener("click", function () {
+  ChangeImage("previous");
+});
+document.getElementById("next").addEventListener("click", function () {
+  ChangeImage("next");
+});
 document.getElementById("Image").addEventListener("click", Missing);
 
 function ChangeImage(type) {
