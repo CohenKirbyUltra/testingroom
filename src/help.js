@@ -1,3 +1,8 @@
+var Static = new Audio();
+Static.src = "audio/sfx/Static.mp3";
+Static.loop = false;
+Static.type = "audio/mpeg";
+
 countdown();
 document.getElementById("locket").addEventListener("keypress", update);
 document.getElementById("locket").addEventListener("change", update);
@@ -165,11 +170,14 @@ async function documentFlicker() {
 }
 
 function flickerCalculate() {
-  let LoopTime2 = getRndInteger(1, 300);
+  let LoopTime2 = getRndInteger(1, 500);
+  Static.play();
   document.body.style.backgroundColor = colorthing;
   return new Promise((resolve) => {
     setTimeout(() => {
       document.body.style.backgroundColor = "#ce7406";
+      Static.pause();
+      resolve();
     }, LoopTime2);
   });
 }
