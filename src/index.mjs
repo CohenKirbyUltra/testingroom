@@ -2,6 +2,7 @@ var Failure = new Audio();
 Failure.src = "audio/sfx/Failure.wav";
 Failure.loop = false;
 Failure.type = "audio/wav";
+
 var o = 0.05;
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -21,10 +22,13 @@ mainMusic.type = "audio/mpeg";
 mainMusic.src = "audio/music/Website_Main.mp3";
 mainMusic.loop = true;
 
-document.onloadeddata = () => {
-  setTimeout(() => {
+var hahahaha = false;
+
+document.onmousemove = function () {
+  if (hahahaha === false) {
     mainMusic.play();
-  }, 1000);
+    hahahaha = true;
+  }
 };
 
 var allElements = [
@@ -263,6 +267,16 @@ var Images = [
   "imgs/Gooby.png",
 ];
 
+var Alerts = [
+  "Just the hangout drawing board!",
+  "London Shankoff",
+  "Average day for a chicago resident",
+  "uh no",
+  "I don't really know what this part is tbh",
+  "The cafe from the gabble's perspective.",
+  "Gooby :3",
+];
+
 var Index = 0;
 
 document.getElementById("previous").addEventListener("click", function () {
@@ -303,32 +317,14 @@ function ChangeImage(type) {
 
 async function Missing() {
   switch (Index) {
-    case 0:
-      alert("Little Gooby :3");
-      break;
-    case 1:
-      alert("The cafe from the gabble's perspective.");
-      break;
-    case 2:
-      alert("Idk what this part is tbh.");
-      break;
     case 3:
       Missing3.play();
       let currentalert = alert("Error 8600: They are Missing.");
       await currentalert;
       window.location.href = "missing.html";
       break;
-    case 4:
-      alert("Average day for a chicago resident");
-      break;
-    case 5:
-      alert("London shankoff");
-      break;
-    case 6:
-      alert("Just the hangout drawing board!");
-      break;
     default:
-      alert("Default Info Message");
+      alert(Alerts[Index]);
       break;
   }
 }
