@@ -292,6 +292,8 @@ function ChangeImage(type) {
       alert("Something went wrong");
       break;
   }
+  Page.pause();
+  Page.currentTime = 0;
   Page.play();
 }
 
