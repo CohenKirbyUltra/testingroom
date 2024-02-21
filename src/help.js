@@ -148,11 +148,11 @@ async function documentFlicker() {
 
   colorthing = "#" + hex1 + hex2 + hex3 + hex4 + hex5 + hex6;
 
-  let LoopTime2 = getRndInteger(1, 300);
   await flickerCalculate();
 }
 
 function flickerCalculate() {
+  let LoopTime2 = getRndInteger(1, 300);
   return new Promise((resolve) => {
     setTimeout(() => {
       document.body.style.backgroundColor = colorthing;

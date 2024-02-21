@@ -246,11 +246,6 @@ function createHappy() {
 
 // image selector shit
 
-var ImageSelector = document.getElementById("Image");
-
-var Previous = document.getElementById("previous");
-var Next = document.getElementById("next");
-
 var Images = [
   "imgs/drawing.jpg",
   "imgs/london.jpg",
@@ -263,8 +258,10 @@ var Images = [
 
 var Index = 0;
 
-Previous.addEventListener("click", ChangeImage("previous"));
-Next.addEventListener("click", ChangeImage("next"));
+document
+  .getElementById("previous")
+  .addEventListener("click", ChangeImage("previous"));
+document.getElementById("next").addEventListener("click", ChangeImage("next"));
 document.getElementById("Image").addEventListener("click", Missing);
 
 function ChangeImage(type) {
