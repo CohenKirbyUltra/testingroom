@@ -246,7 +246,7 @@ function createHappy() {
 
 // image selector shit
 var Page = new Audio();
-Page.type = "audio/mp3";
+Page.type = "audio/mpeg";
 Page.src = "sfx/pageFlip.mp3";
 
 var Images = [
