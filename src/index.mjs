@@ -246,7 +246,7 @@ function createHappy() {
 
 // image selector shit
 
-var ImageSelector = document.getElementById("image");
+var ImageSelector = document.getElementById("selectorImage");
 
 var Previous = document.getElementById("previous");
 var Next = document.getElementById("next");
