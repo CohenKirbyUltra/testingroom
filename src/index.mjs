@@ -24,7 +24,7 @@ mainMusic.loop = true;
 
 var hahahaha = false;
 
-document.onmousemove = function () {
+document.onclick = function () {
   if (hahahaha === false) {
     mainMusic.play();
     hahahaha = true;
