@@ -178,9 +178,11 @@ function flickerCalculate() {
   let LoopTime2 = getRndInteger(1, 500);
   Static.play();
   document.body.style.backgroundColor = colorthing;
+  document.body.style.backgroundImage = "url(imgs/Static.gif)";
   return new Promise((resolve) => {
     setTimeout(() => {
       document.body.style.backgroundColor = "#ce7406";
+      document.body.style.backgroundImage = "";
       Static.pause();
       resolve();
     }, LoopTime2);
