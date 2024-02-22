@@ -2,13 +2,13 @@ var hoversrc, clicksrc;
 
 var hover = new Audio();
 hover.type = "audio/wav";
-hover.src = "audio/watch/sfx_rrui_watch_ui_button_hover_general";
+hover.src = "audio/watch/sfx_rrui_watch_ui_button_hover_general_01.wav";
 hoversrc = "audio/watch/sfx_rrui_watch_ui_button_hover_general";
 hover.loop = false;
 
 var click = new Audio();
 click.type = "audio/wav";
-click.src = "audio/watch/sfx_rrui_watch_ui_select_click";
+click.src = "audio/watch/sfx_rrui_watch_ui_select_click_01.wav";
 clicksrc = "audio/watch/sfx_rrui_watch_ui_select_click";
 click.loop = false;
 

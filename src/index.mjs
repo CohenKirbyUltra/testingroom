@@ -254,8 +254,8 @@ Page.type = "audio/mpeg";
 Page.src = "audio/sfx/pageFlip.mp3";
 
 var Missing3 = new Audio();
-Missing3.type = "audio/mpeg";
-Missing3.src = "audio/sfx/info3.mp3";
+Missing3.type = "audio/wav";
+Missing3.src = "audio/sfx/info3.wav";
 
 var Images = [
   "imgs/drawing.jpg",
