@@ -1,3 +1,5 @@
+import * as watch from "src/watchsfx.js";
+
 var Failure = new Audio();
 Failure.src = "audio/sfx/Failure.wav";
 Failure.loop = false;
@@ -324,7 +326,9 @@ async function Missing() {
       window.location.href = "missing.html";
       break;
     default:
-      alert(Alerts[Index]);
+      watch.watchSfx("chat", "chatsrc", 3);
+      await alert(Alerts[Index]);
+      watch.watchSfx("toggle", "togglesrc", 3);
       break;
   }
 }
