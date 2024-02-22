@@ -31,6 +31,6 @@ document.querySelector("button").addEventListener("click", function () {
 function watchSound(sfx, sfxsrc, limit) {
   sfx.pause();
   sfx.currentTime = 0;
-  sfx.src = sfxsrc + "0" + getRndInteger(1, limit) + ".wav";
+  sfx.src = sfxsrc + "_0" + getRndInteger(1, limit) + ".wav";
   sfx.play();
 }
