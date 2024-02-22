@@ -1,5 +1,7 @@
 var hoversrc, clicksrc;
 
+console.log("loaded script"); // to see if it loads
+
 var hover = new Audio();
 hover.type = "audio/wav";
 hover.src = "audio/watch/sfx_rrui_watch_ui_button_hover_general_01.wav";
@@ -18,10 +20,12 @@ function getRndInteger(min, max) {
 
 document.querySelector("button").addEventListener("mouseover", function () {
   watchSound(hover, hoversrc, 6);
+  console.log("hover");
 });
 
 document.querySelector("button").addEventListener("click", function () {
   watchSound(click, clicksrc, 6);
+  console.log("click");
 });
 
 function watchSound(sfx, sfxsrc, limit) {
