@@ -1,4 +1,4 @@
-import * as watch from "src/watchsfx.js";
+import * as watch from "/src/watchsfx.js";
 
 var Failure = new Audio();
 Failure.src = "audio/sfx/Failure.wav";
