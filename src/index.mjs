@@ -37,14 +37,16 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-document.querySelector("button").addEventListener("mouseover", function () {
-  watchSound(hover, hoversrc, 6);
-  console.log("hover");
-});
+document.querySelector("button").forEach((element) => {
+  element.addEventListener("mouseover", function () {
+    watchSound(hover, hoversrc, 6);
+    console.log("hover");
+  });
 
-document.querySelector("button").addEventListener("click", function () {
-  watchSound(click, clicksrc, 6);
-  console.log("click");
+  element.addEventListener("click", function () {
+    watchSound(click, clicksrc, 6);
+    console.log("click");
+  });
 });
 
 function watchSound(sfx, sfxsrc, limit) {
@@ -380,9 +382,9 @@ async function Missing() {
       window.location.href = "missing.html";
       break;
     default:
-      watch.watchSfx("chat", "chatsrc", 3);
+      watchSfx("chat", "chatsrc", 3);
       await alert(Alerts[Index]);
-      watch.watchSfx("toggle", "togglesrc", 3);
+      watchSfx("toggle", "togglesrc", 3);
       break;
   }
 }
