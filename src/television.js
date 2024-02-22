@@ -1,16 +1,24 @@
 var Noise = new Audio();
 Noise.type = "audio/mpeg";
-Noise.src = "../audio/sfx/Static.mp3";
+Noise.src = "audio/sfx/Static.mp3";
 Noise.loop = true;
 Noise.volume = 0.5;
 
-Noise.play();
+var docload = false;
+
+document.onclick = function () {
+  if (docload === false) {
+    docload = true;
+    Noise.play();
+  }
+};
 
 const codes = ["15", "1777"];
 
 var InputerCode = document.getElementById("vhsInput");
 var Happybtn = document.getElementById("vhsSubmit");
 var vhsTV = document.getElementById("vhsTV");
+var LoadingBar = document.getElementById("LoadingBar");
 var videoplayer = vhsTV.getElementsByTagName("source")[0];
 var currentValue = "";
 Happybtn.disabled = true;
@@ -131,8 +139,22 @@ function KeyClick() {
 
 function changeVideo(name) {
   Happybtn.enabled = true;
-  Happybtn.innerHTML = "Loading...";
+  LoadingBar.innerHTML = "Loading...";
   vhsTV.getElementsByTagName("source")[0].setAttribute("src", name);
   vhsTV.load();
   vhsTV.play();
+  vhsTV.addEventListener("loadeddata", async function () {
+    LoadingBar.innerHTML = "Loaded!";
+    await wait(2000);
+    LoadingBar.innerHTML = "";
+  });
+  vhsTV.addEventListener("ended", async function () {
+    LoadingBar.innerHTML = "Done";
+    await wait(2000);
+    LoadingBar.innerHTML = "";
+  });
+}
+
+function wait(milliseconds) {
+  new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
