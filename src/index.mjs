@@ -378,7 +378,7 @@ async function Missing() {
   switch (Index) {
     case 3:
       Missing3.play();
-      await setTimeout(() => {
+      setTimeout(() => {
         window.location.href = "missing.html";
       }, 4000);
       break;
