@@ -314,7 +314,7 @@ Page.src = "audio/sfx/pageFlip.mp3";
 
 var Missing3 = new Audio();
 Missing3.type = "audio/wav";
-Missing3.src = "audio/sfx/Info3.wav";
+Missing3.src = "audio/sfx/Missing3.wav";
 
 var Images = [
   "imgs/drawing.jpg",
