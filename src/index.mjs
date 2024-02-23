@@ -39,17 +39,18 @@ function getRndInteger(min, max) {
 
 document.querySelectorAll("button").forEach((element) => {
   element.addEventListener("mouseover", function () {
-    watchSound(hover, hoversrc, 6);
+    watchSound(hover, hoversrc, 6, 0.5);
     console.log("hover");
   });
 
   element.addEventListener("click", function () {
-    watchSound(click, clicksrc, 6);
+    watchSound(click, clicksrc, 6, 0.7);
     console.log("click");
   });
 });
 
-function watchSound(sfx, sfxsrc, limit) {
+function watchSound(sfx, sfxsrc, limit, volume) {
+  sfx.volume = volume;
   sfx.pause();
   sfx.currentTime = 0;
   sfx.src = sfxsrc + "_0" + getRndInteger(1, limit) + ".wav";
@@ -383,10 +384,10 @@ async function Missing() {
       window.location.href = "missing.html";
       break;
     default:
-      watchSound(chat, chatsrc, 3);
+      watchSound(chat, chatsrc, 3, 0.4);
       await setTimeout(() => {}, 200);
       await alert(Alerts[Index]);
-      watchSound(toggle, togglesrc, 3);
+      watchSound(toggle, togglesrc, 3, 0.4);
       break;
   }
 }
