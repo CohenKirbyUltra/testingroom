@@ -37,7 +37,7 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-document.querySelector("button").forEach((element) => {
+document.querySelectorAll("button").forEach((element) => {
   element.addEventListener("mouseover", function () {
     watchSound(hover, hoversrc, 6);
     console.log("hover");
