@@ -377,12 +377,14 @@ async function Missing() {
   switch (Index) {
     case 3:
       Missing3.play();
+      await setTimeout(() => {}, 200);
       let currentalert = alert("Error 8600: They are Missing.");
       await currentalert;
       window.location.href = "missing.html";
       break;
     default:
       watchSound(chat, chatsrc, 3);
+      await setTimeout(() => {}, 200);
       await alert(Alerts[Index]);
       watchSound(toggle, togglesrc, 3);
       break;
