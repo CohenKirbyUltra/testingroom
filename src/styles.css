@@ -205,4 +205,12 @@ button {
   font-color: #ffaa00;
   width: 10%;
   height: 5%;
+  transition: cubic-bezier(1, 0, 0, 1) 0.5s;
+  font-family: futura;
+}
+
+button:hover {
+  cursor: pointer;
+  width: 11%;
+  height: 6%;
 }
