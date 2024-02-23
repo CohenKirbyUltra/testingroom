@@ -378,8 +378,9 @@ async function Missing() {
   switch (Index) {
     case 3:
       Missing3.play();
-      await setTimeout(() => {}, 4000);
-      window.location.href = "missing.html";
+      await setTimeout(() => {
+        window.location.href = "missing.html";
+      }, 4000);
       break;
     default:
       watchSound(chat, chatsrc, 3, 0.4);
