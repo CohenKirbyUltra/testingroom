@@ -382,9 +382,9 @@ async function Missing() {
       window.location.href = "missing.html";
       break;
     default:
-      watchSound("chat", "chatsrc", 3);
+      watchSound(chat, chatsrc, 3);
       await alert(Alerts[Index]);
-      watchSound("toggle", "togglesrc", 3);
+      watchSound(toggle, togglesrc, 3);
       break;
   }
 }
