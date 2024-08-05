@@ -1,3 +1,7 @@
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 var Sfx = new Audio();
 Sfx.src = "../../audio/music/torture.mp3";
 Sfx.loop = true;
@@ -27,9 +31,13 @@ document.onvisibilitychange = () => {
         array[index].innerHTML = "WHY IS IT ALWAYS ME";
         document.body.style = "background-color: maroon";
         document.getElementById("Dakota").src = "Why.png";
+        setTimeout(() => {
+          window.location.href = "https://cohenkirbyultra.github.io/testingroom/index.html";
+        }, 10000);
         setInterval(function() {
             const para = document.createElement("h1");
-            para.innerText = "GET OUT OF HERE";
+            para.innerText = "WHY";
+            para.style = "font-size:" + getRndInteger(20, 200) + "px";
             document.body.appendChild(para);
         }, 100)
       });
@@ -43,25 +51,26 @@ document.onvisibilitychange = () => {
           vocal.pause();
           vocal.currentTime = 0;
           vocal.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/dontleavemehere.wav";
-          alert("Don't leave me here...");
+          alert("Please, don't leave me here...");
           break;
         case 2:
           vocal.pause();
           vocal.currentTime = 0;
           vocal.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/please.wav";
-          alert("Please..");
+          alert("Please, I'm begging you..");
           break;
         case 3:
           vocal.pause();
           vocal.currentTime = 0;
           vocal.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/cohen.wav";
-          alert("PLEASE I'M BEGGING YOU C||||E|");
+          alert("HE DID THIS TO ME!");
           break;
         case 4:
+          Music.pause();
           vocal.pause();
           vocal.currentTime = 0;
           vocal.src = "https://cohenkirbyultra.github.io/testingroom/audio/sfx/whatdididowrong.wav";
-          alert("WHAT DID I DO WRONG?!");
+          alert("karma.");
           break;
         case 5:
           vocal.pause();
