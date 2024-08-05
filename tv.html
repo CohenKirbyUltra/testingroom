@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=“UTF-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <style>
+    body {
+        background-color: #000000;
+    }
+
+    .container {
+        position: absolute;
+        width: 60%;
+        height: 65%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    div#image::before {
+        content:url("imgs/tv.png");
+    }​
+
+    .content {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        z-index: -1;
+        position: relative;
+    }
+
+    .fuzz {
+        position: absolute;
+        width: 40%;
+        height: 50%;
+        top: 50%;
+        left: 70%;
+        transform: translate(-110%, -50%);
+        z-index: -2;
+        overflow: hidden;
+        opacity: 0.2;
+    }
+
+    .videoplayer {
+        position: absolute;
+        width: 40%;
+        height: 55%;
+        top: 50%;
+        left: 70%;
+        transform: translate(-110%, -50%);
+        z-index: -3;
+        overflow: hidden;
+        opacity: 0.8;            
+    }
+
+    input {
+        position: absolute;
+        width: 7.5%;
+        height: 5%;
+        top: 50%;
+        left: 70%;
+        transform: translate(-53%, -450%);
+        z-index: 11;
+        overflow: hidden;
+        opacity: 1; 
+        border-width: 3px;
+        border-radius: 3px;
+        border-color: #701c13;
+        color: brown;
+        background-color: #4a1604;
+    }
+
+    button {
+        font-size: 80%;
+    }
+
+    .button {
+        position: absolute;
+        border-radius: 100px;
+        width: 4%;
+        height: 5%;
+        top: 50%;
+        left: 70%;
+        transform: translate(-53%, -250%);
+        z-index: 11;
+        overflow: hidden;
+        opacity: 1; 
+        border-width: 3px;
+        border-radius: 3px;
+        border-color: #701c13;
+        color: brown;
+        background-color: #4a1604;
+    }
+
+    .next {
+        position: absolute;
+        border-radius: 100px;
+        width: 4%;
+        height: 5%;
+        top: 50%;
+        left: 70%;
+        transform: translate(-99%, -400%);
+        z-index: 11;
+        overflow: hidden;
+        opacity: 1; 
+        border-width: 3px;
+        border-radius: 3px;
+        border-color: #701c13;
+        color: brown;
+        background-color: #4a1604;
+    }
+    .prev {
+        position: absolute;
+        border-radius: 100px;
+        width: 4%;
+        height: 5%;
+        top: 50%;
+        left: 70%;
+        transform: translate(-5%, -400%);
+        z-index: 11;
+        overflow: hidden;
+        opacity: 1; 
+        border-width: 3px;
+        border-radius: 3px;
+        border-color: #701c13;
+        color: brown;
+        background-color: #4a1604;
+    }
+
+    </style>
+    <title>TV</title>
+  </head>
+
+  <body>
+    <center>
+        <h5 id="LoadingBar"></h5>
+        <div>
+            <img src="imgs/tv.png" class="container"/>
+            <img src="imgs/static.gif" class="fuzz"/>
+            <video id="vhsTV" class="videoplayer" preload="auto">
+                <source id="videoplayer" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <br>
+            <input type="input" id="vhsInput" maxlength="12"></input>
+            <br>
+            <button id="vhsSubmit" class="button">Load</button>
+            <br>
+            <button id="vhsNext" class="next" onclick="vhsTV.currentTime+=10;">+10 Seconds</button><button id="vhsPrev" class="prev" onclick="vhsTV.currentTime-=10;">-10 Seconds</button>
+        </div>
+    </center>
+
+    <script src="src/television.js">
+    </script>
+  </body>
+</html>

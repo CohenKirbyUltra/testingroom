@@ -1,31 +1,19 @@
 <html>
-  <head>
+  <head onLoad="document.getElementById("game2").play();">
     <style>
       body {
         background-color: black;
       }
     </style>
     <title>NO</title>
-    <audio id="game2" controls autoplay hidden>
-        <source src="../audio/No.mp3" type="audio/mpeg">
-    </audio>
+    <link rel="icon" type="image/x-icon" href="imgs/Happy.png">
     <center>
     <link rel="stylesheet" href="src/missing.css" />
-    <img src="imgs/SMILE.png" width="400px" height="400px"/>
+    <img id="happy" src="imgs/SMILE.png" width="100%" height="100%"/>
     </center>
   </head>
   <body>
-    <script>
-      function PlayAudio() {
-        document.getElementById("game2").play();
-      }
-
-      document.onvisibilitychange = () => {
-        if (document.visibilityState === "hidden") {
-          window.WindowState = "normal";
-          window.alert("LOOK AT ME");
-        }
-      };
+    <script src="src/happy.js">
     </script>
   </body>
 </html>

@@ -5,19 +5,74 @@
         background-color: black;
       }
     </style>
-    <audio id="game" controls autoplay hidden>
+    <link rel="icon" type="image/x-icon" href="../imgs/Happy.png">    
+    <audio id="game" controls hidden>
       <source src="../audio/all-a-game.mp3" type="audio/mpeg">
-      <source src="../audio/all-a-game.ogg" type="audio/ogg">
+    </audio>
+
+    <audio id="change_sfx" controls hidden>
+      <source src="../audio/find.mp3" type="audio/mpeg">
     </audio>
   </head>
-  <body onload="PlayAudio();">
+  <body>
     <center>
-      <img src="../imgs/Rabbit.png" width="100%" height="100%"/>
+      <img id="findmeplease" width="100%" height="100%"/>
     </center>
     <script>
-      function PlayAudio() {
-        document.getElementById("game").play();
-      }
+      var times = 0;
+const tests = ["../imgs/Test1.png", "../imgs/Test2.png", "../imgs/Test3.png", "../imgs/Test4.png", "../imgs/Test5.png", "../imgs/Test6.png"];
+
+update();
+
+document.onvisibilitychange = () => {
+    if (document.visibilityState === "hidden") {
+        update();
+        ChangeAudio();
+    }
+};
+function update() {
+    times++;
+    switch(times) {
+        case 1:
+            document.getElementById("findmeplease").src = tests[0];
+            break;
+        case 2:
+            document.getElementById("findmeplease").src = tests[1];
+            break;
+        case 3:
+            document.getElementById("findmeplease").src = tests[2];
+            break;
+        case 4:
+            document.getElementById("findmeplease").src = tests[3];
+            break;
+        case 5:
+            document.getElementById("findmeplease").src = tests[4];
+            break;
+        case 6:
+            document.getElementById("findmeplease").src = tests[5];
+            PlayAudio();
+            break;
+        default:
+            alert("...");
+            break;
+    }
+}
+
+
+function PlayAudio() {
+    document.getElementById("game").play();
+}
+
+function ChangeAudio() {
+  document.getElementById("change_sfx").play();
+}
+
+function preload_image(im_url) {
+    let img = new Image();
+    img.src = im_url;
+}
+
+tests.forEach(preload_image);
     </script>
   </body>
 </html>

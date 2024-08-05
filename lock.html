@@ -2,9 +2,11 @@
 <html>
   <head>
     <center>
+    <meta charset=“UTF-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
+    <link rel="stylesheet" type="text/css" href="src/help.css">
     <title>Useless</title>
-    <link href="src/help.css" />
-    <meta charset="UTF-8" />
     <br>
     <br>
     <section>
@@ -27,13 +29,13 @@
       <h1><b>They never found them</b></h1>
     </header>
     <div>
-      <div class="container"><img class="image" src="imgs/Remember.png/"/><div class="overlay"></div></div> 
-      <div class="container"><img class="image" src="imgs/Remember.png/"/><div class="overlay"></div></div><div class="container"><img class="image" src="imgs/Remember.png/"/><div class="overlay"></div></div><div class="container" id="vent"><img class="image" src="imgs/Remember.png/"/><div class="overlay"></div></div>
-      <div class="container"><img class="image" src="imgs/Remember.png/"/><div class="overlay"></div></div> <div class="container"><img class="image" src="imgs/Remember.png/"/><div class="overlay"></div></div> <div class="container"><img class="image" src="imgs/Remember.png/"/><div class="overlay"></div></div>
+      <div class="container"><img class="image" src="imgs/Remember.png"/><div class="overlay"></div></div> 
     </div>
     <br>
-    <h1>Remember.</h1>
+    <h1 id="remember"></h1>
     <p id="hellothere"></p>
+    <p id="HI"></p>
+    <p>
     <br>
     <input type="input" id="locket" />
     <button id="goodbye">...</button>
@@ -41,6 +43,10 @@
   </head>
 
   <body>
+    <audio id="ticktock" controls hidden>
+      <source src="audio/sfx/tick.wav" type="audio/wav">
+    </audio>
     <script src="src/help.js"></script>
+    <script src="src/localmusic.js"></script>
   </body>
 </html>
