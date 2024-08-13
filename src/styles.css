@@ -13,4 +13,14 @@ body {
 
 .backgroundthing {
   background-color: rgb(222, 98, 4);
+  width: 70%;
+}
+
+#logo {
+  width: 40%;
+  height: 20%;
+}
+
+#photoBoard {
+  width: 70%;
 }
