@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You are an Idiot!</title>
+    <style>
+      .window {
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        background-color: lightblue;
+        border: 2px solid blue;
+        text-align: center;
+        line-height: 150px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function createWindow() {
+        const windowDiv = document.createElement("div");
+        windowDiv.className = "window";
+        windowDiv.innerText = "Click me to close";
+
+        let dx = (Math.random() - 0.5) * 10;
+        let dy = (Math.random() - 0.5) * 10;
+
+        document.body.appendChild(windowDiv);
+
+        function move() {
+          const rect = windowDiv.getBoundingClientRect();
+          if (rect.left + dx < 0 || rect.right + dx > window.innerWidth)
+            dx = -dx;
+          if (rect.top + dy < 0 || rect.bottom + dy > window.innerHeight)
+            dy = -dy;
+
+          windowDiv.style.left = rect.left + dx + "px";
+          windowDiv.style.top = rect.top + dy + "px";
+
+          requestAnimationFrame(move);
+        }
+
+        windowDiv.onclick = function () {
+          document.body.removeChild(windowDiv);
+          createWindow();
+        };
+
+        move();
+      }
+
+      for (let i = 0; i < 3; i++) {
+        createWindow();
+      }
+    </script>
+  </body>
+</html>
