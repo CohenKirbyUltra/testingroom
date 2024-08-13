@@ -1,34 +1,31 @@
 html {
   cursor: url("../images/Small_Cursor.png"), auto;
-  cursor: url("../images/Small_Cursor.png"), default;
-  cursor: url("../images/Small_Cursor.png"), none;
-  cursor: url("../images/Small_Cursor.png"), context-menu;
-  cursor: url("../images/Small_Cursor.png"), help;
-  cursor: url("../images/Small_Cursor.png"), pointer;
-  cursor: url("../images/Small_Cursor.png"), progress;
-  cursor: url("../images/Small_Cursor.png"), wait;
-  cursor: url("../images/Small_Cursor.png"), cell;
-  cursor: url("../images/Small_Cursor.png"), crosshair;
-  cursor: url("../images/Small_Cursor.png"), text;
-  cursor: url("../images/Small_Cursor.png"), vertical-text;
-  cursor: url("../images/Small_Cursor.png"), alias;
-  cursor: url("../images/Small_Cursor.png"), copy;
-  cursor: url("../images/Small_Cursor.png"), move;
-  cursor: url("../images/Small_Cursor.png"), no-drop;
-  cursor: url("../images/Small_Cursor.png"), not-allowed;
-  cursor: url("../images/Small_Cursor.png"), all-scroll;
-  cursor: url("../images/Small_Cursor.png"), col-resize;
-  cursor: url("../images/Small_Cursor.png"), row-resize;
-  cursor: url("../images/Small_Cursor.png"), n-resize;
-  cursor: url("../images/Small_Cursor.png"), e-resize;
-  cursor: url("../images/Small_Cursor.png"), s-resize;
-  cursor: url("../images/Small_Cursor.png"), w-resize;
-  cursor: url("../images/Small_Cursor.png"), ns-resize;
-  cursor: url("../images/Small_Cursor.png"), ew-resize;
-  cursor: url("../images/Small_Cursor.png"), ne-resize;
-  cursor: url("../images/Small_Cursor.png"), nw-resize;
-  cursor: url("../images/Small_Cursor.png"), se-resize;
-  cursor: url("../images/Small_Cursor.png"), sw-resize;
-  cursor: url("../images/Small_Cursor.png"), nesw-resize;
-  cursor: url("../images/Small_Cursor.png"), nwse-resize;
+}
+
+body {
+  cursor: url("../images/Small_Cursor.png"), auto;
+}
+
+.backgroundthing {
+  cursor: url("../images/Small_Cursor.png"), auto;
+}
+
+.footerig {
+  cursor: url("../images/Small_Cursor.png"), auto;
+}
+
+#logo {
+  cursor: url("../images/Small_Cursor.png"), auto;
+}
+
+#photoBoard {
+  cursor: url("../images/Small_Cursor.png"), auto;
+}
+
+.rrbutton {
+  cursor: url("../images/Small_Cursor.png"), auto;
+}
+
+.rrbutton:hover {
+  cursor: url("../images/Small_Cursor.png"), auto;
 }
