@@ -35,15 +35,19 @@
       let y = Math.random() * (window.innerHeight - peterHeight);
       let dx = (Math.random() - 0.5) * 4;
       let dy = (Math.random() - 0.5) * 4;
+      let changex = 0.05;
+      let changey = 0.05;
 
       function update() {
         if (x + dx < 0 || x + dx > window.innerWidth - peterWidth) {
           dx = -dx;
-          scream.play();
+          changex = -changex;
+          scream();
         }
         if (y + dy < 0 || y + dy > window.innerHeight - peterHeight) {
           dy = -dy;
-          scream.play();
+          changey = -changey;
+          scream();
         }
 
         x += dx;
@@ -57,6 +61,12 @@
       }
 
       update();
+
+      function scream() {
+        scream.pause();
+        scream.currentTime = 0;
+        scream.play();
+      }
     </script>
   </body>
 </html>
