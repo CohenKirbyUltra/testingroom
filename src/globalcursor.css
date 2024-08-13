@@ -10,6 +10,10 @@ body {
   cursor: url("../images/Small_Cursor.png"), auto;
 }
 
+a {
+  cursor: url("../images/Small_Cursor.png"), auto;
+}
+
 .footerig {
   cursor: url("../images/Small_Cursor.png"), auto;
 }
