@@ -31,6 +31,10 @@
       const peterWidth = peter.offsetWidth;
       const peterHeight = peter.offsetHeight;
 
+      peter.addEventListener("click", function () {
+        dx = 0;
+        dy = 0;
+      });
       let x = Math.random() * (window.innerWidth - peterWidth);
       let y = Math.random() * (window.innerHeight - peterHeight);
       let dx = (Math.random() - 0.5) * 4;
