@@ -35,7 +35,9 @@ hover.type = "audio/wav";
 release = new Audio();
 release.type = "audio/wav";
 
-document.addEventListener("click", sfxplay("click"));
+document.addEventListener("click", function () {
+  sfxplay("click");
+});
 
 function sfxplay(type) {
   let x = getRndInteger(0, 6);
@@ -50,8 +52,7 @@ function sfxplay(type) {
       release.src = releasesfxs[x];
       release.play();
     default:
-      // nothing happens
-      window.alert("Error! SFX TYPE INVALID");
+    // nothing happens
   }
 }
 
