@@ -25,6 +25,8 @@
     <div id="peter"></div>
 
     <script>
+      var scream = new Audio();
+      scream.src = "audio/agony.mp3";
       const peter = document.getElementById("peter");
       const peterWidth = peter.offsetWidth;
       const peterHeight = peter.offsetHeight;
@@ -37,6 +39,7 @@
       function update() {
         if (x + dx < 0 || x + dx > window.innerWidth - peterWidth) {
           dx = -dx;
+          scream.play();
         }
         if (y + dy < 0 || y + dy > window.innerHeight - peterHeight) {
           dy = -dy;
