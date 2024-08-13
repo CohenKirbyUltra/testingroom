@@ -1,15 +1,16 @@
 @font-face {
-  font-family: RecRoom;
+  font-family: Futura;
   src: url("../fonts/Futura_Bold.ttf");
 }
 
 body {
-  font-family: RecRoom;
+  font-family: Futura;
   background-color: rgb(248, 125, 2);
   color: rgb(255, 197, 140);
-}
-
-body {
   background-image: url("../images/AnimatedBackground.gif");
   background-size: cover;
+}
+
+.backgroundthing {
+  background-color: rgb(222, 98, 4);
 }
