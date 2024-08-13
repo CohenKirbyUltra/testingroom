@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter Griffin Bouncing Around</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        cursor: none; /* Hides the cursor for a more playful effect */
+      }
+
+      #peter {
+        position: absolute;
+        width: 100px; /* Adjust size as needed */
+        height: 100px; /* Adjust size as needed */
+        background-image: url("https://path-to-your-image.com/peter-griffin.png"); /* Replace with your image URL */
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="peter"></div>
+
+    <script>
+      const peter = document.getElementById("peter");
+      const peterWidth = peter.offsetWidth;
+      const peterHeight = peter.offsetHeight;
+
+      let x = Math.random() * (window.innerWidth - peterWidth);
+      let y = Math.random() * (window.innerHeight - peterHeight);
+      let dx = (Math.random() - 0.5) * 4;
+      let dy = (Math.random() - 0.5) * 4;
+
+      function update() {
+        if (x + dx < 0 || x + dx > window.innerWidth - peterWidth) {
+          dx = -dx;
+        }
+        if (y + dy < 0 || y + dy > window.innerHeight - peterHeight) {
+          dy = -dy;
+        }
+
+        x += dx;
+        y += dy;
+
+        peter.style.transform = `translate(${x}px, ${y}px)`;
+
+        requestAnimationFrame(update);
+      }
+
+      update();
+    </script>
+  </body>
+</html>
