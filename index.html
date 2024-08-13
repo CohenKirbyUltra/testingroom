@@ -84,19 +84,15 @@
       release = new Audio();
       release.type = "audio/wav";
 
-      document.onclick =
-        () =>
-          function () {
-            sfxplay("click");
-          }
-      );
+      document.onclick = () =>
+        function () {
+          sfxplay("click");
+        };
 
-      document.button.onmouseover =
-        () =>
-          function () {
-            sfxplay("hover");
-          }
-      );
+      document.button.onmouseover = () =>
+        function () {
+          sfxplay("hover");
+        };
 
       function sfxplay(type) {
         let x = getRndInteger(0, 6);
