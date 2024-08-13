@@ -43,6 +43,7 @@
         }
         if (y + dy < 0 || y + dy > window.innerHeight - peterHeight) {
           dy = -dy;
+          scream.play();
         }
 
         x += dx;
