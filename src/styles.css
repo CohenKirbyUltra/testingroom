@@ -1,8 +1,10 @@
 @font-face {
   font-family: RecRoom;
-  src: url("../fonts/Futura\ Bold.ttf");
+  src: url("../fonts/Futura_Bold.ttf");
 }
 
 body {
   font-family: RecRoom;
+  background-color: rgb(248, 125, 2);
+  color: rgb(255, 197, 140);
 }
