@@ -42,12 +42,12 @@
         if (x + dx < 0 || x + dx > window.innerWidth - peterWidth) {
           dx = -dx;
           changex = -changex;
-          scream();
+          yell();
         }
         if (y + dy < 0 || y + dy > window.innerHeight - peterHeight) {
           dy = -dy;
           changey = -changey;
-          scream();
+          yell();
         }
 
         x += dx;
@@ -62,7 +62,7 @@
 
       update();
 
-      function scream() {
+      function yell() {
         scream.pause();
         scream.currentTime = 0;
         scream.play();
