@@ -206,9 +206,9 @@
             imageElement.dataset.description = img.description;
             imageElement.onmouseover = () =>
               showDescription(img.description, img.name);
-            imageElement.onmouseover = () => playsfx("hover");
-            imageElement.onmouseout = () => playsfx("hover");
-            imageElement.onclick = () => playsfx("click");
+            imageElement.onmouseover = () => sfxplay("hover");
+            imageElement.onmouseout = () => sfxplay("hover");
+            imageElement.onclick = () => sfxplay("click");
             gallery.appendChild(imageElement);
           });
         }
