@@ -81,20 +81,14 @@
           let x = getRndInteger(0, 6);
           switch (type) {
             case "click":
-              click.pause();
-              click.currentTime = 0;
               click.src = clicksfxs[x];
-              click.play();
+              click.cloneNode().play();
             case "hover":
-              hover.pause();
-              hover.currentTime = 0;
               hover.src = hoversfxs[x];
-              hover.play();
+              hover.cloneNode().play();
             case "release":
-              release.pause();
-              release.currentTime = 0;
               release.src = releasesfxs[x];
-              release.play();
+              release.cloneNode().play();
             default:
             // nothing happens
           }
