@@ -8,11 +8,19 @@
     <link href="../src/globalcursor.css" rel="stylesheet" />
     <style>
       .gallery img {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         margin: 10px;
         cursor: url("../images/Small_Cursor.png"), pointer;
       }
+
+      .gallery img:hover {
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+        cursor: url("../images/Small_Cursor.png"), pointer;
+      }
+
       .description {
         margin-top: 10px;
       }
@@ -198,11 +206,16 @@
             imageElement.src = img.src;
             imageElement.alt = `Image ${index + 1}`;
             imageElement.dataset.description = img.description;
-            imageElement.onmouseover = () =>
+            imageElement.onclick = () => {
               showDescription(img.description, img.name);
-            imageElement.onmouseover = () => sfxplay("hover");
-            imageElement.onmouseout = () => sfxplay("hover");
-            imageElement.onclick = () => sfxplay("click");
+              sfxplay("click");
+            };
+            imageElement.onmouseover = () => {
+              sfxplay("hover");
+            };
+            imageElement.onmouseout = () => {
+              sfxplay("hover");
+            };
             gallery.appendChild(imageElement);
           });
         }
