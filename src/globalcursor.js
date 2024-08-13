@@ -39,11 +39,9 @@ document.addEventListener("click", function () {
   sfxplay("click");
 });
 
-document
-  .getElementsByClassName("rrbutton")
-  .addEventListener("mouseover", function () {
-    sfxplay("hover");
-  });
+document.button.addEventListener("mouseover", function () {
+  sfxplay("hover");
+});
 
 function sfxplay(type) {
   let x = getRndInteger(0, 6);

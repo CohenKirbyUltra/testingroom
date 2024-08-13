@@ -35,6 +35,8 @@ body {
   background-color: rgb(234, 138, 65);
   color: white;
   border-radius: 10px;
+  width: 40px;
+  height: 30px;
 }
 
 .rrbutton:hover {
@@ -42,4 +44,6 @@ body {
   background-color: rgb(193, 114, 54);
   color: #bbbbbb;
   border-radius: 8px;
+  width: 40px;
+  height: 30px;
 }
