@@ -39,6 +39,12 @@ document.addEventListener("click", function () {
   sfxplay("click");
 });
 
+document
+  .getElementsByClassName("rrbutton")
+  .addEventListener("mouseover", function () {
+    sfxplay("hover");
+  });
+
 function sfxplay(type) {
   let x = getRndInteger(0, 6);
   switch (type) {

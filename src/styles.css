@@ -16,6 +16,11 @@ body {
   width: 70%;
 }
 
+.footerig {
+  background-color: rgb(222, 98, 4);
+  width: 70%;
+}
+
 #logo {
   width: 40%;
   height: 20%;
@@ -23,4 +28,18 @@ body {
 
 #photoBoard {
   width: 70%;
+}
+
+.rrbutton {
+  border-width: 0px;
+  background-color: rgb(234, 138, 65);
+  color: white;
+  border-radius: 10px;
+}
+
+.rrbutton:hover {
+  border-width: 0px;
+  background-color: rgb(193, 114, 54);
+  color: #bbbbbb;
+  border-radius: 8px;
 }
