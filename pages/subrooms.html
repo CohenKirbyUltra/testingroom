@@ -11,7 +11,7 @@
         width: 100px;
         height: 100px;
         margin: 10px;
-        cursor: pointer;
+        cursor: url("../images/Small_Cursor.png"), pointer;
       }
       .description {
         margin-top: 10px;
@@ -19,134 +19,142 @@
       .category-buttons button {
         margin: 5px;
         padding: 5px 10px;
-        cursor: pointer;
+        cursor: url("../images/Small_Cursor.png"), pointer;
       }
     </style>
   </head>
   <body>
     <div class="category-buttons">
-      <button onclick="displayGallery('Main')">Main</button>
-      <button onclick="displayGallery('Combat')">Combat</button>
-      <button onclick="displayGallery('Climbing')">Climbing</button>
-      <button onclick="displayGallery('Misc')">Misc</button>
+      <button class="rrbutton" onclick="displayGallery('Main')">Main</button>
+      <button class="rrbutton" onclick="displayGallery('Combat')">
+        Combat
+      </button>
+      <button class="rrbutton" onclick="displayGallery('Climbing')">
+        Climbing
+      </button>
+      <button class="rrbutton" onclick="displayGallery('Misc')">Misc</button>
     </div>
-    <h2 id="name" class="name">Placeholder</h2>
-    <div id="gallery" class="gallery"></div>
-    <div id="description" class="description"></div>
+    <div class="backgroundthing">
+      <h2 id="name" class="name">Placeholder</h2>
+      <div id="gallery" class="gallery"></div>
+      <div id="description" class="description"></div>
 
-    <script>
-      const images = [
-        {
-          name: "Hub Area",
-          src: "../images/subrooms/Hub.png",
-          category: "Main",
-          description: "Main image 1 description",
-        },
-        {
-          name: "Chillspace",
-          src: "../images/subrooms/Hangout.png",
-          category: "Main",
-          description: "Main image 2 description",
-        },
-        {
-          name: "Chicago",
-          src: "../images/subrooms/Chicago.png",
-          category: "Combat",
-          description: "Combat image 1 description",
-        },
-        {
-          name: "London",
-          src: "../images/subrooms/London.png",
-          category: "Combat",
-          description: "Combat image 2 description",
-        },
-        {
-          name: "Surviva da jello killar",
-          src: "../images/subrooms/Survival.png",
-          category: "Combat",
-          description: "Combat image 3 description",
-        },
-        {
-          name: "Player Vs Enemy",
-          src: "../images/subrooms/PVE.png",
-          category: "Combat",
-          description: "Combat image 4 description",
-        },
-        {
-          name: "Course 1 - The Cliumb of all time",
-          src: "../images/subrooms/Course_1.png",
-          category: "Climbing",
-          description: "Climbing image 1 description",
-        },
-        {
-          name: "Course 2 - Gob the lin tower",
-          src: "../images/subrooms/Course_2.png",
-          category: "Climbing",
-          description: "Climbing image 2 description",
-        },
-        {
-          name: "Course 3 - Getting over the mountain thingy",
-          src: "../images/subrooms/Course_3.png",
-          category: "Climbing",
-          description: "Climbing image 3 description",
-        },
-        {
-          name: "Course 4 - Hellborn",
-          src: "../images/subrooms/Hello.png",
-          category: "Climbing",
-          description: "Hello. We'll meet again soon.",
-        },
-        {
-          name: "Comical jog racing",
-          src: "../images/subrooms/Missing.png",
-          category: "Misc",
-          description: "Misc image 1 description",
-        },
-        {
-          name: "Puzzle Area",
-          src: "../images/subrooms/Puzzles.png",
-          category: "Misc",
-          description: "Misc image 2 description",
-        },
-        {
-          name: "Achievements",
-          src: "../images/subrooms/Achievements.png",
-          category: "Misc",
-          description: "Misc image 3 description",
-        },
-        {
-          name: "Credits",
-          src: "../images/subrooms/Credits.png",
-          category: "Misc",
-          description: "Misc image 4 description",
-        },
-      ];
+      <script>
+        const images = [
+          {
+            name: "Hub Area",
+            src: "../images/subrooms/Hub.png",
+            category: "Main",
+            description: "Main image 1 description",
+          },
+          {
+            name: "Chillspace",
+            src: "../images/subrooms/Hangout.png",
+            category: "Main",
+            description: "Main image 2 description",
+          },
+          {
+            name: "Chicago",
+            src: "../images/subrooms/Chicago.png",
+            category: "Combat",
+            description: "Combat image 1 description",
+          },
+          {
+            name: "London",
+            src: "../images/subrooms/London.png",
+            category: "Combat",
+            description: "Combat image 2 description",
+          },
+          {
+            name: "Surviva da jello killar",
+            src: "../images/subrooms/Survival.png",
+            category: "Combat",
+            description: "Combat image 3 description",
+          },
+          {
+            name: "Player Vs Enemy",
+            src: "../images/subrooms/PVE.png",
+            category: "Combat",
+            description: "Combat image 4 description",
+          },
+          {
+            name: "Course 1 - The Cliumb of all time",
+            src: "../images/subrooms/Course_1.png",
+            category: "Climbing",
+            description: "Climbing image 1 description",
+          },
+          {
+            name: "Course 2 - Gob the lin tower",
+            src: "../images/subrooms/Course_2.png",
+            category: "Climbing",
+            description: "Climbing image 2 description",
+          },
+          {
+            name: "Course 3 - Getting over the mountain thingy",
+            src: "../images/subrooms/Course_3.png",
+            category: "Climbing",
+            description: "Climbing image 3 description",
+          },
+          {
+            name: "Course 4 - Hellborn",
+            src: "../images/subrooms/Hello.png",
+            category: "Climbing",
+            description: "Hello. We'll meet again soon.",
+          },
+          {
+            name: "Comical jog racing",
+            src: "../images/subrooms/Missing.png",
+            category: "Misc",
+            description: "Misc image 1 description",
+          },
+          {
+            name: "Puzzle Area",
+            src: "../images/subrooms/Puzzles.png",
+            category: "Misc",
+            description: "Misc image 2 description",
+          },
+          {
+            name: "Achievements",
+            src: "../images/subrooms/Achievements.png",
+            category: "Misc",
+            description: "Misc image 3 description",
+          },
+          {
+            name: "Credits",
+            src: "../images/subrooms/Credits.png",
+            category: "Misc",
+            description: "Misc image 4 description",
+          },
+        ];
 
-      function displayGallery(category) {
-        const gallery = document.getElementById("gallery");
-        gallery.innerHTML = ""; // Clear existing images
+        function displayGallery(category) {
+          const gallery = document.getElementById("gallery");
+          gallery.innerHTML = ""; // Clear existing images
 
-        const filteredImages = images.filter(
-          (img) => img.category === category
-        );
+          const filteredImages = images.filter(
+            (img) => img.category === category
+          );
 
-        filteredImages.forEach((img, index) => {
-          const imageElement = document.createElement("img");
-          imageElement.src = img.src;
-          imageElement.alt = `Image ${index + 1}`;
-          imageElement.dataset.description = img.description;
-          imageElement.onclick = () => showDescription(img.description);
-          gallery.appendChild(imageElement);
-        });
-      }
+          filteredImages.forEach((img, index) => {
+            const imageElement = document.createElement("img");
+            imageElement.src = img.src;
+            imageElement.alt = `Image ${index + 1}`;
+            imageElement.dataset.description = img.description;
+            imageElement.onmouseover = () =>
+              showDescription(img.description, img.name);
+            gallery.appendChild(imageElement);
+          });
+        }
 
-      function showDescription(description) {
-        document.getElementById("description").textContent = description;
-      }
+        function showDescription(description, name) {
+          document.getElementById("description").textContent = description;
+          document.getElementById("name").innerHTML = name;
+        }
 
-      // Display gallery for the default category on page load
-      displayGallery("Main"); // Change default category if needed
-    </script>
+        // Display gallery for the default category on page load
+        displayGallery("Main"); // Change default category if needed
+      </script>
+    </div>
     <script src="../src/globalcursor.js"></script>
     <footer>
       <div class="footerig">
