@@ -84,16 +84,14 @@
       release = new Audio();
       release.type = "audio/wav";
 
-      document.addEventListener(
-        "click",
+      document.onclick =
         () =>
           function () {
             sfxplay("click");
           }
       );
 
-      document.button.addEventListener(
-        "mouseover",
+      document.button.onmouseover =
         () =>
           function () {
             sfxplay("hover");
@@ -105,13 +103,13 @@
         switch (type) {
           case "click":
             click.src = clicksfxs[x];
-            click.play();
+            click.cloneNode().play();
           case "hover":
             hover.src = hoversfxs[x];
-            hover.play();
+            hover.cloneNode().play();
           case "release":
             release.src = releasesfxs[x];
-            release.play();
+            release.cloneNode().play();
           default:
           // nothing happens
         }
