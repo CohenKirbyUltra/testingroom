@@ -96,15 +96,6 @@
         const galleryContainer = document.querySelector("#gallery");
 
         data.forEach((item) => {
-          // Create table row
-          const row = document.createElement("tr");
-          row.innerHTML = `
-                    <td>${item.name}</td>
-                    <td>${item.description}</td>
-                    <td><img src="${item.imageSrc}" alt="${item.name}"></td>
-                `;
-          tableBody.appendChild(row);
-
           // Create gallery item
           const galleryItem = document.createElement("div");
           galleryItem.className = "gallery-item";
