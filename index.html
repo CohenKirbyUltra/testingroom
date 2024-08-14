@@ -118,9 +118,9 @@
         return Math.floor(Math.random() * (max - min)) + min;
       }
 
-      document.querySelectorAll("rrbutton").map((element, index, array) => {
+      document.querySelectorAll("rrbutton").forEach(element, index, array) {
         element.sfxplay("hover");
-      });
+      }
 
       const ad = document.getElementById("ad");
 
