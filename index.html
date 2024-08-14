@@ -83,18 +83,21 @@
       release = new Audio();
       release.type = "audio/wav";
 
-      document.getElementById("about").onclick = send("click", "about");
+      document.getElementById("about").onclick = "dothing('click' 'about')";
 
-      document.getElementById("about").onmouseover = send("hover", "none");
+      document.getElementById("about").onmouseover = "dothing('hover', 'none')";
 
-      document.getElementById("devs").onclick = send("click", "devs");
+      document.getElementById("devs").onclick = "dothing('click', 'devs')";
 
-      document.getElementById("devs").onmouseover = send("hover", "none");
+      document.getElementById("devs").onmouseover = "dothing('hover', 'none')";
 
-      document.getElementById("credits").onclick = send("click", "credits");
+      document.getElementById("credits").onclick =
+        "dothing('click', 'credits')";
 
-      document.getElementById("credits").onmouseover = send("hover", "none");
-      function send(type, send) {
+      document.getElementById("credits").onmouseover =
+        "dothing('hover', 'none')";
+
+      function dothing(type, send) {
         switch (send) {
           case "about":
             window.location.href = "pages/about.html";
