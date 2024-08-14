@@ -37,9 +37,30 @@
       </div>
       <footer>
         <div class="footerig">
-          <button id="about" class="rrbutton">About</button>
-          <button id="devs" class="rrbutton">Devs</button>
-          <button id="credits" class="rrbutton">Credits</button>
+          <button
+            id="about"
+            class="rrbutton"
+            onmouseover="dothing('hover', 'none')"
+            onclick="dothing('click', 'about')"
+          >
+            About
+          </button>
+          <button
+            id="devs"
+            class="rrbutton"
+            onmouseover="dothing('hover', 'none')"
+            onclick="dothing('click', 'devs')"
+          >
+            Devs
+          </button>
+          <button
+            id="credits"
+            class="rrbutton"
+            onmouseover="dothing('hover', 'none')"
+            onclick="dothing('click', 'credits')"
+          >
+            Credits
+          </button>
         </div>
       </footer>
     </center>
@@ -83,20 +104,6 @@
       release = new Audio();
       release.type = "audio/wav";
 
-      document.getElementById("about").onclick = "dothing('click' 'about')";
-
-      document.getElementById("about").onmouseover = "dothing('hover', 'none')";
-
-      document.getElementById("devs").onclick = "dothing('click', 'devs')";
-
-      document.getElementById("devs").onmouseover = "dothing('hover', 'none')";
-
-      document.getElementById("credits").onclick =
-        "dothing('click', 'credits')";
-
-      document.getElementById("credits").onmouseover =
-        "dothing('hover', 'none')";
-
       function dothing(type, send) {
         switch (send) {
           case "about":
@@ -108,9 +115,9 @@
           default:
           //a
         }
-
         sfxplay(type);
       }
+
       function sfxplay(type) {
         let x = getRndInteger(0, 6);
         switch (type) {
