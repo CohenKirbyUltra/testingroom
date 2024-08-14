@@ -34,22 +34,10 @@
   </head>
   <body>
     <div class="category-buttons">
-      <button class="rrbutton" id="main" onclick="displayGallery('Main')">
-        Main
-      </button>
-      <button class="rrbutton" id="combat" onclick="displayGallery('Combat')">
-        Combat
-      </button>
-      <button
-        class="rrbutton"
-        id="climbing"
-        onclick="displayGallery('Climbing')"
-      >
-        Climbing
-      </button>
-      <button class="rrbutton" id="misc" onclick="displayGallery('Misc')">
-        Misc
-      </button>
+      <button class="rrbutton" id="main">Main</button>
+      <button class="rrbutton" id="combat">Combat</button>
+      <button class="rrbutton" id="climbing">Climbing</button>
+      <button class="rrbutton" id="misc">Misc</button>
     </div>
     <div class="backgroundthing">
       <h2 id="name" class="name">Placeholder</h2>
@@ -225,18 +213,22 @@
         document.getElementById("main").onclick = () =>
           function () {
             flip.cloneNode().play();
+            displayGallery("Main");
           };
         document.getElementById("combat").onclick = () =>
           function () {
             flip.cloneNode().play();
+            displayGallery("Combat");
           };
         document.getElementById("climbing").onclick = () =>
           function () {
             flip.cloneNode().play();
+            displayGallery("Climbing");
           };
         document.getElementById("misc").onclick = () =>
           function () {
             flip.cloneNode().play();
+            displayGallery("Misc");
           };
 
         function displayGallery(category) {
