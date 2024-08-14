@@ -84,16 +84,37 @@
       release = new Audio();
       release.type = "audio/wav";
 
-      document.onclick = () =>
+      document.getElementById("about").onclick = () =>
         function () {
           sfxplay("click");
+          window.location.href = "pages/about.html";
         };
 
-      document.button.onmouseover = () =>
+      document.getElementById("about").onmouseover = () =>
         function () {
           sfxplay("hover");
         };
 
+      document.getElementById("dev").onclick = () =>
+        function () {
+          sfxplay("click");
+          window.location.href = "pages/devs.html";
+        };
+
+      document.getElementById("dev").onmouseover = () =>
+        function () {
+          sfxplay("hover");
+        };
+      document.getElementById("credits").onclick = () =>
+        function () {
+          sfxplay("click");
+          window.location.href = "pages/credits.html";
+        };
+
+      document.getElementById("credits").onmouseover = () =>
+        function () {
+          sfxplay("hover");
+        };
       function sfxplay(type) {
         let x = getRndInteger(0, 6);
         switch (type) {
