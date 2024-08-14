@@ -118,13 +118,10 @@
         return Math.floor(Math.random() * (max - min)) + min;
       }
 
-      Array.from(document.getElementsByClassName("rrbutton")).forEach(function (
-        element,
-        index,
-        array
-      ) {
-        element.onmouseover = sfxplay("hover");
-      });
+      document.querySelectorAll(".myclass")].map((element, index, array) => {
+          element.onmouseover = sfxplay("hover");
+          }
+      );
     </script>
     <script src="src/index.js"></script>
   </body>
