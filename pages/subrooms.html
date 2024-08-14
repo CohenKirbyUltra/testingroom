@@ -34,14 +34,22 @@
   </head>
   <body>
     <div class="category-buttons">
-      <button class="rrbutton" onclick="displayGallery('Main')">Main</button>
-      <button class="rrbutton" onclick="displayGallery('Combat')">
+      <button class="rrbutton" id="main" onclick="displayGallery('Main')">
+        Main
+      </button>
+      <button class="rrbutton" id="combat" onclick="displayGallery('Combat')">
         Combat
       </button>
-      <button class="rrbutton" onclick="displayGallery('Climbing')">
+      <button
+        class="rrbutton"
+        id="climbing"
+        onclick="displayGallery('Climbing')"
+      >
         Climbing
       </button>
-      <button class="rrbutton" onclick="displayGallery('Misc')">Misc</button>
+      <button class="rrbutton" id="misc" onclick="displayGallery('Misc')">
+        Misc
+      </button>
     </div>
     <div class="backgroundthing">
       <h2 id="name" class="name">Placeholder</h2>
@@ -76,7 +84,12 @@
           "../audio/ui/sfx_rrui_watch_ui_select_up_05.wav",
           "../audio/ui/sfx_rrui_watch_ui_select_up_06.wav",
         ];
-        var click, hover, release;
+        var click, hover, release, flip;
+        flip = new Audio();
+        flip.type = "audio/mpeg";
+        flip.src = "../audio/page-flip.mp3";
+        flip.volume = 0.5;
+
         click = new Audio();
         click.type = "audio/wav";
         click.volume = 0.5;
@@ -208,6 +221,23 @@
               "The credits area that shows what inventions, who beta tested, the funny items, and characters/devs of the game.",
           },
         ];
+
+        document.getElementById("main").onclick = () =>
+          function () {
+            flip.cloneNode().play();
+          };
+        document.getElementById("combat").onclick = () =>
+          function () {
+            flip.cloneNode().play();
+          };
+        document.getElementById("climbing").onclick = () =>
+          function () {
+            flip.cloneNode().play();
+          };
+        document.getElementById("misc").onclick = () =>
+          function () {
+            flip.cloneNode().play();
+          };
 
         function displayGallery(category) {
           const gallery = document.getElementById("gallery");
