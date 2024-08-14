@@ -1,4 +1,4 @@
-<html onclick="sfxplay('click')">
+<html onclick="sfxplay('click')" onload="adstuff()">
   <audio autoplay loop id="music">
     <source src="audio/Website_Main.mp3" type="audio/mpeg" />
   </audio>
@@ -7,7 +7,7 @@
     <link href="src/styles.css" rel="stylesheet" />
     <link href="src/globalcursor.css" rel="stylesheet" />
     <center>
-      <img id="ad" class="adplacement src="images/subrooms/Missing.png" />
+      <img id="ad" class="adplacement" src="images/subrooms/Missing.png" />
       <img src="images/cohenTitle.png" id="logo" />
       <div class="backgroundthing">
         <section>
@@ -37,9 +37,9 @@
       </div>
       <footer>
         <div class="footerig">
-          <button id="about" class="rrbutton">About</button>
-          <button id="devs" class="rrbutton">Devs</button>
-          <button id="credits" class="rrbutton">Credits</button>
+          <button id="about" class="rrbutton" onclick="window.location.href = 'pages/about.html'">About</button>
+          <button id="devs" class="rrbutton" onclick="window.location.href = 'pages/devs.html'">Devs</button>
+          <button id="credits" class="rrbutton" onclick="window.location.href = 'pages/credits.html'">Credits</button>
         </div>
       </footer>
     </center>
@@ -128,17 +128,15 @@
         let rand = getRndInteger(0, 20);
 
         if (rand < 10) {
-          ad.src = "images/ad1.png";
+          document.getElementById("ad").src = "images/ad1.png";
         }
         if (rand >= 11 && rand < 20) {
-          ad.src = "images/ad2.png";
+          document.getElementById("ad").src = "images/ad2.png";
         }
         if (rand === 20) {
-          ad.src = "images/ad3.png";
+          document.getElementById("ad").src = "images/ad3.png";
         }
       }
-
-      adstuff();
     </script>
     <script src="src/index.js"></script>
   </body>
