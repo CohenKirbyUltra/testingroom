@@ -1,4 +1,4 @@
-<html>
+<html onclick="sfxplay('click')">
   <audio autoplay loop id="music">
     <source src="audio/Website_Main.mp3" type="audio/mpeg" />
   </audio>
@@ -40,24 +40,24 @@
           <button
             id="about"
             class="rrbutton"
-            onmouseover="dothing('hover', 'none')"
-            onclick="dothing('click', 'about')"
+            onmouseover="sfxplay('hover')"
+            onclick="window.location.href = "pages/about.html"
           >
             About
           </button>
           <button
             id="devs"
             class="rrbutton"
-            onmouseover="dothing('hover', 'none')"
-            onclick="dothing('click', 'devs')"
+            onmouseover="sfxplay('hover')"
+            onclick=window.location.href = "pages/devs.html"
           >
             Devs
           </button>
           <button
             id="credits"
             class="rrbutton"
-            onmouseover="dothing('hover', 'none')"
-            onclick="dothing('click', 'credits')"
+            onmouseover="sfxplay('hover')"
+            onclick="dowindow.location.href = "pages/credits.html"
           >
             Credits
           </button>
