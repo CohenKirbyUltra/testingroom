@@ -143,6 +143,8 @@
       window.addEventListener("DOMContentLoaded", function () {
         ads();
 
+        document.getElementById("music").play();
+
         document.querySelectorAll("button").forEach((button) => () => {
           button.onmouseover = function () {
             sfxplay("hover");
