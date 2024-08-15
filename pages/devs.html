@@ -82,31 +82,31 @@
         {
           name: "LuciferKS",
           work: "Designer, Artist, Creative Designer, Tester",
-          description: "",
+          description: "The goober. You might either find him working, or just straight up napping somewhere. (dont wake him up though you will Die)",
           imageSrc: "https://via.placeholder.com/200",
         },
         {
           name: "LunaKS",
           work: "Builder, Designer, Artist, Creative Designer, Tester",
-          description: "Waves crashing on a sandy beach.",
+          description: "Hello ^_^  I build and design silly cool thingies like the gabble and jello :3 I may not be the best in my league but I’m having fun >_<!!!”,
           imageSrc: "https://via.placeholder.com/200",
         },
         {
           name: "Disjoined",
           work: "Music/Sfx Recorder, Creative Designer, Tester",
-          description: "Waves crashing on a sandy beach.",
+          description: "One of the foodlesticks although he knew nothing of his purpose all he could do is lag yet he controlled it powerfully",
           imageSrc: "https://via.placeholder.com/200",
         },
         {
           name: "Kevinthekeen",
           work: "Music/Sfx Recorder, Musician, Creative Designer, Tester",
-          description: "Waves crashing on a sandy beach.",
+          description: "You will die in oklahoma",
           imageSrc: "https://via.placeholder.com/200",
         },
         {
           name: "Mr Doodle",
           work: "Builder, Creative Designer, Artist, Tester",
-          description: "Waves crashing on a sandy beach.",
+          description: "Just a dumbass on the team. He's also the owner of MemorBox.",
           imageSrc: "https://via.placeholder.com/200",
         },
         {
@@ -116,9 +116,27 @@
           imageSrc: "https://via.placeholder.com/200",
         },
         {
+          name: "KKingInfinite",
+          work: "Coder, Creative Designer, Designer, Tester",
+          description: "Waves crashing on a sandy beach.",
+          imageSrc: "https://via.placeholder.com/200",
+        },
+        {
+          name: "Raine",
+          work: "VA, Tester",
+          description: "idk but he voices #######",
+          imageSrc: "https://via.placeholder.com/200",
+        },
+        {
           name: "M.4.G.1.K",
           work: "Music/Sfx Recorder, Tester",
           description: "Waves crashing on a sandy beach.",
+          imageSrc: "https://via.placeholder.com/200",
+        },
+        {
+          name: "Lucidaudio",
+          work: "Musician",
+          description: "Serum addict",
           imageSrc: "https://via.placeholder.com/200",
         },
       ];
@@ -133,6 +151,7 @@
           galleryItem.className = "gallery-item";
           galleryItem.innerHTML = `
                     <h2>${item.name}</h2>
+                    <h4>${item.work}</h4>
                     <img src="${item.imageSrc}" alt="${item.name}">
                     <p>${item.description}</p>
                 `;
@@ -143,5 +162,16 @@
       // Populate the gallery and table on page load
       window.onload = populateGalleryAndTable;
     </script>
+    <footer>
+      <div class="footerig">
+        <button
+          id="back"
+          class="rrbutton"
+          onclick="window.location.href = '../index.html'"
+        >
+          Back
+        </button>
+      </div>
+    </footer>
   </body>
 </html>
