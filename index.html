@@ -128,39 +128,38 @@
         let rand = getRndInteger(0, 20);
 
         if (rand < 10) {
-            document.getElementById("ad").src = "images/ad1.png";
+          document.getElementById("ad").src = "images/ad1.png";
         }
         if (rand >= 11 && rand < 20) {
-            document.getElementById("ad").src = "images/ad2.png";
+          document.getElementById("ad").src = "images/ad2.png";
         }
         if (rand === 20) {
-            document.getElementById("ad").src = "images/ad3.png";
+          document.getElementById("ad").src = "images/ad3.png";
         }
       }
 
       window.addEventListener("DOMContentLoaded", function () {
-
         ads();
 
-        document.querySelectorAll('button').forEach(button => () {
+        document.querySelectorAll("button").forEach((button) => () => {
           button.onmouseover = () => {
-              sfxplay("hover");
+            sfxplay("hover");
           };
         });
 
         window.addEventListener("click", sfxplay("click"));
 
-        document.getElementById("about").onmouseover = function() {
+        document.getElementById("about").onmouseover = function () {
           sfxplay("hover");
-        }
+        };
 
-        document.getElementById("devs").onmouseover = function() {
+        document.getElementById("devs").onmouseover = function () {
           sfxplay("hover");
-        }
+        };
 
-        document.getElementById("credits").onmouseover = function() {
+        document.getElementById("credits").onmouseover = function () {
           sfxplay("hover");
-        }
+        };
       });
     </script>
   </body>
