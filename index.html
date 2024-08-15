@@ -142,7 +142,7 @@
         ads();
 
         document.querySelectorAll("button").forEach((button) => () => {
-          button.onmouseover = () => {
+          button.onmouseover = function () {
             sfxplay("hover");
           };
         });
