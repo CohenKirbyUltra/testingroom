@@ -58,7 +58,7 @@
     }
   }
 </script>
-<html onclick="sfxplay('click')" onload="adstuff()">
+<html onclick="sfxplay('click')">
   <audio autoplay loop id="music">
     <source src="audio/Website_Main.mp3" type="audio/mpeg" />
   </audio>
@@ -144,6 +144,18 @@
         });
 
         window.addEventListener("click", sfxplay("click"));
+
+        document.getElementById("about").onmouseover = function() {
+          sfxplay("hover");
+        }
+
+        document.getElementById("devs").onmouseover = function() {
+          sfxplay("hover");
+        }
+
+        document.getElementById("credits").onmouseover = function() {
+          sfxplay("hover");
+        }
       });
     </script>
   </body>
