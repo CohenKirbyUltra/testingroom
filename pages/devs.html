@@ -1,169 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testing Room | Devs</title>
-    <link href="../src/styles.css" rel="stylesheet" />
-    <link href="../src/globalcursor.css" rel="stylesheet" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-      .container {
-        width: 90%;
-        margin: 0 auto;
-      }
-      h1 {
-        text-align: center;
-        margin: 20px 0;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-      }
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-      }
-      th {
-        background-color: #f2f2f2;
-      }
-      img {
-        max-width: 100px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-      }
-      .gallery-item {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .gallery-item img {
-        width: 200px;
-        height: auto;
-      }
-      .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>The Devs</h1>
 
-      <!-- Data Table -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testing Room | Devs</title>
+  <link href="../src/styles.css" rel="stylesheet" />
+  <link href="../src/globalcursor.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
 
-      <!-- Gallery Section -->
-      <div class="backgroundthing">
-        <div class="gallery" id="gallery">
-          <!-- Gallery items will be inserted here by JavaScript -->
-        </div>
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    img {
+      max-width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .gallery-item img {
+      width: 200px;
+      height: auto;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>The Devs</h1>
+
+    <!-- Data Table -->
+
+    <!-- Gallery Section -->
+    <div class="backgroundthing">
+      <div class="gallery" id="gallery">
+        <!-- Gallery items will be inserted here by JavaScript -->
       </div>
     </div>
+  </div>
 
-    <script>
-      // Data array
-      const data = [
-        {
-          name: "CohenKS",
-          work: "All over the above?",
-          description: "Hi i'm the creator of game I do lots of work :3",
-          imageSrc: "https://via.placeholder.com/200",
-        },
-        {
-          name: "LuciferKS",
-          work: "Designer, Artist, Creative Designer, Tester",
-          description:
-            "The goober. You might either find him working, or just straight up napping somewhere. (dont wake him up though you will Die)",
-          imageSrc: "https://via.placeholder.com/200",
-        },
-        {
-          name: "LunaKS",
-          work: "Builder, Designer, Artist, Creative Designer, Tester",
-          description:
-            "Hello ^_^  I build and design silly cool thingies like the gabble and jello :3 I may not be the best in my league but I’m having fun >_<!!!",
-          imageSrc: "https://via.placeholder.com/200",
-        },
-        {
-          name: "Disjoined",
-          work: "Music/Sfx Recorder, Creative Designer, Tester",
-          description:
-            "One of the foodlesticks although he knew nothing of his purpose all he could do is lag yet he controlled it powerfully",
-          imageSrc: "https://via.placeholder.com/200",
-        },
-        {
-          name: "Kevinthekeen",
-          work: "Music/Sfx Recorder, Musician, Creative Designer, Tester",
-          description: "You will die in oklahoma",
-          imageSrc: "https://via.placeholder.com/200",
-        },
-        {
-          name: "Mr Doodle",
-          work: "Builder, Creative Designer, Artist, Tester",
-          description:
-            "Just a dumbass on the team. He's also the owner of MemorBox.",
-          imageSrc: "https://via.placeholder.com/200",
-        },
-        {
-          name: "BlueToonsYT",
-          work: "Coder, Creative Designer, Designer, Tester",
-          description: "Waves crashing on a sandy beach.",
-          imageSrc: "https://via.placeholder.com/200",
-        },
-        {
-          name: "Raine",
-          work: "VA, Tester",
-          description: "idk but they voice #######",
-          imageSrc: "https://via.placeholder.com/200",
-        },
-        {
-          name: "M.4.G.1.K",
-          work: "Music/Sfx Recorder, Tester",
-          description: "Waves crashing on a sandy beach.",
-          imageSrc: "https://via.placeholder.com/200",
-        }
-      ];
+  <script>
+    // Data array
+    const data = [
+      {
+        name: "CohenKS",
+        work: "All over the above?",
+        description: "Hi i'm the creator of game I do lots of work :3",
+        imageSrc: "https://via.placeholder.com/200",
+      },
+      {
+        name: "LuciferKS",
+        work: "Designer, Artist, Creative Designer, Tester",
+        description:
+          "The goober. You might either find him working, or just straight up napping somewhere. (dont wake him up though you will Die)",
+        imageSrc: "https://via.placeholder.com/200",
+      },
+      {
+        name: "Disjoined",
+        work: "Music/Sfx Recorder, Creative Designer, Tester",
+        description:
+          "One of the foodlesticks although he knew nothing of his purpose all he could do is lag yet he controlled it powerfully",
+        imageSrc: "https://via.placeholder.com/200",
+      },
+      {
+        name: "Kevinthekeen",
+        work: "Music/Sfx Recorder, Musician, Creative Designer, Tester",
+        description: "You will die in oklahoma",
+        imageSrc: "https://via.placeholder.com/200",
+      },
+      {
+        name: "Mr Doodle",
+        work: "Builder, Creative Designer, Artist, Tester",
+        description:
+          "Just a dumbass on the team. He's also the owner of MemorBox.",
+        imageSrc: "https://via.placeholder.com/200",
+      },
+      {
+        name: "BlueToonsYT",
+        work: "Coder, Creative Designer, Designer, Tester",
+        description: "Waves crashing on a sandy beach.",
+        imageSrc: "https://via.placeholder.com/200",
+      },
+      {
+        name: "Raine",
+        work: "VA, Tester",
+        description: "idk but they voice #######",
+        imageSrc: "https://via.placeholder.com/200",
+      },
+    ];
 
-      // Function to populate the data table and gallery
-      function populateGalleryAndTable() {
-        const galleryContainer = document.querySelector("#gallery");
+    // Function to populate the data table and gallery
+    function populateGalleryAndTable() {
+      const galleryContainer = document.querySelector("#gallery");
 
-        data.forEach((item) => {
-          // Create gallery item
-          const galleryItem = document.createElement("div");
-          galleryItem.className = "gallery-item";
-          galleryItem.innerHTML = `
+      data.forEach((item) => {
+        // Create gallery item
+        const galleryItem = document.createElement("div");
+        galleryItem.className = "gallery-item";
+        galleryItem.innerHTML = `
                     <h2>${item.name}</h2>
                     <h4>${item.work}</h4>
                     <img src="${item.imageSrc}" alt="${item.name}">
                     <p>${item.description}</p>
                 `;
-          galleryContainer.appendChild(galleryItem);
-        });
-      }
+        galleryContainer.appendChild(galleryItem);
+      });
+    }
 
-      // Populate the gallery and table on page load
-      window.onload = populateGalleryAndTable;
-    </script>
-    <footer>
-      <div class="footerig">
-        <button
-          id="back"
-          class="rrbutton"
-          onclick="window.location.href = '../index.html'"
-        >
-          Back
-        </button>
-      </div>
-    </footer>
-  </body>
+    // Populate the gallery and table on page load
+    window.onload = populateGalleryAndTable;
+  </script>
+  <footer>
+    <div class="footerig">
+      <button id="back" class="rrbutton" onclick="window.location.href = '../index.html'">
+        Back
+      </button>
+    </div>
+  </footer>
+</body>
+
 </html>
