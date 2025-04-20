@@ -5,30 +5,30 @@ function getRndInteger(min, max) {
 }
 
 clicksfxs = [
-    "../audio/ui/sfx_rrui_watch_ui_select_click_01.wav",
-    "../audio/ui/sfx_rrui_watch_ui_select_click_02.wav",
-    "../audio/ui/sfx_rrui_watch_ui_select_click_03.wav",
-    "../audio/ui/sfx_rrui_watch_ui_select_click_04.wav",
-    "../audio/ui/sfx_rrui_watch_ui_select_click_05.wav",
-    "../audio/ui/sfx_rrui_watch_ui_select_click_06.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_click_01.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_click_02.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_click_03.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_click_04.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_click_05.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_click_06.wav",
 ];
 
 hoversfxs = [
-    "../audio/ui/sfx_rrui_watch_ui_button_hover_general_01.wav",
-    "../audio/ui/sfx_rrui_watch_ui_button_hover_general_02.wav",
-    "../audio/ui/sfx_rrui_watch_ui_button_hover_general_03.wav",
-    "../audio/ui/sfx_rrui_watch_ui_button_hover_general_04.wav",
-    "../audio/ui/sfx_rrui_watch_ui_button_hover_general_05.wav",
-    "../audio/ui/sfx_rrui_watch_ui_button_hover_general_06.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_button_hover_general_01.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_button_hover_general_02.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_button_hover_general_03.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_button_hover_general_04.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_button_hover_general_05.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_button_hover_general_06.wav",
 ];
 
 releasesfxs = [
-    "../audio/ui/sfx_rrui_watch_ui_select_up_01.wav",
-    "../audio/ui/sfx_rrui_watch_ui_select_up_02.wav",
-    "../audio/ui/sfx_rrui_watch_ui_select_up_03.wav",
-    "../audio/ui/sfx_rrui_watch_ui_select_up_04.wav",
-    "../audio/ui/sfx_rrui_watch_ui_select_up_05.wav",
-    "../audio/ui/sfx_rrui_watch_ui_select_up_06.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_up_01.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_up_02.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_up_03.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_up_04.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_up_05.wav",
+    "https://cohenkirbyultra.github.io/testingroom/audio/ui/sfx_rrui_watch_ui_select_up_06.wav",
 ];
 
 var click, hover, release;
