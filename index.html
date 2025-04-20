@@ -1,9 +1,4 @@
-<script src="src/SFX.js">
-</script>
-<html onclick="sfxplay('click')">
-  <audio autoplay loop id="music">
-    <source src="audio/Website_Main.mp3" type="audio/mpeg" />
-  </audio>
+<html>
   <head>
     <title>Testing Room | Homepage</title>
     <link href="src/styles.css" rel="stylesheet" />
@@ -20,10 +15,13 @@
           </p>
         </section>
       </div>
+      
       <img src="images/Photo Board.png" id="photoBoard" />
       <div class="backgroundthing">
         <section>
-          <header><h1>Main Premise</h1></header>
+          <header>
+            <h1>Main Premise</h1>
+          </header>
           <h3>
             Testing room is a game I made to test stuff out...Well, originally.
           </h3>
@@ -37,6 +35,9 @@
           </h3>
         </section>
       </div>
+      <audio autoplay loop id="music">
+        <source src="audio/Website_Main.mp3" type="audio/mpeg" />
+      </audio>
       <footer>
         <div class="footerig">
           <button
@@ -64,7 +65,9 @@
       </footer>
     </center>
   </head>
+
   <body>
+    <script src="src/SFX.js"></script>
     <script>
       function ads() {
         let rand = getRndInteger(0, 20);
