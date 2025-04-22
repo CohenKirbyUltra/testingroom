@@ -5,5 +5,5 @@ function playSound(src) {
     audio.cloneNode().play();
 }
 
-document.getElementById("Username").addEventListener("change", playSound("../audio/ui/admin/Poker_DiceClack03.wav"));
-document.getElementById("Password").addEventListener("change", playSound("../audio/ui/admin/Poker_DiceClack03.wav"));
+document.getElementById("Username").addEventListener("change", playSound("https://cohenkirbyultra.github.io/testingroom/audio/ui/admin/Poker_DiceClack03.wav"));
+document.getElementById("Password").addEventListener("change", playSound("https://cohenkirbyultra.github.io/testingroom/audio/ui/admin/Poker_DiceClack03.wav"));
