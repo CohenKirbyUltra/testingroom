@@ -1,5 +1,7 @@
 {
-    "Creds":[
-        {"Username":"Cohen Rec Macintosh", "Password":"090470"}
+    "credentials":[
+        {
+            "Username":"Cohen Rec Macintosh", "Password":"090470"
+        }
     ]
 }

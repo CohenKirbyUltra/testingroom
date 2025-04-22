@@ -122,7 +122,7 @@
             function Submit() {
                 const a = JSON.parse(fetch("https://cohenkirbyultra.github.io/testingroom/pages/cred.json"));
 
-                if (Username == a.creds.Username && Password == a.creds.Password) {
+                if (Username == a.credentials.Username && Password == a.credentials.Password) {
                     alert("Process");
                 } else {
                     alert("Invaild Credentials");
