@@ -1,7 +1,8 @@
 // For login.html
+var audio = new Audio();
 function playSound(src) {
-    let audio = new Audio()
     audio.src = src;
+    audio.type = "audio/wav";
     audio.cloneNode().play();
 }
 
