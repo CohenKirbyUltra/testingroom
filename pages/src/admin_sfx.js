@@ -5,5 +5,5 @@ function playSound(src) {
     audio.cloneNode().play();
 }
 
-document.getElementById("Username").addEventListener("input", playSound("../audio/ui/admin/Poker_DiceClack03.wav"));
-document.getElementById("Password").addEventListener("input", playSound("../audio/ui/admin/Poker_DiceClack03.wav"));
+document.getElementById("Username").addEventListener("change", playSound("../audio/ui/admin/Poker_DiceClack03.wav"));
+document.getElementById("Password").addEventListener("change", playSound("../audio/ui/admin/Poker_DiceClack03.wav"));
