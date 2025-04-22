@@ -4,7 +4,7 @@ audio.type = "audio/wav";
 
 function playSound(src) {
     audio.currentTime = 0;
-    audio.src = "https://cohenkirbyultra.github.io/testingroom/audio/ui/admin/" + src;
+    audio.src = "https://cohenkirbyultra.github.io/testingroom/audio/ui/admin/Poker_DiceClack03.wav";
     audio.play();
 }
 
