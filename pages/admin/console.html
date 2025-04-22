@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>[ | Admin Console | ]</title>
+        <style>
+            @font-face {
+                font-family: Console;
+                src: url("src/fonts/Console.ttf");
+            }
+
+            html {
+                font-family: Console;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="Console_Area">
+
+        </div>
+        <input class="Prompt" id="Prompt" type="text" />
+
+        <script>
+            function newElement(type) {
+                return document.createElement(type);
+            }
+            document.getElementById("Prompt").addEventListener("submit", () => {
+                let x = newElement("p");
+                x.innerHTML = this.value;
+                document.getElementById("Console_Area").appendChild(x);
+
+                this.value = "";
+            });
+        </script>
+    </body>
+</html>
