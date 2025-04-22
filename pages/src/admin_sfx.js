@@ -4,7 +4,7 @@ audio.type = "audio/wav";
 
 function playSound(src) {
     audio.src = "https://cohenkirbyultra.github.io/testingroom/audio/ui/admin/" + src;
-    audio.cloneNode().play();
+    audio.play();
 }
 
-document.addEventListener("keypress", playSound("Poker_DiceClack03.wav"));
+document.addEventListener("keydown", playSound("Poker_DiceClack03.wav"));
