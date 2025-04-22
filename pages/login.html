@@ -109,7 +109,26 @@
         </script>
         <script>
             var Username, Password;
-            
+            var _username, _password;
+
+            _username = document.getElementById("Username").value;
+            _password = document.getElementById("Password").value;
+
+            function Update() {
+                Username = _username;
+                Password = _password    
+            }
+
+            function Submit() {
+                let creds = fetch("https://spiteful1277.neocities.org/creds.json");
+                const a = JSON.parse(creds);
+
+                if (Username == a.creds.Username && Password == a.creds.Password) {
+                    alert("Process");
+                } else {
+                    alert("Invaild Credentials");
+                }
+            }
         </script>
     </body>
 </html>
