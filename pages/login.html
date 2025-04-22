@@ -42,6 +42,14 @@
                 border-color: rgb(255, 0, 0);
                 border-radius: 4px;
             }
+
+            .Login-Input {
+                background-color: rgb(49, 1, 1);
+                color: red;
+                border-color: red;                
+                border-radius: 16px;
+                border-width: 4px;
+            }
         </style>
     </head>
 
@@ -49,11 +57,11 @@
         <center>
             <div>
                 <label for="Username">Username</label>
-                <input type="text" id="Username" placeholder="Username"/>
+                <input type="text" id="Username" class="Login-Input" placeholder="Username"/>
 
                 <br>
                 <label for="Password">Password</label>
-                <input type="password" id="Password" placeholder="Password"/>
+                <input type="password" id="Password" class="Login-Input" placeholder="Password"/>
 
                 <br>
                 <button type="submit" id="Submit">Submit</button>
