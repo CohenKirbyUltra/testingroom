@@ -120,9 +120,7 @@
             }
 
             function Submit() {
-                let creds = fetch("https://cohenkirbyultra.github.io/testingroom/pages/cred.json");
-                
-                const a = JSON.parse(creds);
+                const a = JSON.parse(fetch("https://cohenkirbyultra.github.io/testingroom/pages/cred.json"));
 
                 if (Username == a.creds.Username && Password == a.creds.Password) {
                     alert("Process");
