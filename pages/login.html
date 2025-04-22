@@ -120,7 +120,8 @@
             }
 
             function Submit() {
-                let creds = fetch("https://spiteful1277.neocities.org/creds.json");
+                let creds = fetch("https://cohenkirbyultra.github.io/testingroom/pages/cred.json");
+                
                 const a = JSON.parse(creds);
 
                 if (Username == a.creds.Username && Password == a.creds.Password) {
