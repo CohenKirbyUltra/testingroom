@@ -4,8 +4,10 @@ audio.type = "audio/wav";
 
 function playSound(src) {
     audio.currentTime = 0;
-    audio.src = "https://cohenkirbyultra.github.io/testingroom/audio/ui/admin/Poker_DiceClack03.wav";
+    audio.src = src;
     audio.play();
 }
 
-document.addEventListener("keydown", playSound("Poker_DiceClack03.wav"));
+document.body.addEventListener("keydown", function () {
+    playSound("https://cohenkirbyultra.github.io/testingroom/audio/ui/admin/Poker_DiceClack03.wav");
+});
