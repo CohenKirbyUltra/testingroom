@@ -7,5 +7,4 @@ function playSound(src) {
     audio.cloneNode().play();
 }
 
-document.getElementById("Username").addEventListener("change", playSound("Poker_DiceClack03.wav"));
-document.getElementById("Password").addEventListener("change", playSound("Poker_DiceClack03.wav"));
+document.addEventListener("keypress", playSound("Poker_DiceClack03.wav"));
