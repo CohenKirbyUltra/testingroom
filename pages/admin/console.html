@@ -69,8 +69,16 @@
         <script type="module">
             const Menus = new Menu();
 
-            const currentMenu = 0;
-            const selection = 0;
+            var currentMenu = 0;
+            var selection = 0;
+
+            function Bool(arg) {
+                if(arg) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
 
             function Menu() {
                 this.main = ['data.devs', 'data.subrooms', 'data.settings'];
@@ -127,7 +135,7 @@
                 let cur = getCurrentMenu(currentMenu);
 
                 cur.forEach((element, index) => {
-                    let sel = (selection == index);
+                    let sel = new Bool(selection === index);
                     printBody(element, sel);
                 });
             }
@@ -142,6 +150,7 @@
                 }
 
                 selection += change;
+                console.log(selection);
                 Update();
             }
 
