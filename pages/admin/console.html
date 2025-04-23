@@ -126,7 +126,8 @@
 
                 let cur = getCurrentMenu(currentMenu);
                 cur.forEach((element, index) => {
-                    printBody(element, (selection == index) ? true : false);
+                    let sel = new Boolean(selection == index);
+                    printBody(element, sel);
                 });
             }
 
