@@ -141,6 +141,9 @@
             }
 
             function changeSelection(change) {
+
+                selection += change;
+
                 if (selection < 0) {
                     selection = 2;
                 }
@@ -148,8 +151,7 @@
                 if (selection > 2) {
                     selection = 0;
                 }
-
-                selection += change;
+                
                 console.log(selection);
                 Update();
             }
