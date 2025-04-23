@@ -86,12 +86,12 @@
             function clearBody() {
                 let y = document.querySelectorAll("p");
 
-                if (y.length < 1) {
-                    return "No Update"
-                } else {
+                try {
                     y.forEach(element => {
                         document.removeChild(element);
                     });
+                } catch (error) {
+                    console.log("Aborted Clearance")   
                 }
             }
 
