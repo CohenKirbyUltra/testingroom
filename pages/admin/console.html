@@ -86,9 +86,13 @@
             function clearBody() {
                 let y = document.querySelectorAll("p");
 
-                y.forEach(element => {
-                    document.removeChild(element);
-                });
+                if (y.length < 1) {
+                    return "No Update"
+                } else {
+                    y.forEach(element => {
+                        document.removeChild(element);
+                    });
+                }
             }
 
             function Update() {
