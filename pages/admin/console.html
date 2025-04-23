@@ -54,25 +54,71 @@
             div {
                 align-content: center;
             }
+
+            .ns {
+                color: red;
+            }
+
+            .s {
+                color: green;
+            }
         </style>
     </head>
 
     <body>
-        <div id="Console_Area">
-
-        </div>
-        <input class="Prompt" id="Prompt" type="text" />
-
         <script>
+            var Menus = [["data.devs", "data.subrooms", "data.settings"], ["Menu 1"], ["Menu 2"], ["Menu 3"]];
+
+            var currentMenu = 0;
+            var selection = 0;
+
             function newElement(type) {
                 return document.createElement(type);
             }
-            document.getElementById("Prompt").addEventListener("submit", () => {
-                let x = newElement("p");
-                x.innerHTML = this.value;
-                document.getElementById("Console_Area").appendChild(x);
 
-                this.value = "";
+            function printBody(text, selected) {
+                let x = newElement("p");
+                x.innerHTML = text;
+                if (selected) {x.class = "s"} else {x.class = "ns"}
+                document.body.appendChild(x);
+            }
+
+            function clearBody() {
+                let y = document.querySelectorAll("p");
+
+                y.forEach(element => {
+                    document.removeChild(element);
+                });
+            }
+
+            function Update() {
+                clearbody()
+
+                Menus[currentMenu] = (element, index) => {
+                    printBody(element, (selection == index) ? true : false);
+                });
+            }
+
+            function changeSelection(change) {
+                if (selection < 0) {
+                    selection = 2;
+                }
+
+                if (selection > 2) {
+                    selection = 0;
+                }
+
+                selection += change;
+                Update();
+            }
+
+            document.body.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowUp") {
+                    changeSelection(1);
+                }
+                if (e.key == "ArrowDown") {
+                    changeSelection(-1);
+                }
             });
         </script>
     </body>
