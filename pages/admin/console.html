@@ -87,9 +87,9 @@
                 let y = document.querySelectorAll("p");
 
                 try {
-                    y.forEach(element => {
+                    y = (element) => {
                         document.removeChild(element);
-                    });
+                    }
                 } catch (error) {
                     console.log("Aborted Clearance")   
                 }
