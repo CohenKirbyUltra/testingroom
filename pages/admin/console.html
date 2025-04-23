@@ -66,11 +66,18 @@
     </head>
 
     <body>
-        <script>
-            var Menus = [["data.devs", "data.subrooms", "data.settings"], ["Menu 1"], ["Menu 2"], ["Menu 3"]];
+        <script type="module">
+            const Menus = new Menu();
 
             var currentMenu = 0;
             var selection = 0;
+
+            function Menu() {
+                this.main = ['data.devs', 'data.subrooms', 'data.settings'];
+                this.devs = ['devsMenu'];
+                this.subrooms = ['subroomsMenu'];
+                this.settings = ['settingMenu'];
+            }
 
             function newElement(type) {
                 return document.createElement(type);
@@ -87,20 +94,40 @@
                 let y = document.querySelectorAll("p");
 
                 try {
-                    y = (element) => {
+                    y.forEach((element, index) => {
                         document.removeChild(element);
-                    }
+                    });
                 } catch (error) {
                     console.log("Aborted Clearance")   
                 }
             }
 
+            function getCurrentMenu(int) {
+                switch (int) {
+                    case 0:
+                        return Menus.main;
+                        break;
+                    case 1:
+                        return Menus.dev;
+                        break;
+                    case 2:
+                        return Menus.subrooms;
+                        break;
+                    case 3:
+                        return Menus.settings;
+                        break;
+                
+                    default:
+                        break;
+                }
+            }
             function Update() {
                 clearBody();
 
-                Menus[currentMenu] = (element, index) => {
+                let cur = getCurrentMenu(currentMenu);
+                cur.forEach((element, index) => {
                     printBody(element, (selection == index) ? true : false);
-                }
+                });
             }
 
             function changeSelection(change) {
