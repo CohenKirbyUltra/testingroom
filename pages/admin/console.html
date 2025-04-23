@@ -94,7 +94,11 @@
             function printBody(text, selected) {
                 let x = newElement("p");
                 x.innerHTML = text;
-                if (selected) {x.class = "s"} else {x.class = "ns"}
+                if (selected) {
+                    x.class = "s";
+                } else {
+                    x.class = "ns";
+                }
                 document.body.appendChild(x);
             }
 
@@ -135,7 +139,7 @@
                 let cur = getCurrentMenu(currentMenu);
 
                 cur.forEach((element, index) => {
-                    let sel = new Bool(selection === index);
+                    let sel = new Boolean(selection === index);
                     printBody(element, sel);
                 });
             }
@@ -151,7 +155,7 @@
                 if (selection > 2) {
                     selection = 0;
                 }
-                
+
                 console.log(selection);
                 Update();
             }
@@ -164,10 +168,6 @@
                     changeSelection(-1);
                 }
             });
-
-            Menus[currentMenu] = (element, index) => {
-                printBody(element, (selection == index) ? true : false);
-            }  
         </script>
     </body>
 </html>
