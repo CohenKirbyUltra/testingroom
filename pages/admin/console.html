@@ -69,8 +69,8 @@
         <script type="module">
             const Menus = new Menu();
 
-            var currentMenu = 0;
-            var selection = 0;
+            const currentMenu = 0;
+            const selection = 0;
 
             function Menu() {
                 this.main = ['data.devs', 'data.subrooms', 'data.settings'];
@@ -125,8 +125,9 @@
                 clearBody();
 
                 let cur = getCurrentMenu(currentMenu);
+
                 cur.forEach((element, index) => {
-                    let sel = new Boolean(selection == index);
+                    let sel = (selection == index);
                     printBody(element, sel);
                 });
             }
