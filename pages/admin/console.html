@@ -125,7 +125,9 @@
                 }
             });
 
-            Update();
+            Menus[currentMenu] = (element, index) => {
+                printBody(element, (selection == index) ? true : false);
+            }  
         </script>
     </body>
 </html>
